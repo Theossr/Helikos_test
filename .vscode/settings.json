@@ -1,0 +1,21 @@
+{
+    "editor.fontFamily": "Cascadia mono",
+    "cmake.showOptionsMovedNotification": false,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "editor.bracketPairColorization.enabled": false,
+    "editor.tokenColorCustomizations": {
+    
+        "textMateRules": [
+            {
+                "scope": "keyword.control.directive",
+                "settings": {
+                    "foreground": "#9b9986"
+                }
+            }
+        ]
+    },
+    "workbench.editor.empty.hint": "hidden"
+}
