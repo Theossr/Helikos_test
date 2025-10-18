@@ -1,0 +1,41 @@
+{
+  "frames": [
+    {
+      "t_rel_s": 0.0,
+      "geo": { "lat_deg": 51.7, "lon_deg": 13.2, "alt_km": 549.8 },
+      "mag": { "x_nT": 12300.0, "y_nT": -800.0, "z_nT": 48000.0, "f_nT": 49500.0 }
+    },
+    {
+      "t_rel_s": 60.0,
+      "geo": { "lat_deg": 51.6, "lon_deg": 13.5, "alt_km": 549.8 },
+      "mag": { "x_nT": 12320.0, "y_nT": -790.0, "z_nT": 47980.0, "f_nT": 49490.0 }
+    }
+  ],
+
+  "decay": {
+    "threshold_km": 100.0,
+
+    "tle_forward": {
+      "crossed": true,
+      "time_utc": "2025-10-17T03:15:20Z",
+      "time_from_start_s": 437120.0,
+      "uncertainty_s": 30.0
+    },
+
+    "physics_drag": {
+      "crossed": true,
+      "time_utc": "2025-10-16T22:41:10Z",
+      "time_from_start_s": 414070.0,
+      "uncertainty_s": 3600.0
+    }
+  },
+
+  "meta": {
+    "points_returned": 541,
+    "points_generated": 1000,
+    "skipped_frames": 459,
+
+    "tle_epoch_utc": "2025-10-05T12:00:00Z",
+    "out_of_tle_epoch_window": true
+  }
+}

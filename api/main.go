@@ -1,22 +1,28 @@
 package main
 
 import (
-	"encoding/json",
-	"net/http",
+	"context"
+	"encoding/json"
 	"fmt"
+	"log"
+	"net/http"
+	"time"
+
+	pb "github.com/Theossr/Helikos_test/api/proto"
+	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 )
 
 type SimRequest struct {
-
-	tle struct {
-		title string `json:"title"`
-		line1 string `json:"line1"`
-		line2 string `json:"line2"`
+	TLE struct {
+		Title string `json:"title"`
+		Line1 string `json:"line1"`
+		Line2 string `json:"line2"`
 	} `json:"tle"`
-	start_epoch_ms uint32 `json:"start_epoch_ms"`
-	duration_s float32 `json:"duration_s"`
-	step_s float32 `json:"step_s"`
-	h_fail_km float32 `json:"h_fail_km"`
+	Start_epoch_ms uint64  `json:"start_epoch_ms"`
+	Duration_s     float32 `json:"duration_s"`
+	Step_s         float32 `json:"step_s"`
+	H_fail_km      float32 `json:"h_fail_km"`
 }
 
 func HealthHandler(w http.ResponseWriter, r *http.Request) {
@@ -37,19 +43,56 @@ func SimHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var sat SatSim
+	var sat SimRequest
 	err := json.NewDecoder(r.Body).Decode(&sat)
 	if err != nil {
 		http.Error(w, "400/Bad request Invalid JSON", http.StatusBadRequest)
 		return
 	}
+
+	conn, err := grpc.NewClient("localhost:50051", grpc.WithTransportCredentials(insecure.NewCredentials()))
+	if err != nil {
+		http.Error(w, "500/Internal server error", http.StatusInternalServerError)
+		log.Printf("Connection error: %v", err)
+		return
+	}
+
+	defer conn.Close()
+
+	client := pb.NewSatelliteEarthSimulationServiceClient(conn)
+
+	protoSimReq := &pb.SimRequest{
+
+		Tle: &pb.SimRequest_TLE{
+
+			Title: sat.TLE.Title,
+			Line1: sat.TLE.Line1,
+			Line2: sat.TLE.Line2,
+		},
+
+		StartEpochMs: sat.Start_epoch_ms,
+		DurationS:    sat.Duration_s,
+		StepS:        sat.Step_s,
+		HFailKm:      sat.H_fail_km,
+	}
+
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+
+	resp, err := client.RunSimulation(ctx, protoSimReq)
+	if err != nil {
+		http.Error(w, "500/Internal server error", http.StatusInternalServerError)
+		log.Printf("Connection error: %v", err)
+		return
+	}
+
+	json.NewEncoder(w).Encode(resp)
 }
 
 func main() {
 
 	http.HandleFunc("/health", HealthHandler)
-	http.HandleFunc("/simulate", SimRequest)
+	http.HandleFunc("/simulate", SimHandler)
 
 	http.ListenAndServe("localhost:8080", nil)
 }
-
