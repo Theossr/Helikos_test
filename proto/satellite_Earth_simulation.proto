@@ -13,29 +13,29 @@ message SimRequest {
 
     TLE tle = 1;
     uint64 start_epoch_ms = 2;
-    float duration_s = 3;
-    float step_s = 4;
-    float h_fail_km = 5;
+    double duration_s = 3;
+    double step_s = 4;
+    double h_fail_km = 5;
 }
 
 message SimResponse {
 
   // Frames
   message Frame {
-    float t_rel_s = 1;
+    double t_rel_s = 1;
 
     message Geo {
-      float lat_deg = 1;
-      float lon_deg = 2;
-      float alt_km = 3;
+      double lat_deg = 1;
+      double lon_deg = 2;
+      double alt_km = 3;
     }
     Geo geo = 2;
 
     message Mag {
-      float x_nT = 1;
-      float y_nT = 2;
-      float z_nT = 3;
-      float f_nT = 4;
+      double x_nT = 1;
+      double y_nT = 2;
+      double z_nT = 3;
+      double f_nT = 4;
     }
     Mag mag = 3;
   }
@@ -43,13 +43,13 @@ message SimResponse {
 
   // Decay
   message Decay {
-    float threshold_km = 1;
+    double threshold_km = 1;
 
     message TLEForward {
       bool crossed = 1;
       string time_utc = 2;
       double time_from_start_s = 3;
-      float uncertainty_s = 4;
+      double uncertainty_s = 4;
     }
     TLEForward tle_forward = 2;
 
@@ -57,7 +57,7 @@ message SimResponse {
       bool crossed = 1;
       string time_utc = 2;
       double time_from_start_s = 3;
-      float uncertainty_s = 4;
+      double uncertainty_s = 4;
     }
     PhysicsDrag physics_drag = 3;
   }

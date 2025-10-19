@@ -1,3 +1,5 @@
+#pragma once
+
 #include <quicktle/dataset.h>
 #include <quicktle/func.h>
 #include <quicktle/node.h>
@@ -20,6 +22,8 @@ public:
     Status RunSimulation(ServerContext* context, const SimRequest* request, SimResponse* response) override;
 
 };
+
+void RunServer();
 
 
 

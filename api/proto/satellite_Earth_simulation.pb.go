@@ -7,12 +7,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -26,9 +25,9 @@ type SimRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Tle           *SimRequest_TLE        `protobuf:"bytes,1,opt,name=tle,proto3" json:"tle,omitempty"`
 	StartEpochMs  uint64                 `protobuf:"varint,2,opt,name=start_epoch_ms,json=startEpochMs,proto3" json:"start_epoch_ms,omitempty"`
-	DurationS     float32                `protobuf:"fixed32,3,opt,name=duration_s,json=durationS,proto3" json:"duration_s,omitempty"`
-	StepS         float32                `protobuf:"fixed32,4,opt,name=step_s,json=stepS,proto3" json:"step_s,omitempty"`
-	HFailKm       float32                `protobuf:"fixed32,5,opt,name=h_fail_km,json=hFailKm,proto3" json:"h_fail_km,omitempty"`
+	DurationS     float64                `protobuf:"fixed64,3,opt,name=duration_s,json=durationS,proto3" json:"duration_s,omitempty"`
+	StepS         float64                `protobuf:"fixed64,4,opt,name=step_s,json=stepS,proto3" json:"step_s,omitempty"`
+	HFailKm       float64                `protobuf:"fixed64,5,opt,name=h_fail_km,json=hFailKm,proto3" json:"h_fail_km,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -77,21 +76,21 @@ func (x *SimRequest) GetStartEpochMs() uint64 {
 	return 0
 }
 
-func (x *SimRequest) GetDurationS() float32 {
+func (x *SimRequest) GetDurationS() float64 {
 	if x != nil {
 		return x.DurationS
 	}
 	return 0
 }
 
-func (x *SimRequest) GetStepS() float32 {
+func (x *SimRequest) GetStepS() float64 {
 	if x != nil {
 		return x.StepS
 	}
 	return 0
 }
 
-func (x *SimRequest) GetHFailKm() float32 {
+func (x *SimRequest) GetHFailKm() float64 {
 	if x != nil {
 		return x.HFailKm
 	}
@@ -222,7 +221,7 @@ func (x *SimRequest_TLE) GetLine2() string {
 // Frames
 type SimResponse_Frame struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	TRelS         float32                `protobuf:"fixed32,1,opt,name=t_rel_s,json=tRelS,proto3" json:"t_rel_s,omitempty"`
+	TRelS         float64                `protobuf:"fixed64,1,opt,name=t_rel_s,json=tRelS,proto3" json:"t_rel_s,omitempty"`
 	Geo           *SimResponse_Frame_Geo `protobuf:"bytes,2,opt,name=geo,proto3" json:"geo,omitempty"`
 	Mag           *SimResponse_Frame_Mag `protobuf:"bytes,3,opt,name=mag,proto3" json:"mag,omitempty"`
 	unknownFields protoimpl.UnknownFields
@@ -259,7 +258,7 @@ func (*SimResponse_Frame) Descriptor() ([]byte, []int) {
 	return file_satellite_Earth_simulation_proto_rawDescGZIP(), []int{1, 0}
 }
 
-func (x *SimResponse_Frame) GetTRelS() float32 {
+func (x *SimResponse_Frame) GetTRelS() float64 {
 	if x != nil {
 		return x.TRelS
 	}
@@ -283,7 +282,7 @@ func (x *SimResponse_Frame) GetMag() *SimResponse_Frame_Mag {
 // Decay
 type SimResponse_Decay struct {
 	state         protoimpl.MessageState         `protogen:"open.v1"`
-	ThresholdKm   float32                        `protobuf:"fixed32,1,opt,name=threshold_km,json=thresholdKm,proto3" json:"threshold_km,omitempty"`
+	ThresholdKm   float64                        `protobuf:"fixed64,1,opt,name=threshold_km,json=thresholdKm,proto3" json:"threshold_km,omitempty"`
 	TleForward    *SimResponse_Decay_TLEForward  `protobuf:"bytes,2,opt,name=tle_forward,json=tleForward,proto3" json:"tle_forward,omitempty"`
 	PhysicsDrag   *SimResponse_Decay_PhysicsDrag `protobuf:"bytes,3,opt,name=physics_drag,json=physicsDrag,proto3" json:"physics_drag,omitempty"`
 	unknownFields protoimpl.UnknownFields
@@ -320,7 +319,7 @@ func (*SimResponse_Decay) Descriptor() ([]byte, []int) {
 	return file_satellite_Earth_simulation_proto_rawDescGZIP(), []int{1, 1}
 }
 
-func (x *SimResponse_Decay) GetThresholdKm() float32 {
+func (x *SimResponse_Decay) GetThresholdKm() float64 {
 	if x != nil {
 		return x.ThresholdKm
 	}
@@ -420,9 +419,9 @@ func (x *SimResponse_Meta) GetOutOfTleEpochWindow() bool {
 
 type SimResponse_Frame_Geo struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	LatDeg        float32                `protobuf:"fixed32,1,opt,name=lat_deg,json=latDeg,proto3" json:"lat_deg,omitempty"`
-	LonDeg        float32                `protobuf:"fixed32,2,opt,name=lon_deg,json=lonDeg,proto3" json:"lon_deg,omitempty"`
-	AltKm         float32                `protobuf:"fixed32,3,opt,name=alt_km,json=altKm,proto3" json:"alt_km,omitempty"`
+	LatDeg        float64                `protobuf:"fixed64,1,opt,name=lat_deg,json=latDeg,proto3" json:"lat_deg,omitempty"`
+	LonDeg        float64                `protobuf:"fixed64,2,opt,name=lon_deg,json=lonDeg,proto3" json:"lon_deg,omitempty"`
+	AltKm         float64                `protobuf:"fixed64,3,opt,name=alt_km,json=altKm,proto3" json:"alt_km,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -457,21 +456,21 @@ func (*SimResponse_Frame_Geo) Descriptor() ([]byte, []int) {
 	return file_satellite_Earth_simulation_proto_rawDescGZIP(), []int{1, 0, 0}
 }
 
-func (x *SimResponse_Frame_Geo) GetLatDeg() float32 {
+func (x *SimResponse_Frame_Geo) GetLatDeg() float64 {
 	if x != nil {
 		return x.LatDeg
 	}
 	return 0
 }
 
-func (x *SimResponse_Frame_Geo) GetLonDeg() float32 {
+func (x *SimResponse_Frame_Geo) GetLonDeg() float64 {
 	if x != nil {
 		return x.LonDeg
 	}
 	return 0
 }
 
-func (x *SimResponse_Frame_Geo) GetAltKm() float32 {
+func (x *SimResponse_Frame_Geo) GetAltKm() float64 {
 	if x != nil {
 		return x.AltKm
 	}
@@ -480,10 +479,10 @@ func (x *SimResponse_Frame_Geo) GetAltKm() float32 {
 
 type SimResponse_Frame_Mag struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	XNT           float32                `protobuf:"fixed32,1,opt,name=x_nT,json=xNT,proto3" json:"x_nT,omitempty"`
-	YNT           float32                `protobuf:"fixed32,2,opt,name=y_nT,json=yNT,proto3" json:"y_nT,omitempty"`
-	ZNT           float32                `protobuf:"fixed32,3,opt,name=z_nT,json=zNT,proto3" json:"z_nT,omitempty"`
-	FNT           float32                `protobuf:"fixed32,4,opt,name=f_nT,json=fNT,proto3" json:"f_nT,omitempty"`
+	XNT           float64                `protobuf:"fixed64,1,opt,name=x_nT,json=xNT,proto3" json:"x_nT,omitempty"`
+	YNT           float64                `protobuf:"fixed64,2,opt,name=y_nT,json=yNT,proto3" json:"y_nT,omitempty"`
+	ZNT           float64                `protobuf:"fixed64,3,opt,name=z_nT,json=zNT,proto3" json:"z_nT,omitempty"`
+	FNT           float64                `protobuf:"fixed64,4,opt,name=f_nT,json=fNT,proto3" json:"f_nT,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -518,28 +517,28 @@ func (*SimResponse_Frame_Mag) Descriptor() ([]byte, []int) {
 	return file_satellite_Earth_simulation_proto_rawDescGZIP(), []int{1, 0, 1}
 }
 
-func (x *SimResponse_Frame_Mag) GetXNT() float32 {
+func (x *SimResponse_Frame_Mag) GetXNT() float64 {
 	if x != nil {
 		return x.XNT
 	}
 	return 0
 }
 
-func (x *SimResponse_Frame_Mag) GetYNT() float32 {
+func (x *SimResponse_Frame_Mag) GetYNT() float64 {
 	if x != nil {
 		return x.YNT
 	}
 	return 0
 }
 
-func (x *SimResponse_Frame_Mag) GetZNT() float32 {
+func (x *SimResponse_Frame_Mag) GetZNT() float64 {
 	if x != nil {
 		return x.ZNT
 	}
 	return 0
 }
 
-func (x *SimResponse_Frame_Mag) GetFNT() float32 {
+func (x *SimResponse_Frame_Mag) GetFNT() float64 {
 	if x != nil {
 		return x.FNT
 	}
@@ -551,7 +550,7 @@ type SimResponse_Decay_TLEForward struct {
 	Crossed        bool                   `protobuf:"varint,1,opt,name=crossed,proto3" json:"crossed,omitempty"`
 	TimeUtc        string                 `protobuf:"bytes,2,opt,name=time_utc,json=timeUtc,proto3" json:"time_utc,omitempty"`
 	TimeFromStartS float64                `protobuf:"fixed64,3,opt,name=time_from_start_s,json=timeFromStartS,proto3" json:"time_from_start_s,omitempty"`
-	UncertaintyS   float32                `protobuf:"fixed32,4,opt,name=uncertainty_s,json=uncertaintyS,proto3" json:"uncertainty_s,omitempty"`
+	UncertaintyS   float64                `protobuf:"fixed64,4,opt,name=uncertainty_s,json=uncertaintyS,proto3" json:"uncertainty_s,omitempty"`
 	unknownFields  protoimpl.UnknownFields
 	sizeCache      protoimpl.SizeCache
 }
@@ -607,7 +606,7 @@ func (x *SimResponse_Decay_TLEForward) GetTimeFromStartS() float64 {
 	return 0
 }
 
-func (x *SimResponse_Decay_TLEForward) GetUncertaintyS() float32 {
+func (x *SimResponse_Decay_TLEForward) GetUncertaintyS() float64 {
 	if x != nil {
 		return x.UncertaintyS
 	}
@@ -619,7 +618,7 @@ type SimResponse_Decay_PhysicsDrag struct {
 	Crossed        bool                   `protobuf:"varint,1,opt,name=crossed,proto3" json:"crossed,omitempty"`
 	TimeUtc        string                 `protobuf:"bytes,2,opt,name=time_utc,json=timeUtc,proto3" json:"time_utc,omitempty"`
 	TimeFromStartS float64                `protobuf:"fixed64,3,opt,name=time_from_start_s,json=timeFromStartS,proto3" json:"time_from_start_s,omitempty"`
-	UncertaintyS   float32                `protobuf:"fixed32,4,opt,name=uncertainty_s,json=uncertaintyS,proto3" json:"uncertainty_s,omitempty"`
+	UncertaintyS   float64                `protobuf:"fixed64,4,opt,name=uncertainty_s,json=uncertaintyS,proto3" json:"uncertainty_s,omitempty"`
 	unknownFields  protoimpl.UnknownFields
 	sizeCache      protoimpl.SizeCache
 }
@@ -675,7 +674,7 @@ func (x *SimResponse_Decay_PhysicsDrag) GetTimeFromStartS() float64 {
 	return 0
 }
 
-func (x *SimResponse_Decay_PhysicsDrag) GetUncertaintyS() float32 {
+func (x *SimResponse_Decay_PhysicsDrag) GetUncertaintyS() float64 {
 	if x != nil {
 		return x.UncertaintyS
 	}
@@ -692,9 +691,9 @@ const file_satellite_Earth_simulation_proto_rawDesc = "" +
 	"\x03tle\x18\x01 \x01(\v2(.SatelliteEarthSimulation.SimRequest.TLER\x03tle\x12$\n" +
 	"\x0estart_epoch_ms\x18\x02 \x01(\x04R\fstartEpochMs\x12\x1d\n" +
 	"\n" +
-	"duration_s\x18\x03 \x01(\x02R\tdurationS\x12\x15\n" +
-	"\x06step_s\x18\x04 \x01(\x02R\x05stepS\x12\x1a\n" +
-	"\th_fail_km\x18\x05 \x01(\x02R\ahFailKm\x1aG\n" +
+	"duration_s\x18\x03 \x01(\x01R\tdurationS\x12\x15\n" +
+	"\x06step_s\x18\x04 \x01(\x01R\x05stepS\x12\x1a\n" +
+	"\th_fail_km\x18\x05 \x01(\x01R\ahFailKm\x1aG\n" +
 	"\x03TLE\x12\x14\n" +
 	"\x05title\x18\x01 \x01(\tR\x05title\x12\x14\n" +
 	"\x05line1\x18\x02 \x01(\tR\x05line1\x12\x14\n" +
@@ -705,20 +704,20 @@ const file_satellite_Earth_simulation_proto_rawDesc = "" +
 	"\x05decay\x18\x02 \x01(\v2+.SatelliteEarthSimulation.SimResponse.DecayR\x05decay\x12>\n" +
 	"\x04meta\x18\x03 \x01(\v2*.SatelliteEarthSimulation.SimResponse.MetaR\x04meta\x1a\xc8\x02\n" +
 	"\x05Frame\x12\x16\n" +
-	"\at_rel_s\x18\x01 \x01(\x02R\x05tRelS\x12A\n" +
+	"\at_rel_s\x18\x01 \x01(\x01R\x05tRelS\x12A\n" +
 	"\x03geo\x18\x02 \x01(\v2/.SatelliteEarthSimulation.SimResponse.Frame.GeoR\x03geo\x12A\n" +
 	"\x03mag\x18\x03 \x01(\v2/.SatelliteEarthSimulation.SimResponse.Frame.MagR\x03mag\x1aN\n" +
 	"\x03Geo\x12\x17\n" +
-	"\alat_deg\x18\x01 \x01(\x02R\x06latDeg\x12\x17\n" +
-	"\alon_deg\x18\x02 \x01(\x02R\x06lonDeg\x12\x15\n" +
-	"\x06alt_km\x18\x03 \x01(\x02R\x05altKm\x1aQ\n" +
+	"\alat_deg\x18\x01 \x01(\x01R\x06latDeg\x12\x17\n" +
+	"\alon_deg\x18\x02 \x01(\x01R\x06lonDeg\x12\x15\n" +
+	"\x06alt_km\x18\x03 \x01(\x01R\x05altKm\x1aQ\n" +
 	"\x03Mag\x12\x11\n" +
-	"\x04x_nT\x18\x01 \x01(\x02R\x03xNT\x12\x11\n" +
-	"\x04y_nT\x18\x02 \x01(\x02R\x03yNT\x12\x11\n" +
-	"\x04z_nT\x18\x03 \x01(\x02R\x03zNT\x12\x11\n" +
-	"\x04f_nT\x18\x04 \x01(\x02R\x03fNT\x1a\x88\x04\n" +
+	"\x04x_nT\x18\x01 \x01(\x01R\x03xNT\x12\x11\n" +
+	"\x04y_nT\x18\x02 \x01(\x01R\x03yNT\x12\x11\n" +
+	"\x04z_nT\x18\x03 \x01(\x01R\x03zNT\x12\x11\n" +
+	"\x04f_nT\x18\x04 \x01(\x01R\x03fNT\x1a\x88\x04\n" +
 	"\x05Decay\x12!\n" +
-	"\fthreshold_km\x18\x01 \x01(\x02R\vthresholdKm\x12W\n" +
+	"\fthreshold_km\x18\x01 \x01(\x01R\vthresholdKm\x12W\n" +
 	"\vtle_forward\x18\x02 \x01(\v26.SatelliteEarthSimulation.SimResponse.Decay.TLEForwardR\n" +
 	"tleForward\x12Z\n" +
 	"\fphysics_drag\x18\x03 \x01(\v27.SatelliteEarthSimulation.SimResponse.Decay.PhysicsDragR\vphysicsDrag\x1a\x91\x01\n" +
@@ -727,12 +726,12 @@ const file_satellite_Earth_simulation_proto_rawDesc = "" +
 	"\acrossed\x18\x01 \x01(\bR\acrossed\x12\x19\n" +
 	"\btime_utc\x18\x02 \x01(\tR\atimeUtc\x12)\n" +
 	"\x11time_from_start_s\x18\x03 \x01(\x01R\x0etimeFromStartS\x12#\n" +
-	"\runcertainty_s\x18\x04 \x01(\x02R\funcertaintyS\x1a\x92\x01\n" +
+	"\runcertainty_s\x18\x04 \x01(\x01R\funcertaintyS\x1a\x92\x01\n" +
 	"\vPhysicsDrag\x12\x18\n" +
 	"\acrossed\x18\x01 \x01(\bR\acrossed\x12\x19\n" +
 	"\btime_utc\x18\x02 \x01(\tR\atimeUtc\x12)\n" +
 	"\x11time_from_start_s\x18\x03 \x01(\x01R\x0etimeFromStartS\x12#\n" +
-	"\runcertainty_s\x18\x04 \x01(\x02R\funcertaintyS\x1a\xdb\x01\n" +
+	"\runcertainty_s\x18\x04 \x01(\x01R\funcertaintyS\x1a\xdb\x01\n" +
 	"\x04Meta\x12'\n" +
 	"\x0fpoints_returned\x18\x01 \x01(\rR\x0epointsReturned\x12)\n" +
 	"\x10points_generated\x18\x02 \x01(\rR\x0fpointsGenerated\x12%\n" +

@@ -20,9 +20,9 @@ type SimRequest struct {
 		Line2 string `json:"line2"`
 	} `json:"tle"`
 	Start_epoch_ms uint64  `json:"start_epoch_ms"`
-	Duration_s     float32 `json:"duration_s"`
-	Step_s         float32 `json:"step_s"`
-	H_fail_km      float32 `json:"h_fail_km"`
+	Duration_s     float64 `json:"duration_s"`
+	Step_s         float64 `json:"step_s"`
+	H_fail_km      float64 `json:"h_fail_km"`
 }
 
 func HealthHandler(w http.ResponseWriter, r *http.Request) {
@@ -50,7 +50,7 @@ func SimHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	conn, err := grpc.NewClient("localhost:50051", grpc.WithTransportCredentials(insecure.NewCredentials()))
+	conn, err := grpc.NewClient("0.0.0.0:50051", grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		http.Error(w, "500/Internal server error", http.StatusInternalServerError)
 		log.Printf("Connection error: %v", err)

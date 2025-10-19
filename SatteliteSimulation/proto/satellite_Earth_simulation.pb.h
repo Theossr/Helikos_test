@@ -441,31 +441,31 @@ class SimRequest final :
   void _internal_set_start_epoch_ms(uint64_t value);
   public:
 
-  // float duration_s = 3;
+  // double duration_s = 3;
   void clear_duration_s();
-  float duration_s() const;
-  void set_duration_s(float value);
+  double duration_s() const;
+  void set_duration_s(double value);
   private:
-  float _internal_duration_s() const;
-  void _internal_set_duration_s(float value);
+  double _internal_duration_s() const;
+  void _internal_set_duration_s(double value);
   public:
 
-  // float step_s = 4;
+  // double step_s = 4;
   void clear_step_s();
-  float step_s() const;
-  void set_step_s(float value);
+  double step_s() const;
+  void set_step_s(double value);
   private:
-  float _internal_step_s() const;
-  void _internal_set_step_s(float value);
+  double _internal_step_s() const;
+  void _internal_set_step_s(double value);
   public:
 
-  // float h_fail_km = 5;
+  // double h_fail_km = 5;
   void clear_h_fail_km();
-  float h_fail_km() const;
-  void set_h_fail_km(float value);
+  double h_fail_km() const;
+  void set_h_fail_km(double value);
   private:
-  float _internal_h_fail_km() const;
-  void _internal_set_h_fail_km(float value);
+  double _internal_h_fail_km() const;
+  void _internal_set_h_fail_km(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:SatelliteEarthSimulation.SimRequest)
@@ -477,9 +477,9 @@ class SimRequest final :
   typedef void DestructorSkippable_;
   ::SatelliteEarthSimulation::SimRequest_TLE* tle_;
   uint64_t start_epoch_ms_;
-  float duration_s_;
-  float step_s_;
-  float h_fail_km_;
+  double duration_s_;
+  double step_s_;
+  double h_fail_km_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_satellite_5fEarth_5fsimulation_2eproto;
 };
@@ -611,31 +611,31 @@ class SimResponse_Frame_Geo final :
     kLonDegFieldNumber = 2,
     kAltKmFieldNumber = 3,
   };
-  // float lat_deg = 1;
+  // double lat_deg = 1;
   void clear_lat_deg();
-  float lat_deg() const;
-  void set_lat_deg(float value);
+  double lat_deg() const;
+  void set_lat_deg(double value);
   private:
-  float _internal_lat_deg() const;
-  void _internal_set_lat_deg(float value);
+  double _internal_lat_deg() const;
+  void _internal_set_lat_deg(double value);
   public:
 
-  // float lon_deg = 2;
+  // double lon_deg = 2;
   void clear_lon_deg();
-  float lon_deg() const;
-  void set_lon_deg(float value);
+  double lon_deg() const;
+  void set_lon_deg(double value);
   private:
-  float _internal_lon_deg() const;
-  void _internal_set_lon_deg(float value);
+  double _internal_lon_deg() const;
+  void _internal_set_lon_deg(double value);
   public:
 
-  // float alt_km = 3;
+  // double alt_km = 3;
   void clear_alt_km();
-  float alt_km() const;
-  void set_alt_km(float value);
+  double alt_km() const;
+  void set_alt_km(double value);
   private:
-  float _internal_alt_km() const;
-  void _internal_set_alt_km(float value);
+  double _internal_alt_km() const;
+  void _internal_set_alt_km(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:SatelliteEarthSimulation.SimResponse.Frame.Geo)
@@ -645,9 +645,9 @@ class SimResponse_Frame_Geo final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  float lat_deg_;
-  float lon_deg_;
-  float alt_km_;
+  double lat_deg_;
+  double lon_deg_;
+  double alt_km_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_satellite_5fEarth_5fsimulation_2eproto;
 };
@@ -780,40 +780,40 @@ class SimResponse_Frame_Mag final :
     kZNTFieldNumber = 3,
     kFNTFieldNumber = 4,
   };
-  // float x_nT = 1;
+  // double x_nT = 1;
   void clear_x_nt();
-  float x_nt() const;
-  void set_x_nt(float value);
+  double x_nt() const;
+  void set_x_nt(double value);
   private:
-  float _internal_x_nt() const;
-  void _internal_set_x_nt(float value);
+  double _internal_x_nt() const;
+  void _internal_set_x_nt(double value);
   public:
 
-  // float y_nT = 2;
+  // double y_nT = 2;
   void clear_y_nt();
-  float y_nt() const;
-  void set_y_nt(float value);
+  double y_nt() const;
+  void set_y_nt(double value);
   private:
-  float _internal_y_nt() const;
-  void _internal_set_y_nt(float value);
+  double _internal_y_nt() const;
+  void _internal_set_y_nt(double value);
   public:
 
-  // float z_nT = 3;
+  // double z_nT = 3;
   void clear_z_nt();
-  float z_nt() const;
-  void set_z_nt(float value);
+  double z_nt() const;
+  void set_z_nt(double value);
   private:
-  float _internal_z_nt() const;
-  void _internal_set_z_nt(float value);
+  double _internal_z_nt() const;
+  void _internal_set_z_nt(double value);
   public:
 
-  // float f_nT = 4;
+  // double f_nT = 4;
   void clear_f_nt();
-  float f_nt() const;
-  void set_f_nt(float value);
+  double f_nt() const;
+  void set_f_nt(double value);
   private:
-  float _internal_f_nt() const;
-  void _internal_set_f_nt(float value);
+  double _internal_f_nt() const;
+  void _internal_set_f_nt(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:SatelliteEarthSimulation.SimResponse.Frame.Mag)
@@ -823,10 +823,10 @@ class SimResponse_Frame_Mag final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  float x_nt_;
-  float y_nt_;
-  float z_nt_;
-  float f_nt_;
+  double x_nt_;
+  double y_nt_;
+  double z_nt_;
+  double f_nt_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_satellite_5fEarth_5fsimulation_2eproto;
 };
@@ -997,13 +997,13 @@ class SimResponse_Frame final :
       ::SatelliteEarthSimulation::SimResponse_Frame_Mag* mag);
   ::SatelliteEarthSimulation::SimResponse_Frame_Mag* unsafe_arena_release_mag();
 
-  // float t_rel_s = 1;
+  // double t_rel_s = 1;
   void clear_t_rel_s();
-  float t_rel_s() const;
-  void set_t_rel_s(float value);
+  double t_rel_s() const;
+  void set_t_rel_s(double value);
   private:
-  float _internal_t_rel_s() const;
-  void _internal_set_t_rel_s(float value);
+  double _internal_t_rel_s() const;
+  void _internal_set_t_rel_s(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:SatelliteEarthSimulation.SimResponse.Frame)
@@ -1015,7 +1015,7 @@ class SimResponse_Frame final :
   typedef void DestructorSkippable_;
   ::SatelliteEarthSimulation::SimResponse_Frame_Geo* geo_;
   ::SatelliteEarthSimulation::SimResponse_Frame_Mag* mag_;
-  float t_rel_s_;
+  double t_rel_s_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_satellite_5fEarth_5fsimulation_2eproto;
 };
@@ -1144,9 +1144,9 @@ class SimResponse_Decay_TLEForward final :
 
   enum : int {
     kTimeUtcFieldNumber = 2,
-    kCrossedFieldNumber = 1,
-    kUncertaintySFieldNumber = 4,
     kTimeFromStartSFieldNumber = 3,
+    kUncertaintySFieldNumber = 4,
+    kCrossedFieldNumber = 1,
   };
   // string time_utc = 2;
   void clear_time_utc();
@@ -1162,24 +1162,6 @@ class SimResponse_Decay_TLEForward final :
   std::string* _internal_mutable_time_utc();
   public:
 
-  // bool crossed = 1;
-  void clear_crossed();
-  bool crossed() const;
-  void set_crossed(bool value);
-  private:
-  bool _internal_crossed() const;
-  void _internal_set_crossed(bool value);
-  public:
-
-  // float uncertainty_s = 4;
-  void clear_uncertainty_s();
-  float uncertainty_s() const;
-  void set_uncertainty_s(float value);
-  private:
-  float _internal_uncertainty_s() const;
-  void _internal_set_uncertainty_s(float value);
-  public:
-
   // double time_from_start_s = 3;
   void clear_time_from_start_s();
   double time_from_start_s() const;
@@ -1187,6 +1169,24 @@ class SimResponse_Decay_TLEForward final :
   private:
   double _internal_time_from_start_s() const;
   void _internal_set_time_from_start_s(double value);
+  public:
+
+  // double uncertainty_s = 4;
+  void clear_uncertainty_s();
+  double uncertainty_s() const;
+  void set_uncertainty_s(double value);
+  private:
+  double _internal_uncertainty_s() const;
+  void _internal_set_uncertainty_s(double value);
+  public:
+
+  // bool crossed = 1;
+  void clear_crossed();
+  bool crossed() const;
+  void set_crossed(bool value);
+  private:
+  bool _internal_crossed() const;
+  void _internal_set_crossed(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:SatelliteEarthSimulation.SimResponse.Decay.TLEForward)
@@ -1197,9 +1197,9 @@ class SimResponse_Decay_TLEForward final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr time_utc_;
-  bool crossed_;
-  float uncertainty_s_;
   double time_from_start_s_;
+  double uncertainty_s_;
+  bool crossed_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_satellite_5fEarth_5fsimulation_2eproto;
 };
@@ -1328,9 +1328,9 @@ class SimResponse_Decay_PhysicsDrag final :
 
   enum : int {
     kTimeUtcFieldNumber = 2,
-    kCrossedFieldNumber = 1,
-    kUncertaintySFieldNumber = 4,
     kTimeFromStartSFieldNumber = 3,
+    kUncertaintySFieldNumber = 4,
+    kCrossedFieldNumber = 1,
   };
   // string time_utc = 2;
   void clear_time_utc();
@@ -1346,24 +1346,6 @@ class SimResponse_Decay_PhysicsDrag final :
   std::string* _internal_mutable_time_utc();
   public:
 
-  // bool crossed = 1;
-  void clear_crossed();
-  bool crossed() const;
-  void set_crossed(bool value);
-  private:
-  bool _internal_crossed() const;
-  void _internal_set_crossed(bool value);
-  public:
-
-  // float uncertainty_s = 4;
-  void clear_uncertainty_s();
-  float uncertainty_s() const;
-  void set_uncertainty_s(float value);
-  private:
-  float _internal_uncertainty_s() const;
-  void _internal_set_uncertainty_s(float value);
-  public:
-
   // double time_from_start_s = 3;
   void clear_time_from_start_s();
   double time_from_start_s() const;
@@ -1371,6 +1353,24 @@ class SimResponse_Decay_PhysicsDrag final :
   private:
   double _internal_time_from_start_s() const;
   void _internal_set_time_from_start_s(double value);
+  public:
+
+  // double uncertainty_s = 4;
+  void clear_uncertainty_s();
+  double uncertainty_s() const;
+  void set_uncertainty_s(double value);
+  private:
+  double _internal_uncertainty_s() const;
+  void _internal_set_uncertainty_s(double value);
+  public:
+
+  // bool crossed = 1;
+  void clear_crossed();
+  bool crossed() const;
+  void set_crossed(bool value);
+  private:
+  bool _internal_crossed() const;
+  void _internal_set_crossed(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:SatelliteEarthSimulation.SimResponse.Decay.PhysicsDrag)
@@ -1381,9 +1381,9 @@ class SimResponse_Decay_PhysicsDrag final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr time_utc_;
-  bool crossed_;
-  float uncertainty_s_;
   double time_from_start_s_;
+  double uncertainty_s_;
+  bool crossed_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_satellite_5fEarth_5fsimulation_2eproto;
 };
@@ -1554,13 +1554,13 @@ class SimResponse_Decay final :
       ::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag* physics_drag);
   ::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag* unsafe_arena_release_physics_drag();
 
-  // float threshold_km = 1;
+  // double threshold_km = 1;
   void clear_threshold_km();
-  float threshold_km() const;
-  void set_threshold_km(float value);
+  double threshold_km() const;
+  void set_threshold_km(double value);
   private:
-  float _internal_threshold_km() const;
-  void _internal_set_threshold_km(float value);
+  double _internal_threshold_km() const;
+  void _internal_set_threshold_km(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:SatelliteEarthSimulation.SimResponse.Decay)
@@ -1572,7 +1572,7 @@ class SimResponse_Decay final :
   typedef void DestructorSkippable_;
   ::SatelliteEarthSimulation::SimResponse_Decay_TLEForward* tle_forward_;
   ::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag* physics_drag_;
-  float threshold_km_;
+  double threshold_km_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_satellite_5fEarth_5fsimulation_2eproto;
 };
@@ -2248,62 +2248,62 @@ inline void SimRequest::set_start_epoch_ms(uint64_t value) {
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimRequest.start_epoch_ms)
 }
 
-// float duration_s = 3;
+// double duration_s = 3;
 inline void SimRequest::clear_duration_s() {
   duration_s_ = 0;
 }
-inline float SimRequest::_internal_duration_s() const {
+inline double SimRequest::_internal_duration_s() const {
   return duration_s_;
 }
-inline float SimRequest::duration_s() const {
+inline double SimRequest::duration_s() const {
   // @@protoc_insertion_point(field_get:SatelliteEarthSimulation.SimRequest.duration_s)
   return _internal_duration_s();
 }
-inline void SimRequest::_internal_set_duration_s(float value) {
+inline void SimRequest::_internal_set_duration_s(double value) {
   
   duration_s_ = value;
 }
-inline void SimRequest::set_duration_s(float value) {
+inline void SimRequest::set_duration_s(double value) {
   _internal_set_duration_s(value);
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimRequest.duration_s)
 }
 
-// float step_s = 4;
+// double step_s = 4;
 inline void SimRequest::clear_step_s() {
   step_s_ = 0;
 }
-inline float SimRequest::_internal_step_s() const {
+inline double SimRequest::_internal_step_s() const {
   return step_s_;
 }
-inline float SimRequest::step_s() const {
+inline double SimRequest::step_s() const {
   // @@protoc_insertion_point(field_get:SatelliteEarthSimulation.SimRequest.step_s)
   return _internal_step_s();
 }
-inline void SimRequest::_internal_set_step_s(float value) {
+inline void SimRequest::_internal_set_step_s(double value) {
   
   step_s_ = value;
 }
-inline void SimRequest::set_step_s(float value) {
+inline void SimRequest::set_step_s(double value) {
   _internal_set_step_s(value);
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimRequest.step_s)
 }
 
-// float h_fail_km = 5;
+// double h_fail_km = 5;
 inline void SimRequest::clear_h_fail_km() {
   h_fail_km_ = 0;
 }
-inline float SimRequest::_internal_h_fail_km() const {
+inline double SimRequest::_internal_h_fail_km() const {
   return h_fail_km_;
 }
-inline float SimRequest::h_fail_km() const {
+inline double SimRequest::h_fail_km() const {
   // @@protoc_insertion_point(field_get:SatelliteEarthSimulation.SimRequest.h_fail_km)
   return _internal_h_fail_km();
 }
-inline void SimRequest::_internal_set_h_fail_km(float value) {
+inline void SimRequest::_internal_set_h_fail_km(double value) {
   
   h_fail_km_ = value;
 }
-inline void SimRequest::set_h_fail_km(float value) {
+inline void SimRequest::set_h_fail_km(double value) {
   _internal_set_h_fail_km(value);
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimRequest.h_fail_km)
 }
@@ -2312,62 +2312,62 @@ inline void SimRequest::set_h_fail_km(float value) {
 
 // SimResponse_Frame_Geo
 
-// float lat_deg = 1;
+// double lat_deg = 1;
 inline void SimResponse_Frame_Geo::clear_lat_deg() {
   lat_deg_ = 0;
 }
-inline float SimResponse_Frame_Geo::_internal_lat_deg() const {
+inline double SimResponse_Frame_Geo::_internal_lat_deg() const {
   return lat_deg_;
 }
-inline float SimResponse_Frame_Geo::lat_deg() const {
+inline double SimResponse_Frame_Geo::lat_deg() const {
   // @@protoc_insertion_point(field_get:SatelliteEarthSimulation.SimResponse.Frame.Geo.lat_deg)
   return _internal_lat_deg();
 }
-inline void SimResponse_Frame_Geo::_internal_set_lat_deg(float value) {
+inline void SimResponse_Frame_Geo::_internal_set_lat_deg(double value) {
   
   lat_deg_ = value;
 }
-inline void SimResponse_Frame_Geo::set_lat_deg(float value) {
+inline void SimResponse_Frame_Geo::set_lat_deg(double value) {
   _internal_set_lat_deg(value);
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimResponse.Frame.Geo.lat_deg)
 }
 
-// float lon_deg = 2;
+// double lon_deg = 2;
 inline void SimResponse_Frame_Geo::clear_lon_deg() {
   lon_deg_ = 0;
 }
-inline float SimResponse_Frame_Geo::_internal_lon_deg() const {
+inline double SimResponse_Frame_Geo::_internal_lon_deg() const {
   return lon_deg_;
 }
-inline float SimResponse_Frame_Geo::lon_deg() const {
+inline double SimResponse_Frame_Geo::lon_deg() const {
   // @@protoc_insertion_point(field_get:SatelliteEarthSimulation.SimResponse.Frame.Geo.lon_deg)
   return _internal_lon_deg();
 }
-inline void SimResponse_Frame_Geo::_internal_set_lon_deg(float value) {
+inline void SimResponse_Frame_Geo::_internal_set_lon_deg(double value) {
   
   lon_deg_ = value;
 }
-inline void SimResponse_Frame_Geo::set_lon_deg(float value) {
+inline void SimResponse_Frame_Geo::set_lon_deg(double value) {
   _internal_set_lon_deg(value);
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimResponse.Frame.Geo.lon_deg)
 }
 
-// float alt_km = 3;
+// double alt_km = 3;
 inline void SimResponse_Frame_Geo::clear_alt_km() {
   alt_km_ = 0;
 }
-inline float SimResponse_Frame_Geo::_internal_alt_km() const {
+inline double SimResponse_Frame_Geo::_internal_alt_km() const {
   return alt_km_;
 }
-inline float SimResponse_Frame_Geo::alt_km() const {
+inline double SimResponse_Frame_Geo::alt_km() const {
   // @@protoc_insertion_point(field_get:SatelliteEarthSimulation.SimResponse.Frame.Geo.alt_km)
   return _internal_alt_km();
 }
-inline void SimResponse_Frame_Geo::_internal_set_alt_km(float value) {
+inline void SimResponse_Frame_Geo::_internal_set_alt_km(double value) {
   
   alt_km_ = value;
 }
-inline void SimResponse_Frame_Geo::set_alt_km(float value) {
+inline void SimResponse_Frame_Geo::set_alt_km(double value) {
   _internal_set_alt_km(value);
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimResponse.Frame.Geo.alt_km)
 }
@@ -2376,82 +2376,82 @@ inline void SimResponse_Frame_Geo::set_alt_km(float value) {
 
 // SimResponse_Frame_Mag
 
-// float x_nT = 1;
+// double x_nT = 1;
 inline void SimResponse_Frame_Mag::clear_x_nt() {
   x_nt_ = 0;
 }
-inline float SimResponse_Frame_Mag::_internal_x_nt() const {
+inline double SimResponse_Frame_Mag::_internal_x_nt() const {
   return x_nt_;
 }
-inline float SimResponse_Frame_Mag::x_nt() const {
+inline double SimResponse_Frame_Mag::x_nt() const {
   // @@protoc_insertion_point(field_get:SatelliteEarthSimulation.SimResponse.Frame.Mag.x_nT)
   return _internal_x_nt();
 }
-inline void SimResponse_Frame_Mag::_internal_set_x_nt(float value) {
+inline void SimResponse_Frame_Mag::_internal_set_x_nt(double value) {
   
   x_nt_ = value;
 }
-inline void SimResponse_Frame_Mag::set_x_nt(float value) {
+inline void SimResponse_Frame_Mag::set_x_nt(double value) {
   _internal_set_x_nt(value);
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimResponse.Frame.Mag.x_nT)
 }
 
-// float y_nT = 2;
+// double y_nT = 2;
 inline void SimResponse_Frame_Mag::clear_y_nt() {
   y_nt_ = 0;
 }
-inline float SimResponse_Frame_Mag::_internal_y_nt() const {
+inline double SimResponse_Frame_Mag::_internal_y_nt() const {
   return y_nt_;
 }
-inline float SimResponse_Frame_Mag::y_nt() const {
+inline double SimResponse_Frame_Mag::y_nt() const {
   // @@protoc_insertion_point(field_get:SatelliteEarthSimulation.SimResponse.Frame.Mag.y_nT)
   return _internal_y_nt();
 }
-inline void SimResponse_Frame_Mag::_internal_set_y_nt(float value) {
+inline void SimResponse_Frame_Mag::_internal_set_y_nt(double value) {
   
   y_nt_ = value;
 }
-inline void SimResponse_Frame_Mag::set_y_nt(float value) {
+inline void SimResponse_Frame_Mag::set_y_nt(double value) {
   _internal_set_y_nt(value);
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimResponse.Frame.Mag.y_nT)
 }
 
-// float z_nT = 3;
+// double z_nT = 3;
 inline void SimResponse_Frame_Mag::clear_z_nt() {
   z_nt_ = 0;
 }
-inline float SimResponse_Frame_Mag::_internal_z_nt() const {
+inline double SimResponse_Frame_Mag::_internal_z_nt() const {
   return z_nt_;
 }
-inline float SimResponse_Frame_Mag::z_nt() const {
+inline double SimResponse_Frame_Mag::z_nt() const {
   // @@protoc_insertion_point(field_get:SatelliteEarthSimulation.SimResponse.Frame.Mag.z_nT)
   return _internal_z_nt();
 }
-inline void SimResponse_Frame_Mag::_internal_set_z_nt(float value) {
+inline void SimResponse_Frame_Mag::_internal_set_z_nt(double value) {
   
   z_nt_ = value;
 }
-inline void SimResponse_Frame_Mag::set_z_nt(float value) {
+inline void SimResponse_Frame_Mag::set_z_nt(double value) {
   _internal_set_z_nt(value);
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimResponse.Frame.Mag.z_nT)
 }
 
-// float f_nT = 4;
+// double f_nT = 4;
 inline void SimResponse_Frame_Mag::clear_f_nt() {
   f_nt_ = 0;
 }
-inline float SimResponse_Frame_Mag::_internal_f_nt() const {
+inline double SimResponse_Frame_Mag::_internal_f_nt() const {
   return f_nt_;
 }
-inline float SimResponse_Frame_Mag::f_nt() const {
+inline double SimResponse_Frame_Mag::f_nt() const {
   // @@protoc_insertion_point(field_get:SatelliteEarthSimulation.SimResponse.Frame.Mag.f_nT)
   return _internal_f_nt();
 }
-inline void SimResponse_Frame_Mag::_internal_set_f_nt(float value) {
+inline void SimResponse_Frame_Mag::_internal_set_f_nt(double value) {
   
   f_nt_ = value;
 }
-inline void SimResponse_Frame_Mag::set_f_nt(float value) {
+inline void SimResponse_Frame_Mag::set_f_nt(double value) {
   _internal_set_f_nt(value);
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimResponse.Frame.Mag.f_nT)
 }
@@ -2460,22 +2460,22 @@ inline void SimResponse_Frame_Mag::set_f_nt(float value) {
 
 // SimResponse_Frame
 
-// float t_rel_s = 1;
+// double t_rel_s = 1;
 inline void SimResponse_Frame::clear_t_rel_s() {
   t_rel_s_ = 0;
 }
-inline float SimResponse_Frame::_internal_t_rel_s() const {
+inline double SimResponse_Frame::_internal_t_rel_s() const {
   return t_rel_s_;
 }
-inline float SimResponse_Frame::t_rel_s() const {
+inline double SimResponse_Frame::t_rel_s() const {
   // @@protoc_insertion_point(field_get:SatelliteEarthSimulation.SimResponse.Frame.t_rel_s)
   return _internal_t_rel_s();
 }
-inline void SimResponse_Frame::_internal_set_t_rel_s(float value) {
+inline void SimResponse_Frame::_internal_set_t_rel_s(double value) {
   
   t_rel_s_ = value;
 }
-inline void SimResponse_Frame::set_t_rel_s(float value) {
+inline void SimResponse_Frame::set_t_rel_s(double value) {
   _internal_set_t_rel_s(value);
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimResponse.Frame.t_rel_s)
 }
@@ -2755,22 +2755,22 @@ inline void SimResponse_Decay_TLEForward::set_time_from_start_s(double value) {
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimResponse.Decay.TLEForward.time_from_start_s)
 }
 
-// float uncertainty_s = 4;
+// double uncertainty_s = 4;
 inline void SimResponse_Decay_TLEForward::clear_uncertainty_s() {
   uncertainty_s_ = 0;
 }
-inline float SimResponse_Decay_TLEForward::_internal_uncertainty_s() const {
+inline double SimResponse_Decay_TLEForward::_internal_uncertainty_s() const {
   return uncertainty_s_;
 }
-inline float SimResponse_Decay_TLEForward::uncertainty_s() const {
+inline double SimResponse_Decay_TLEForward::uncertainty_s() const {
   // @@protoc_insertion_point(field_get:SatelliteEarthSimulation.SimResponse.Decay.TLEForward.uncertainty_s)
   return _internal_uncertainty_s();
 }
-inline void SimResponse_Decay_TLEForward::_internal_set_uncertainty_s(float value) {
+inline void SimResponse_Decay_TLEForward::_internal_set_uncertainty_s(double value) {
   
   uncertainty_s_ = value;
 }
-inline void SimResponse_Decay_TLEForward::set_uncertainty_s(float value) {
+inline void SimResponse_Decay_TLEForward::set_uncertainty_s(double value) {
   _internal_set_uncertainty_s(value);
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimResponse.Decay.TLEForward.uncertainty_s)
 }
@@ -2870,22 +2870,22 @@ inline void SimResponse_Decay_PhysicsDrag::set_time_from_start_s(double value) {
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimResponse.Decay.PhysicsDrag.time_from_start_s)
 }
 
-// float uncertainty_s = 4;
+// double uncertainty_s = 4;
 inline void SimResponse_Decay_PhysicsDrag::clear_uncertainty_s() {
   uncertainty_s_ = 0;
 }
-inline float SimResponse_Decay_PhysicsDrag::_internal_uncertainty_s() const {
+inline double SimResponse_Decay_PhysicsDrag::_internal_uncertainty_s() const {
   return uncertainty_s_;
 }
-inline float SimResponse_Decay_PhysicsDrag::uncertainty_s() const {
+inline double SimResponse_Decay_PhysicsDrag::uncertainty_s() const {
   // @@protoc_insertion_point(field_get:SatelliteEarthSimulation.SimResponse.Decay.PhysicsDrag.uncertainty_s)
   return _internal_uncertainty_s();
 }
-inline void SimResponse_Decay_PhysicsDrag::_internal_set_uncertainty_s(float value) {
+inline void SimResponse_Decay_PhysicsDrag::_internal_set_uncertainty_s(double value) {
   
   uncertainty_s_ = value;
 }
-inline void SimResponse_Decay_PhysicsDrag::set_uncertainty_s(float value) {
+inline void SimResponse_Decay_PhysicsDrag::set_uncertainty_s(double value) {
   _internal_set_uncertainty_s(value);
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimResponse.Decay.PhysicsDrag.uncertainty_s)
 }
@@ -2894,22 +2894,22 @@ inline void SimResponse_Decay_PhysicsDrag::set_uncertainty_s(float value) {
 
 // SimResponse_Decay
 
-// float threshold_km = 1;
+// double threshold_km = 1;
 inline void SimResponse_Decay::clear_threshold_km() {
   threshold_km_ = 0;
 }
-inline float SimResponse_Decay::_internal_threshold_km() const {
+inline double SimResponse_Decay::_internal_threshold_km() const {
   return threshold_km_;
 }
-inline float SimResponse_Decay::threshold_km() const {
+inline double SimResponse_Decay::threshold_km() const {
   // @@protoc_insertion_point(field_get:SatelliteEarthSimulation.SimResponse.Decay.threshold_km)
   return _internal_threshold_km();
 }
-inline void SimResponse_Decay::_internal_set_threshold_km(float value) {
+inline void SimResponse_Decay::_internal_set_threshold_km(double value) {
   
   threshold_km_ = value;
 }
-inline void SimResponse_Decay::set_threshold_km(float value) {
+inline void SimResponse_Decay::set_threshold_km(double value) {
   _internal_set_threshold_km(value);
   // @@protoc_insertion_point(field_set:SatelliteEarthSimulation.SimResponse.Decay.threshold_km)
 }

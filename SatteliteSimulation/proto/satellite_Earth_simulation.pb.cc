@@ -93,9 +93,9 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SimResponse_FrameDefaultTypeInt
 constexpr SimResponse_Decay_TLEForward::SimResponse_Decay_TLEForward(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : time_utc_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , crossed_(false)
+  , time_from_start_s_(0)
   , uncertainty_s_(0)
-  , time_from_start_s_(0){}
+  , crossed_(false){}
 struct SimResponse_Decay_TLEForwardDefaultTypeInternal {
   constexpr SimResponse_Decay_TLEForwardDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -108,9 +108,9 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SimResponse_Decay_TLEForwardDef
 constexpr SimResponse_Decay_PhysicsDrag::SimResponse_Decay_PhysicsDrag(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : time_utc_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , crossed_(false)
+  , time_from_start_s_(0)
   , uncertainty_s_(0)
-  , time_from_start_s_(0){}
+  , crossed_(false){}
 struct SimResponse_Decay_PhysicsDragDefaultTypeInternal {
   constexpr SimResponse_Decay_PhysicsDragDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -299,30 +299,30 @@ const char descriptor_table_protodef_satellite_5fEarth_5fsimulation_2eproto[] PR
   "lliteEarthSimulation\"\306\001\n\nSimRequest\0225\n\003t"
   "le\030\001 \001(\0132(.SatelliteEarthSimulation.SimR"
   "equest.TLE\022\026\n\016start_epoch_ms\030\002 \001(\004\022\022\n\ndu"
-  "ration_s\030\003 \001(\002\022\016\n\006step_s\030\004 \001(\002\022\021\n\th_fail"
-  "_km\030\005 \001(\002\0322\n\003TLE\022\r\n\005title\030\001 \001(\t\022\r\n\005line1"
+  "ration_s\030\003 \001(\001\022\016\n\006step_s\030\004 \001(\001\022\021\n\th_fail"
+  "_km\030\005 \001(\001\0322\n\003TLE\022\r\n\005title\030\001 \001(\t\022\r\n\005line1"
   "\030\002 \001(\t\022\r\n\005line2\030\003 \001(\t\"\336\007\n\013SimResponse\022;\n"
   "\006frames\030\001 \003(\0132+.SatelliteEarthSimulation"
   ".SimResponse.Frame\022:\n\005decay\030\002 \001(\0132+.Sate"
   "lliteEarthSimulation.SimResponse.Decay\0228"
   "\n\004meta\030\003 \001(\0132*.SatelliteEarthSimulation."
   "SimResponse.Meta\032\214\002\n\005Frame\022\017\n\007t_rel_s\030\001 "
-  "\001(\002\022<\n\003geo\030\002 \001(\0132/.SatelliteEarthSimulat"
+  "\001(\001\022<\n\003geo\030\002 \001(\0132/.SatelliteEarthSimulat"
   "ion.SimResponse.Frame.Geo\022<\n\003mag\030\003 \001(\0132/"
   ".SatelliteEarthSimulation.SimResponse.Fr"
-  "ame.Mag\0327\n\003Geo\022\017\n\007lat_deg\030\001 \001(\002\022\017\n\007lon_d"
-  "eg\030\002 \001(\002\022\016\n\006alt_km\030\003 \001(\002\032=\n\003Mag\022\014\n\004x_nT\030"
-  "\001 \001(\002\022\014\n\004y_nT\030\002 \001(\002\022\014\n\004z_nT\030\003 \001(\002\022\014\n\004f_n"
-  "T\030\004 \001(\002\032\200\003\n\005Decay\022\024\n\014threshold_km\030\001 \001(\002\022"
+  "ame.Mag\0327\n\003Geo\022\017\n\007lat_deg\030\001 \001(\001\022\017\n\007lon_d"
+  "eg\030\002 \001(\001\022\016\n\006alt_km\030\003 \001(\001\032=\n\003Mag\022\014\n\004x_nT\030"
+  "\001 \001(\001\022\014\n\004y_nT\030\002 \001(\001\022\014\n\004z_nT\030\003 \001(\001\022\014\n\004f_n"
+  "T\030\004 \001(\001\032\200\003\n\005Decay\022\024\n\014threshold_km\030\001 \001(\001\022"
   "K\n\013tle_forward\030\002 \001(\01326.SatelliteEarthSim"
   "ulation.SimResponse.Decay.TLEForward\022M\n\014"
   "physics_drag\030\003 \001(\01327.SatelliteEarthSimul"
   "ation.SimResponse.Decay.PhysicsDrag\032a\n\nT"
   "LEForward\022\017\n\007crossed\030\001 \001(\010\022\020\n\010time_utc\030\002"
   " \001(\t\022\031\n\021time_from_start_s\030\003 \001(\001\022\025\n\runcer"
-  "tainty_s\030\004 \001(\002\032b\n\013PhysicsDrag\022\017\n\007crossed"
+  "tainty_s\030\004 \001(\001\032b\n\013PhysicsDrag\022\017\n\007crossed"
   "\030\001 \001(\010\022\020\n\010time_utc\030\002 \001(\t\022\031\n\021time_from_st"
-  "art_s\030\003 \001(\001\022\025\n\runcertainty_s\030\004 \001(\002\032\211\001\n\004M"
+  "art_s\030\003 \001(\001\022\025\n\runcertainty_s\030\004 \001(\001\032\211\001\n\004M"
   "eta\022\027\n\017points_returned\030\001 \001(\r\022\030\n\020points_g"
   "enerated\030\002 \001(\r\022\026\n\016skipped_frames\030\003 \001(\r\022\025"
   "\n\rtle_epoch_utc\030\004 \001(\t\022\037\n\027out_of_tle_epoc"
@@ -749,27 +749,27 @@ const char* SimRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
         } else
           goto handle_unusual;
         continue;
-      // float duration_s = 3;
+      // double duration_s = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
-          duration_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
-          ptr += sizeof(float);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
+          duration_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // float step_s = 4;
+      // double step_s = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 37)) {
-          step_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
-          ptr += sizeof(float);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
+          step_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // float h_fail_km = 5;
+      // double h_fail_km = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 45)) {
-          h_fail_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
-          ptr += sizeof(float);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 41)) {
+          h_fail_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
@@ -816,34 +816,34 @@ uint8_t* SimRequest::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(2, this->_internal_start_epoch_ms(), target);
   }
 
-  // float duration_s = 3;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_duration_s = this->_internal_duration_s();
-  uint32_t raw_duration_s;
+  // double duration_s = 3;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_duration_s = this->_internal_duration_s();
+  uint64_t raw_duration_s;
   memcpy(&raw_duration_s, &tmp_duration_s, sizeof(tmp_duration_s));
   if (raw_duration_s != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_duration_s(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_duration_s(), target);
   }
 
-  // float step_s = 4;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_step_s = this->_internal_step_s();
-  uint32_t raw_step_s;
+  // double step_s = 4;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_step_s = this->_internal_step_s();
+  uint64_t raw_step_s;
   memcpy(&raw_step_s, &tmp_step_s, sizeof(tmp_step_s));
   if (raw_step_s != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->_internal_step_s(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(4, this->_internal_step_s(), target);
   }
 
-  // float h_fail_km = 5;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_h_fail_km = this->_internal_h_fail_km();
-  uint32_t raw_h_fail_km;
+  // double h_fail_km = 5;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_h_fail_km = this->_internal_h_fail_km();
+  uint64_t raw_h_fail_km;
   memcpy(&raw_h_fail_km, &tmp_h_fail_km, sizeof(tmp_h_fail_km));
   if (raw_h_fail_km != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->_internal_h_fail_km(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(5, this->_internal_h_fail_km(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -874,31 +874,31 @@ size_t SimRequest::ByteSizeLong() const {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64SizePlusOne(this->_internal_start_epoch_ms());
   }
 
-  // float duration_s = 3;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_duration_s = this->_internal_duration_s();
-  uint32_t raw_duration_s;
+  // double duration_s = 3;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_duration_s = this->_internal_duration_s();
+  uint64_t raw_duration_s;
   memcpy(&raw_duration_s, &tmp_duration_s, sizeof(tmp_duration_s));
   if (raw_duration_s != 0) {
-    total_size += 1 + 4;
+    total_size += 1 + 8;
   }
 
-  // float step_s = 4;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_step_s = this->_internal_step_s();
-  uint32_t raw_step_s;
+  // double step_s = 4;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_step_s = this->_internal_step_s();
+  uint64_t raw_step_s;
   memcpy(&raw_step_s, &tmp_step_s, sizeof(tmp_step_s));
   if (raw_step_s != 0) {
-    total_size += 1 + 4;
+    total_size += 1 + 8;
   }
 
-  // float h_fail_km = 5;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_h_fail_km = this->_internal_h_fail_km();
-  uint32_t raw_h_fail_km;
+  // double h_fail_km = 5;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_h_fail_km = this->_internal_h_fail_km();
+  uint64_t raw_h_fail_km;
   memcpy(&raw_h_fail_km, &tmp_h_fail_km, sizeof(tmp_h_fail_km));
   if (raw_h_fail_km != 0) {
-    total_size += 1 + 4;
+    total_size += 1 + 8;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
@@ -929,23 +929,23 @@ void SimRequest::MergeFrom(const SimRequest& from) {
   if (from._internal_start_epoch_ms() != 0) {
     _internal_set_start_epoch_ms(from._internal_start_epoch_ms());
   }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_duration_s = from._internal_duration_s();
-  uint32_t raw_duration_s;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_duration_s = from._internal_duration_s();
+  uint64_t raw_duration_s;
   memcpy(&raw_duration_s, &tmp_duration_s, sizeof(tmp_duration_s));
   if (raw_duration_s != 0) {
     _internal_set_duration_s(from._internal_duration_s());
   }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_step_s = from._internal_step_s();
-  uint32_t raw_step_s;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_step_s = from._internal_step_s();
+  uint64_t raw_step_s;
   memcpy(&raw_step_s, &tmp_step_s, sizeof(tmp_step_s));
   if (raw_step_s != 0) {
     _internal_set_step_s(from._internal_step_s());
   }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_h_fail_km = from._internal_h_fail_km();
-  uint32_t raw_h_fail_km;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_h_fail_km = from._internal_h_fail_km();
+  uint64_t raw_h_fail_km;
   memcpy(&raw_h_fail_km, &tmp_h_fail_km, sizeof(tmp_h_fail_km));
   if (raw_h_fail_km != 0) {
     _internal_set_h_fail_km(from._internal_h_fail_km());
@@ -1051,27 +1051,27 @@ const char* SimResponse_Frame_Geo::_InternalParse(const char* ptr, ::PROTOBUF_NA
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // float lat_deg = 1;
+      // double lat_deg = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 13)) {
-          lat_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
-          ptr += sizeof(float);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
+          lat_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // float lon_deg = 2;
+      // double lon_deg = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
-          lon_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
-          ptr += sizeof(float);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
+          lon_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // float alt_km = 3;
+      // double alt_km = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
-          alt_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
-          ptr += sizeof(float);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
+          alt_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
@@ -1104,34 +1104,34 @@ uint8_t* SimResponse_Frame_Geo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // float lat_deg = 1;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_lat_deg = this->_internal_lat_deg();
-  uint32_t raw_lat_deg;
+  // double lat_deg = 1;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_lat_deg = this->_internal_lat_deg();
+  uint64_t raw_lat_deg;
   memcpy(&raw_lat_deg, &tmp_lat_deg, sizeof(tmp_lat_deg));
   if (raw_lat_deg != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_lat_deg(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_lat_deg(), target);
   }
 
-  // float lon_deg = 2;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_lon_deg = this->_internal_lon_deg();
-  uint32_t raw_lon_deg;
+  // double lon_deg = 2;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_lon_deg = this->_internal_lon_deg();
+  uint64_t raw_lon_deg;
   memcpy(&raw_lon_deg, &tmp_lon_deg, sizeof(tmp_lon_deg));
   if (raw_lon_deg != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_lon_deg(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_lon_deg(), target);
   }
 
-  // float alt_km = 3;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_alt_km = this->_internal_alt_km();
-  uint32_t raw_alt_km;
+  // double alt_km = 3;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_alt_km = this->_internal_alt_km();
+  uint64_t raw_alt_km;
   memcpy(&raw_alt_km, &tmp_alt_km, sizeof(tmp_alt_km));
   if (raw_alt_km != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_alt_km(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_alt_km(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1150,31 +1150,31 @@ size_t SimResponse_Frame_Geo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // float lat_deg = 1;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_lat_deg = this->_internal_lat_deg();
-  uint32_t raw_lat_deg;
+  // double lat_deg = 1;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_lat_deg = this->_internal_lat_deg();
+  uint64_t raw_lat_deg;
   memcpy(&raw_lat_deg, &tmp_lat_deg, sizeof(tmp_lat_deg));
   if (raw_lat_deg != 0) {
-    total_size += 1 + 4;
+    total_size += 1 + 8;
   }
 
-  // float lon_deg = 2;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_lon_deg = this->_internal_lon_deg();
-  uint32_t raw_lon_deg;
+  // double lon_deg = 2;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_lon_deg = this->_internal_lon_deg();
+  uint64_t raw_lon_deg;
   memcpy(&raw_lon_deg, &tmp_lon_deg, sizeof(tmp_lon_deg));
   if (raw_lon_deg != 0) {
-    total_size += 1 + 4;
+    total_size += 1 + 8;
   }
 
-  // float alt_km = 3;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_alt_km = this->_internal_alt_km();
-  uint32_t raw_alt_km;
+  // double alt_km = 3;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_alt_km = this->_internal_alt_km();
+  uint64_t raw_alt_km;
   memcpy(&raw_alt_km, &tmp_alt_km, sizeof(tmp_alt_km));
   if (raw_alt_km != 0) {
-    total_size += 1 + 4;
+    total_size += 1 + 8;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
@@ -1199,23 +1199,23 @@ void SimResponse_Frame_Geo::MergeFrom(const SimResponse_Frame_Geo& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_lat_deg = from._internal_lat_deg();
-  uint32_t raw_lat_deg;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_lat_deg = from._internal_lat_deg();
+  uint64_t raw_lat_deg;
   memcpy(&raw_lat_deg, &tmp_lat_deg, sizeof(tmp_lat_deg));
   if (raw_lat_deg != 0) {
     _internal_set_lat_deg(from._internal_lat_deg());
   }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_lon_deg = from._internal_lon_deg();
-  uint32_t raw_lon_deg;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_lon_deg = from._internal_lon_deg();
+  uint64_t raw_lon_deg;
   memcpy(&raw_lon_deg, &tmp_lon_deg, sizeof(tmp_lon_deg));
   if (raw_lon_deg != 0) {
     _internal_set_lon_deg(from._internal_lon_deg());
   }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_alt_km = from._internal_alt_km();
-  uint32_t raw_alt_km;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_alt_km = from._internal_alt_km();
+  uint64_t raw_alt_km;
   memcpy(&raw_alt_km, &tmp_alt_km, sizeof(tmp_alt_km));
   if (raw_alt_km != 0) {
     _internal_set_alt_km(from._internal_alt_km());
@@ -1321,35 +1321,35 @@ const char* SimResponse_Frame_Mag::_InternalParse(const char* ptr, ::PROTOBUF_NA
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // float x_nT = 1;
+      // double x_nT = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 13)) {
-          x_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
-          ptr += sizeof(float);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
+          x_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // float y_nT = 2;
+      // double y_nT = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
-          y_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
-          ptr += sizeof(float);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
+          y_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // float z_nT = 3;
+      // double z_nT = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
-          z_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
-          ptr += sizeof(float);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
+          z_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // float f_nT = 4;
+      // double f_nT = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 37)) {
-          f_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
-          ptr += sizeof(float);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
+          f_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
@@ -1382,44 +1382,44 @@ uint8_t* SimResponse_Frame_Mag::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // float x_nT = 1;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_x_nt = this->_internal_x_nt();
-  uint32_t raw_x_nt;
+  // double x_nT = 1;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_x_nt = this->_internal_x_nt();
+  uint64_t raw_x_nt;
   memcpy(&raw_x_nt, &tmp_x_nt, sizeof(tmp_x_nt));
   if (raw_x_nt != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_x_nt(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_x_nt(), target);
   }
 
-  // float y_nT = 2;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_y_nt = this->_internal_y_nt();
-  uint32_t raw_y_nt;
+  // double y_nT = 2;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_y_nt = this->_internal_y_nt();
+  uint64_t raw_y_nt;
   memcpy(&raw_y_nt, &tmp_y_nt, sizeof(tmp_y_nt));
   if (raw_y_nt != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_y_nt(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_y_nt(), target);
   }
 
-  // float z_nT = 3;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_z_nt = this->_internal_z_nt();
-  uint32_t raw_z_nt;
+  // double z_nT = 3;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_z_nt = this->_internal_z_nt();
+  uint64_t raw_z_nt;
   memcpy(&raw_z_nt, &tmp_z_nt, sizeof(tmp_z_nt));
   if (raw_z_nt != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_z_nt(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_z_nt(), target);
   }
 
-  // float f_nT = 4;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_f_nt = this->_internal_f_nt();
-  uint32_t raw_f_nt;
+  // double f_nT = 4;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_f_nt = this->_internal_f_nt();
+  uint64_t raw_f_nt;
   memcpy(&raw_f_nt, &tmp_f_nt, sizeof(tmp_f_nt));
   if (raw_f_nt != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->_internal_f_nt(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(4, this->_internal_f_nt(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1438,40 +1438,40 @@ size_t SimResponse_Frame_Mag::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // float x_nT = 1;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_x_nt = this->_internal_x_nt();
-  uint32_t raw_x_nt;
+  // double x_nT = 1;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_x_nt = this->_internal_x_nt();
+  uint64_t raw_x_nt;
   memcpy(&raw_x_nt, &tmp_x_nt, sizeof(tmp_x_nt));
   if (raw_x_nt != 0) {
-    total_size += 1 + 4;
+    total_size += 1 + 8;
   }
 
-  // float y_nT = 2;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_y_nt = this->_internal_y_nt();
-  uint32_t raw_y_nt;
+  // double y_nT = 2;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_y_nt = this->_internal_y_nt();
+  uint64_t raw_y_nt;
   memcpy(&raw_y_nt, &tmp_y_nt, sizeof(tmp_y_nt));
   if (raw_y_nt != 0) {
-    total_size += 1 + 4;
+    total_size += 1 + 8;
   }
 
-  // float z_nT = 3;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_z_nt = this->_internal_z_nt();
-  uint32_t raw_z_nt;
+  // double z_nT = 3;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_z_nt = this->_internal_z_nt();
+  uint64_t raw_z_nt;
   memcpy(&raw_z_nt, &tmp_z_nt, sizeof(tmp_z_nt));
   if (raw_z_nt != 0) {
-    total_size += 1 + 4;
+    total_size += 1 + 8;
   }
 
-  // float f_nT = 4;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_f_nt = this->_internal_f_nt();
-  uint32_t raw_f_nt;
+  // double f_nT = 4;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_f_nt = this->_internal_f_nt();
+  uint64_t raw_f_nt;
   memcpy(&raw_f_nt, &tmp_f_nt, sizeof(tmp_f_nt));
   if (raw_f_nt != 0) {
-    total_size += 1 + 4;
+    total_size += 1 + 8;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
@@ -1496,30 +1496,30 @@ void SimResponse_Frame_Mag::MergeFrom(const SimResponse_Frame_Mag& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_x_nt = from._internal_x_nt();
-  uint32_t raw_x_nt;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_x_nt = from._internal_x_nt();
+  uint64_t raw_x_nt;
   memcpy(&raw_x_nt, &tmp_x_nt, sizeof(tmp_x_nt));
   if (raw_x_nt != 0) {
     _internal_set_x_nt(from._internal_x_nt());
   }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_y_nt = from._internal_y_nt();
-  uint32_t raw_y_nt;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_y_nt = from._internal_y_nt();
+  uint64_t raw_y_nt;
   memcpy(&raw_y_nt, &tmp_y_nt, sizeof(tmp_y_nt));
   if (raw_y_nt != 0) {
     _internal_set_y_nt(from._internal_y_nt());
   }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_z_nt = from._internal_z_nt();
-  uint32_t raw_z_nt;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_z_nt = from._internal_z_nt();
+  uint64_t raw_z_nt;
   memcpy(&raw_z_nt, &tmp_z_nt, sizeof(tmp_z_nt));
   if (raw_z_nt != 0) {
     _internal_set_z_nt(from._internal_z_nt());
   }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_f_nt = from._internal_f_nt();
-  uint32_t raw_f_nt;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_f_nt = from._internal_f_nt();
+  uint64_t raw_f_nt;
   memcpy(&raw_f_nt, &tmp_f_nt, sizeof(tmp_f_nt));
   if (raw_f_nt != 0) {
     _internal_set_f_nt(from._internal_f_nt());
@@ -1651,11 +1651,11 @@ const char* SimResponse_Frame::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // float t_rel_s = 1;
+      // double t_rel_s = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 13)) {
-          t_rel_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
-          ptr += sizeof(float);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
+          t_rel_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
@@ -1704,14 +1704,14 @@ uint8_t* SimResponse_Frame::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // float t_rel_s = 1;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_t_rel_s = this->_internal_t_rel_s();
-  uint32_t raw_t_rel_s;
+  // double t_rel_s = 1;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_t_rel_s = this->_internal_t_rel_s();
+  uint64_t raw_t_rel_s;
   memcpy(&raw_t_rel_s, &tmp_t_rel_s, sizeof(tmp_t_rel_s));
   if (raw_t_rel_s != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_t_rel_s(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_t_rel_s(), target);
   }
 
   // .SatelliteEarthSimulation.SimResponse.Frame.Geo geo = 2;
@@ -1760,13 +1760,13 @@ size_t SimResponse_Frame::ByteSizeLong() const {
         *mag_);
   }
 
-  // float t_rel_s = 1;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_t_rel_s = this->_internal_t_rel_s();
-  uint32_t raw_t_rel_s;
+  // double t_rel_s = 1;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_t_rel_s = this->_internal_t_rel_s();
+  uint64_t raw_t_rel_s;
   memcpy(&raw_t_rel_s, &tmp_t_rel_s, sizeof(tmp_t_rel_s));
   if (raw_t_rel_s != 0) {
-    total_size += 1 + 4;
+    total_size += 1 + 8;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
@@ -1797,9 +1797,9 @@ void SimResponse_Frame::MergeFrom(const SimResponse_Frame& from) {
   if (from._internal_has_mag()) {
     _internal_mutable_mag()->::SatelliteEarthSimulation::SimResponse_Frame_Mag::MergeFrom(from._internal_mag());
   }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_t_rel_s = from._internal_t_rel_s();
-  uint32_t raw_t_rel_s;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_t_rel_s = from._internal_t_rel_s();
+  uint64_t raw_t_rel_s;
   memcpy(&raw_t_rel_s, &tmp_t_rel_s, sizeof(tmp_t_rel_s));
   if (raw_t_rel_s != 0) {
     _internal_set_t_rel_s(from._internal_t_rel_s());
@@ -1861,9 +1861,9 @@ SimResponse_Decay_TLEForward::SimResponse_Decay_TLEForward(const SimResponse_Dec
     time_utc_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_time_utc(), 
       GetArenaForAllocation());
   }
-  ::memcpy(&crossed_, &from.crossed_,
-    static_cast<size_t>(reinterpret_cast<char*>(&time_from_start_s_) -
-    reinterpret_cast<char*>(&crossed_)) + sizeof(time_from_start_s_));
+  ::memcpy(&time_from_start_s_, &from.time_from_start_s_,
+    static_cast<size_t>(reinterpret_cast<char*>(&crossed_) -
+    reinterpret_cast<char*>(&time_from_start_s_)) + sizeof(crossed_));
   // @@protoc_insertion_point(copy_constructor:SatelliteEarthSimulation.SimResponse.Decay.TLEForward)
 }
 
@@ -1873,9 +1873,9 @@ time_utc_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlr
   time_utc_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&crossed_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&time_from_start_s_) -
-    reinterpret_cast<char*>(&crossed_)) + sizeof(time_from_start_s_));
+    reinterpret_cast<char*>(&time_from_start_s_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&crossed_) -
+    reinterpret_cast<char*>(&time_from_start_s_)) + sizeof(crossed_));
 }
 
 SimResponse_Decay_TLEForward::~SimResponse_Decay_TLEForward() {
@@ -1907,9 +1907,9 @@ void SimResponse_Decay_TLEForward::Clear() {
   (void) cached_has_bits;
 
   time_utc_.ClearToEmpty();
-  ::memset(&crossed_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&time_from_start_s_) -
-      reinterpret_cast<char*>(&crossed_)) + sizeof(time_from_start_s_));
+  ::memset(&time_from_start_s_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&crossed_) -
+      reinterpret_cast<char*>(&time_from_start_s_)) + sizeof(crossed_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1945,11 +1945,11 @@ const char* SimResponse_Decay_TLEForward::_InternalParse(const char* ptr, ::PROT
         } else
           goto handle_unusual;
         continue;
-      // float uncertainty_s = 4;
+      // double uncertainty_s = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 37)) {
-          uncertainty_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
-          ptr += sizeof(float);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
+          uncertainty_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
@@ -2008,14 +2008,14 @@ uint8_t* SimResponse_Decay_TLEForward::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_time_from_start_s(), target);
   }
 
-  // float uncertainty_s = 4;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_uncertainty_s = this->_internal_uncertainty_s();
-  uint32_t raw_uncertainty_s;
+  // double uncertainty_s = 4;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_uncertainty_s = this->_internal_uncertainty_s();
+  uint64_t raw_uncertainty_s;
   memcpy(&raw_uncertainty_s, &tmp_uncertainty_s, sizeof(tmp_uncertainty_s));
   if (raw_uncertainty_s != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->_internal_uncertainty_s(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(4, this->_internal_uncertainty_s(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2041,20 +2041,6 @@ size_t SimResponse_Decay_TLEForward::ByteSizeLong() const {
         this->_internal_time_utc());
   }
 
-  // bool crossed = 1;
-  if (this->_internal_crossed() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // float uncertainty_s = 4;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_uncertainty_s = this->_internal_uncertainty_s();
-  uint32_t raw_uncertainty_s;
-  memcpy(&raw_uncertainty_s, &tmp_uncertainty_s, sizeof(tmp_uncertainty_s));
-  if (raw_uncertainty_s != 0) {
-    total_size += 1 + 4;
-  }
-
   // double time_from_start_s = 3;
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_time_from_start_s = this->_internal_time_from_start_s();
@@ -2062,6 +2048,20 @@ size_t SimResponse_Decay_TLEForward::ByteSizeLong() const {
   memcpy(&raw_time_from_start_s, &tmp_time_from_start_s, sizeof(tmp_time_from_start_s));
   if (raw_time_from_start_s != 0) {
     total_size += 1 + 8;
+  }
+
+  // double uncertainty_s = 4;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_uncertainty_s = this->_internal_uncertainty_s();
+  uint64_t raw_uncertainty_s;
+  memcpy(&raw_uncertainty_s, &tmp_uncertainty_s, sizeof(tmp_uncertainty_s));
+  if (raw_uncertainty_s != 0) {
+    total_size += 1 + 8;
+  }
+
+  // bool crossed = 1;
+  if (this->_internal_crossed() != 0) {
+    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
@@ -2089,22 +2089,22 @@ void SimResponse_Decay_TLEForward::MergeFrom(const SimResponse_Decay_TLEForward&
   if (!from._internal_time_utc().empty()) {
     _internal_set_time_utc(from._internal_time_utc());
   }
-  if (from._internal_crossed() != 0) {
-    _internal_set_crossed(from._internal_crossed());
-  }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_uncertainty_s = from._internal_uncertainty_s();
-  uint32_t raw_uncertainty_s;
-  memcpy(&raw_uncertainty_s, &tmp_uncertainty_s, sizeof(tmp_uncertainty_s));
-  if (raw_uncertainty_s != 0) {
-    _internal_set_uncertainty_s(from._internal_uncertainty_s());
-  }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_time_from_start_s = from._internal_time_from_start_s();
   uint64_t raw_time_from_start_s;
   memcpy(&raw_time_from_start_s, &tmp_time_from_start_s, sizeof(tmp_time_from_start_s));
   if (raw_time_from_start_s != 0) {
     _internal_set_time_from_start_s(from._internal_time_from_start_s());
+  }
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_uncertainty_s = from._internal_uncertainty_s();
+  uint64_t raw_uncertainty_s;
+  memcpy(&raw_uncertainty_s, &tmp_uncertainty_s, sizeof(tmp_uncertainty_s));
+  if (raw_uncertainty_s != 0) {
+    _internal_set_uncertainty_s(from._internal_uncertainty_s());
+  }
+  if (from._internal_crossed() != 0) {
+    _internal_set_crossed(from._internal_crossed());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -2131,11 +2131,11 @@ void SimResponse_Decay_TLEForward::InternalSwap(SimResponse_Decay_TLEForward* ot
       &other->time_utc_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SimResponse_Decay_TLEForward, time_from_start_s_)
-      + sizeof(SimResponse_Decay_TLEForward::time_from_start_s_)
-      - PROTOBUF_FIELD_OFFSET(SimResponse_Decay_TLEForward, crossed_)>(
-          reinterpret_cast<char*>(&crossed_),
-          reinterpret_cast<char*>(&other->crossed_));
+      PROTOBUF_FIELD_OFFSET(SimResponse_Decay_TLEForward, crossed_)
+      + sizeof(SimResponse_Decay_TLEForward::crossed_)
+      - PROTOBUF_FIELD_OFFSET(SimResponse_Decay_TLEForward, time_from_start_s_)>(
+          reinterpret_cast<char*>(&time_from_start_s_),
+          reinterpret_cast<char*>(&other->time_from_start_s_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SimResponse_Decay_TLEForward::GetMetadata() const {
@@ -2170,9 +2170,9 @@ SimResponse_Decay_PhysicsDrag::SimResponse_Decay_PhysicsDrag(const SimResponse_D
     time_utc_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_time_utc(), 
       GetArenaForAllocation());
   }
-  ::memcpy(&crossed_, &from.crossed_,
-    static_cast<size_t>(reinterpret_cast<char*>(&time_from_start_s_) -
-    reinterpret_cast<char*>(&crossed_)) + sizeof(time_from_start_s_));
+  ::memcpy(&time_from_start_s_, &from.time_from_start_s_,
+    static_cast<size_t>(reinterpret_cast<char*>(&crossed_) -
+    reinterpret_cast<char*>(&time_from_start_s_)) + sizeof(crossed_));
   // @@protoc_insertion_point(copy_constructor:SatelliteEarthSimulation.SimResponse.Decay.PhysicsDrag)
 }
 
@@ -2182,9 +2182,9 @@ time_utc_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlr
   time_utc_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&crossed_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&time_from_start_s_) -
-    reinterpret_cast<char*>(&crossed_)) + sizeof(time_from_start_s_));
+    reinterpret_cast<char*>(&time_from_start_s_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&crossed_) -
+    reinterpret_cast<char*>(&time_from_start_s_)) + sizeof(crossed_));
 }
 
 SimResponse_Decay_PhysicsDrag::~SimResponse_Decay_PhysicsDrag() {
@@ -2216,9 +2216,9 @@ void SimResponse_Decay_PhysicsDrag::Clear() {
   (void) cached_has_bits;
 
   time_utc_.ClearToEmpty();
-  ::memset(&crossed_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&time_from_start_s_) -
-      reinterpret_cast<char*>(&crossed_)) + sizeof(time_from_start_s_));
+  ::memset(&time_from_start_s_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&crossed_) -
+      reinterpret_cast<char*>(&time_from_start_s_)) + sizeof(crossed_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -2254,11 +2254,11 @@ const char* SimResponse_Decay_PhysicsDrag::_InternalParse(const char* ptr, ::PRO
         } else
           goto handle_unusual;
         continue;
-      // float uncertainty_s = 4;
+      // double uncertainty_s = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 37)) {
-          uncertainty_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
-          ptr += sizeof(float);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
+          uncertainty_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
@@ -2317,14 +2317,14 @@ uint8_t* SimResponse_Decay_PhysicsDrag::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_time_from_start_s(), target);
   }
 
-  // float uncertainty_s = 4;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_uncertainty_s = this->_internal_uncertainty_s();
-  uint32_t raw_uncertainty_s;
+  // double uncertainty_s = 4;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_uncertainty_s = this->_internal_uncertainty_s();
+  uint64_t raw_uncertainty_s;
   memcpy(&raw_uncertainty_s, &tmp_uncertainty_s, sizeof(tmp_uncertainty_s));
   if (raw_uncertainty_s != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->_internal_uncertainty_s(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(4, this->_internal_uncertainty_s(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2350,20 +2350,6 @@ size_t SimResponse_Decay_PhysicsDrag::ByteSizeLong() const {
         this->_internal_time_utc());
   }
 
-  // bool crossed = 1;
-  if (this->_internal_crossed() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // float uncertainty_s = 4;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_uncertainty_s = this->_internal_uncertainty_s();
-  uint32_t raw_uncertainty_s;
-  memcpy(&raw_uncertainty_s, &tmp_uncertainty_s, sizeof(tmp_uncertainty_s));
-  if (raw_uncertainty_s != 0) {
-    total_size += 1 + 4;
-  }
-
   // double time_from_start_s = 3;
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_time_from_start_s = this->_internal_time_from_start_s();
@@ -2371,6 +2357,20 @@ size_t SimResponse_Decay_PhysicsDrag::ByteSizeLong() const {
   memcpy(&raw_time_from_start_s, &tmp_time_from_start_s, sizeof(tmp_time_from_start_s));
   if (raw_time_from_start_s != 0) {
     total_size += 1 + 8;
+  }
+
+  // double uncertainty_s = 4;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_uncertainty_s = this->_internal_uncertainty_s();
+  uint64_t raw_uncertainty_s;
+  memcpy(&raw_uncertainty_s, &tmp_uncertainty_s, sizeof(tmp_uncertainty_s));
+  if (raw_uncertainty_s != 0) {
+    total_size += 1 + 8;
+  }
+
+  // bool crossed = 1;
+  if (this->_internal_crossed() != 0) {
+    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
@@ -2398,22 +2398,22 @@ void SimResponse_Decay_PhysicsDrag::MergeFrom(const SimResponse_Decay_PhysicsDra
   if (!from._internal_time_utc().empty()) {
     _internal_set_time_utc(from._internal_time_utc());
   }
-  if (from._internal_crossed() != 0) {
-    _internal_set_crossed(from._internal_crossed());
-  }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_uncertainty_s = from._internal_uncertainty_s();
-  uint32_t raw_uncertainty_s;
-  memcpy(&raw_uncertainty_s, &tmp_uncertainty_s, sizeof(tmp_uncertainty_s));
-  if (raw_uncertainty_s != 0) {
-    _internal_set_uncertainty_s(from._internal_uncertainty_s());
-  }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_time_from_start_s = from._internal_time_from_start_s();
   uint64_t raw_time_from_start_s;
   memcpy(&raw_time_from_start_s, &tmp_time_from_start_s, sizeof(tmp_time_from_start_s));
   if (raw_time_from_start_s != 0) {
     _internal_set_time_from_start_s(from._internal_time_from_start_s());
+  }
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_uncertainty_s = from._internal_uncertainty_s();
+  uint64_t raw_uncertainty_s;
+  memcpy(&raw_uncertainty_s, &tmp_uncertainty_s, sizeof(tmp_uncertainty_s));
+  if (raw_uncertainty_s != 0) {
+    _internal_set_uncertainty_s(from._internal_uncertainty_s());
+  }
+  if (from._internal_crossed() != 0) {
+    _internal_set_crossed(from._internal_crossed());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -2440,11 +2440,11 @@ void SimResponse_Decay_PhysicsDrag::InternalSwap(SimResponse_Decay_PhysicsDrag* 
       &other->time_utc_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SimResponse_Decay_PhysicsDrag, time_from_start_s_)
-      + sizeof(SimResponse_Decay_PhysicsDrag::time_from_start_s_)
-      - PROTOBUF_FIELD_OFFSET(SimResponse_Decay_PhysicsDrag, crossed_)>(
-          reinterpret_cast<char*>(&crossed_),
-          reinterpret_cast<char*>(&other->crossed_));
+      PROTOBUF_FIELD_OFFSET(SimResponse_Decay_PhysicsDrag, crossed_)
+      + sizeof(SimResponse_Decay_PhysicsDrag::crossed_)
+      - PROTOBUF_FIELD_OFFSET(SimResponse_Decay_PhysicsDrag, time_from_start_s_)>(
+          reinterpret_cast<char*>(&time_from_start_s_),
+          reinterpret_cast<char*>(&other->time_from_start_s_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SimResponse_Decay_PhysicsDrag::GetMetadata() const {
@@ -2549,11 +2549,11 @@ const char* SimResponse_Decay::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // float threshold_km = 1;
+      // double threshold_km = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 13)) {
-          threshold_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
-          ptr += sizeof(float);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
+          threshold_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
@@ -2602,14 +2602,14 @@ uint8_t* SimResponse_Decay::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // float threshold_km = 1;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_threshold_km = this->_internal_threshold_km();
-  uint32_t raw_threshold_km;
+  // double threshold_km = 1;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_threshold_km = this->_internal_threshold_km();
+  uint64_t raw_threshold_km;
   memcpy(&raw_threshold_km, &tmp_threshold_km, sizeof(tmp_threshold_km));
   if (raw_threshold_km != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_threshold_km(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_threshold_km(), target);
   }
 
   // .SatelliteEarthSimulation.SimResponse.Decay.TLEForward tle_forward = 2;
@@ -2658,13 +2658,13 @@ size_t SimResponse_Decay::ByteSizeLong() const {
         *physics_drag_);
   }
 
-  // float threshold_km = 1;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_threshold_km = this->_internal_threshold_km();
-  uint32_t raw_threshold_km;
+  // double threshold_km = 1;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_threshold_km = this->_internal_threshold_km();
+  uint64_t raw_threshold_km;
   memcpy(&raw_threshold_km, &tmp_threshold_km, sizeof(tmp_threshold_km));
   if (raw_threshold_km != 0) {
-    total_size += 1 + 4;
+    total_size += 1 + 8;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
@@ -2695,9 +2695,9 @@ void SimResponse_Decay::MergeFrom(const SimResponse_Decay& from) {
   if (from._internal_has_physics_drag()) {
     _internal_mutable_physics_drag()->::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag::MergeFrom(from._internal_physics_drag());
   }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_threshold_km = from._internal_threshold_km();
-  uint32_t raw_threshold_km;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_threshold_km = from._internal_threshold_km();
+  uint64_t raw_threshold_km;
   memcpy(&raw_threshold_km, &tmp_threshold_km, sizeof(tmp_threshold_km));
   if (raw_threshold_km != 0) {
     _internal_set_threshold_km(from._internal_threshold_km());
