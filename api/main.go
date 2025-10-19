@@ -11,6 +11,7 @@ import (
 	pb "github.com/Theossr/Helikos_test/api/proto"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
+	"google.golang.org/protobuf/encoding/protojson"
 )
 
 type SimRequest struct {
@@ -86,7 +87,21 @@ func SimHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	json.NewEncoder(w).Encode(resp)
+	marshaler := protojson.MarshalOptions{
+
+		Indent:          "  ",
+		EmitUnpopulated: true,
+	}
+	jsonBytes, err := marshaler.Marshal(resp)
+	if err != nil {
+		http.Error(w, "500/Internal server error", http.StatusInternalServerError)
+		log.Printf("JSON marshal error: %v", err)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	w.Write(jsonBytes)
 }
 
 func main() {

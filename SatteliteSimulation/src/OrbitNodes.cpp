@@ -2,9 +2,28 @@
 
 
 Geo::Geo(double lat_deg, double lon_deg, double alt_km) {
+
         this->lat_deg = lat_deg;
         this->lon_deg = lon_deg;
         this->alt_km = alt_km;
+}
+
+double Geo::getLat() const{
+
+    return this->lat_deg;
+
+}
+
+double Geo::getLon() const{
+    
+    return this->lon_deg;
+
+}
+    
+double Geo::getAlt() const{
+    
+    return this->alt_km;
+
 }
 
 DecayCounting::DecayCounting() {
@@ -33,6 +52,24 @@ DecayCounting& DecayCounting::operator=(const DecayCounting& other) {
     return *this;
 }
 
+bool DecayCounting::getCrossed() const {
+
+    return this->crossed;
+
+}
+
+std::string DecayCounting::getTimeUtc() const {
+
+    return this->time_utc;
+
+}
+
+double DecayCounting::getTimeFromStart() const {
+
+    return this->time_from_start_s;
+
+}
+
 Decay::Decay() {
 
     this->threshold_km = NULL;
@@ -58,6 +95,24 @@ Decay& Decay::operator=(const Decay& other) {
     return *this;
 }
 
+double Decay::getThreshold() const {
+
+    return this->threshold_km;
+
+}
+
+DecayCounting Decay::getTleForward() const {
+
+    return this->tle_forward;
+
+}
+
+DecayCounting Decay::getPhysicsDrag() const {
+
+    return this->physics_drag;
+
+}
+
 OrbitNodes::OrbitNodes(std::string& line1, std::string& line2, uint64_t start_epoch_ms, double duration_s, double step_s, double h_fail_km)  {
 
     libsgp4::Tle tle(line1, line2);
@@ -65,15 +120,17 @@ OrbitNodes::OrbitNodes(std::string& line1, std::string& line2, uint64_t start_ep
     double current = 0.0;
     DecayCounting tle_forward;
     DecayCounting physics_drag;
+    libsgp4::DateTime epoch = tle.Epoch();
+    this->tle_epoch_utc = epoch.ToString();
         
     for (int i = 0; i <= static_cast<int>(duration_s / step_s); ++i) {
-        this->nodes.push_back(formSatPair(sgp4, fromUnixMs(start_epoch_ms + i*1000), h_fail_km, current + i*step_s, tle_forward, physics_drag));
+        this->nodes.push_back(formSatPair(sgp4, fromUnixMs(start_epoch_ms + i*1000), epoch, h_fail_km, current + i*step_s, tle_forward, physics_drag));
     }
     this->dc = Decay(h_fail_km, tle_forward, physics_drag);
 }
 
-std::pair<double, Geo> OrbitNodes::formSatPair(libsgp4::SGP4& sgp4, const libsgp4::DateTime& time_date, double h_fail_km, double current, 
-                                                DecayCounting& tle_forward, DecayCounting& physics_drag) {
+std::pair<double, Geo> OrbitNodes::formSatPair(libsgp4::SGP4& sgp4, const libsgp4::DateTime& time_date, const libsgp4::DateTime& epoch, 
+                                                double h_fail_km, double current, DecayCounting& tle_forward, DecayCounting& physics_drag) {
 
     libsgp4::Eci eci = sgp4.FindPosition(time_date);
     libsgp4::CoordGeodetic coGeo = eci.ToGeodetic();
@@ -81,6 +138,10 @@ std::pair<double, Geo> OrbitNodes::formSatPair(libsgp4::SGP4& sgp4, const libsgp
     if(alt_km < h_fail_km) {
         tle_forward = DecayCounting(time_date.ToString(), current);
 // make here the physics counting???
+    }
+    if(epoch < time_date) {
+
+        this->out_of_tle_epoch_window = false;
     }
     Geo geoCurrent(coGeo.latitude * 180.0 / M_PI, coGeo.longitude * 180 / M_PI, alt_km);
     return std::pair<double, Geo>(current, geoCurrent);
@@ -102,8 +163,26 @@ libsgp4::DateTime fromUnixMs(uint64_t time_ms) {
     );
 }
 
-std::vector<std::pair<double, Geo>> OrbitNodes::getNodes() {
+std::vector<std::pair<double, Geo>> OrbitNodes::getNodes() const {
 
     return this->nodes;
+
+}
+
+Decay OrbitNodes::getDecay() const {
+
+    return this->dc;
+
+}
+
+std::string OrbitNodes::getTleEpoch() const {
+
+    return this->tle_epoch_utc;
+
+}
+
+bool OrbitNodes::getOutOfEpoch() const {
+
+    return this->out_of_tle_epoch_window;
 
 }
