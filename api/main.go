@@ -14,6 +14,7 @@ import (
 	"google.golang.org/protobuf/encoding/protojson"
 )
 
+// Struct for parsing json
 type SimRequest struct {
 	TLE struct {
 		Title string `json:"title"`
@@ -44,6 +45,7 @@ func SimHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// Providing with json
 	var sat SimRequest
 	err := json.NewDecoder(r.Body).Decode(&sat)
 	if err != nil {
@@ -51,6 +53,7 @@ func SimHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// Connecting with SatelliteSimulation
 	conn, err := grpc.NewClient("sat_sim:50051", grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		http.Error(w, "500/Internal server error", http.StatusInternalServerError)
@@ -62,6 +65,7 @@ func SimHandler(w http.ResponseWriter, r *http.Request) {
 
 	client := pb.NewSatelliteEarthSimulationServiceClient(conn)
 
+	// Parsing json data
 	protoSimReq := &pb.SimRequest{
 
 		Tle: &pb.SimRequest_TLE{
@@ -77,9 +81,11 @@ func SimHandler(w http.ResponseWriter, r *http.Request) {
 		HFailKm:      sat.H_fail_km,
 	}
 
+	// Making context
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 
+	// Running satellite simulation
 	resp, err := client.RunSimulation(ctx, protoSimReq)
 	if err != nil {
 		http.Error(w, "500/Internal server error", http.StatusInternalServerError)
@@ -87,11 +93,12 @@ func SimHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// catching the response
 	marshaler := protojson.MarshalOptions{
 
 		Indent:          "  ",
 		EmitUnpopulated: true,
-		UseProtoNames:   true,
+		UseProtoNames:   true, // snake_case at final response
 	}
 	jsonBytes, err := marshaler.Marshal(resp)
 	if err != nil {
@@ -100,6 +107,7 @@ func SimHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// writing the response json
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	w.Write(jsonBytes)
@@ -110,5 +118,6 @@ func main() {
 	http.HandleFunc("/health", HealthHandler)
 	http.HandleFunc("/simulate", SimHandler)
 
+	// Running Server
 	http.ListenAndServe("0.0.0.0:8080", nil)
 }

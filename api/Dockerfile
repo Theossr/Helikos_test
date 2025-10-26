@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y ca-certificates curl && rm -rf /var/lib
 
 COPY --from=builder /app/api .
 
-EXPOSE 8080
+# REST API port
+EXPOSE 8080 
 
 CMD ["./api"]

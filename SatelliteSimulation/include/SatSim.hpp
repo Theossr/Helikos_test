@@ -22,6 +22,7 @@ using EarthSimulation::EarthSimulationService;
 using EarthSimulation::EarthRequest;
 using EarthSimulation::EarthResponse;
 
+// Getting and parsing the protobuf data from REST API service 
 class SatelliteServiceImpl final : public SatelliteEarthSimulationService::Service {
 public:
 
@@ -29,6 +30,8 @@ public:
 
 };
 
+
+// Sending the data to earth sim with request
 class EarthSimulationClient {
 public:
 
@@ -40,6 +43,7 @@ private:
     std::unique_ptr<EarthSimulationService::Stub> stub_;
 };
 
+// Running the satellite simulation server
 void RunServer();
 
 

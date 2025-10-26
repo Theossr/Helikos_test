@@ -23,8 +23,10 @@ using EarthSimulation::EarthResponse;
 class EarthSimulationServiceImpl final : public EarthSimulationService::Service {
 public:
 
+    // Getting data from satellite simulation
     Status SendEarthData(ServerContext* context, const EarthRequest* request, EarthResponse* response) override;
 
 };
 
+// Running the earth sim server
 void RunServer();

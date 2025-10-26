@@ -1,11 +1,14 @@
 syntax = "proto3";
-package SatelliteEarthSimulation;
+package SatelliteEarthSimulation; // Protobuf between REST API and satellite simulation services. The same in SatelliteSimulation
 
-option go_package = "github.com/Theossr/Helikos_test/api/proto";
+option go_package = "github.com/Theossr/Helikos_test/api/proto"; // route
 
+// Request REST API template in protobuf
 message SimRequest {
+
     // TLE
     message TLE {
+
         string title = 1;
         string line1 = 2;
         string line2 = 3;
@@ -18,61 +21,76 @@ message SimRequest {
     double h_fail_km = 5;
 }
 
+// Response REST API template in protobuf
 message SimResponse {
 
   // Frames
   message Frame {
+
     double t_rel_s = 1;
 
     message Geo {
+
       double lat_deg = 1;
       double lon_deg = 2;
       double alt_km = 3;
     }
+
     Geo geo = 2;
 
     message Mag {
+
       double x_nT = 1;
       double y_nT = 2;
       double z_nT = 3;
       double f_nT = 4;
     }
+
     Mag mag = 3;
   }
   repeated Frame frames = 1;
 
   // Decay
   message Decay {
+
     double threshold_km = 1;
 
     message TLEForward {
+
       bool crossed = 1;
       string time_utc = 2;
       double time_from_start_s = 3;
       double uncertainty_s = 4;
     }
+
     TLEForward tle_forward = 2;
 
     message PhysicsDrag {
+
       bool crossed = 1;
       string time_utc = 2;
       double time_from_start_s = 3;
       double uncertainty_s = 4;
     }
+
     PhysicsDrag physics_drag = 3;
   }
+
   Decay decay = 2;
 
   // Meta
   message Meta {
+
     uint32 points_generated = 2;
     string tle_epoch_utc = 4;
     bool out_of_tle_epoch_window = 5;
   }
+
   Meta meta = 3;
 }
 
+// Running exchange
 service SatelliteEarthSimulationService {
+  
   rpc RunSimulation (SimRequest) returns (SimResponse);
 }
-
