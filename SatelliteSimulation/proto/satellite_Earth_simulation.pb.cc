@@ -16,158 +16,170 @@
 #include <google/protobuf/port_def.inc>
 
 PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace SatelliteEarthSimulation {
-constexpr SimRequest_TLE::SimRequest_TLE(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : title_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , line1_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , line2_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+PROTOBUF_CONSTEXPR SimRequest_TLE::SimRequest_TLE(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.title_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.line1_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.line2_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SimRequest_TLEDefaultTypeInternal {
-  constexpr SimRequest_TLEDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SimRequest_TLEDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~SimRequest_TLEDefaultTypeInternal() {}
   union {
     SimRequest_TLE _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SimRequest_TLEDefaultTypeInternal _SimRequest_TLE_default_instance_;
-constexpr SimRequest::SimRequest(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : tle_(nullptr)
-  , start_epoch_ms_(uint64_t{0u})
-  , duration_s_(0)
-  , step_s_(0)
-  , h_fail_km_(0){}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SimRequest_TLEDefaultTypeInternal _SimRequest_TLE_default_instance_;
+PROTOBUF_CONSTEXPR SimRequest::SimRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.tle_)*/nullptr
+  , /*decltype(_impl_.start_epoch_ms_)*/uint64_t{0u}
+  , /*decltype(_impl_.duration_s_)*/0
+  , /*decltype(_impl_.step_s_)*/0
+  , /*decltype(_impl_.h_fail_km_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SimRequestDefaultTypeInternal {
-  constexpr SimRequestDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SimRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~SimRequestDefaultTypeInternal() {}
   union {
     SimRequest _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SimRequestDefaultTypeInternal _SimRequest_default_instance_;
-constexpr SimResponse_Frame_Geo::SimResponse_Frame_Geo(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : lat_deg_(0)
-  , lon_deg_(0)
-  , alt_km_(0){}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SimRequestDefaultTypeInternal _SimRequest_default_instance_;
+PROTOBUF_CONSTEXPR SimResponse_Frame_Geo::SimResponse_Frame_Geo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.lat_deg_)*/0
+  , /*decltype(_impl_.lon_deg_)*/0
+  , /*decltype(_impl_.alt_km_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SimResponse_Frame_GeoDefaultTypeInternal {
-  constexpr SimResponse_Frame_GeoDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SimResponse_Frame_GeoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~SimResponse_Frame_GeoDefaultTypeInternal() {}
   union {
     SimResponse_Frame_Geo _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SimResponse_Frame_GeoDefaultTypeInternal _SimResponse_Frame_Geo_default_instance_;
-constexpr SimResponse_Frame_Mag::SimResponse_Frame_Mag(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : x_nt_(0)
-  , y_nt_(0)
-  , z_nt_(0)
-  , f_nt_(0){}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SimResponse_Frame_GeoDefaultTypeInternal _SimResponse_Frame_Geo_default_instance_;
+PROTOBUF_CONSTEXPR SimResponse_Frame_Mag::SimResponse_Frame_Mag(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.x_nt_)*/0
+  , /*decltype(_impl_.y_nt_)*/0
+  , /*decltype(_impl_.z_nt_)*/0
+  , /*decltype(_impl_.f_nt_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SimResponse_Frame_MagDefaultTypeInternal {
-  constexpr SimResponse_Frame_MagDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SimResponse_Frame_MagDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~SimResponse_Frame_MagDefaultTypeInternal() {}
   union {
     SimResponse_Frame_Mag _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SimResponse_Frame_MagDefaultTypeInternal _SimResponse_Frame_Mag_default_instance_;
-constexpr SimResponse_Frame::SimResponse_Frame(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : geo_(nullptr)
-  , mag_(nullptr)
-  , t_rel_s_(0){}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SimResponse_Frame_MagDefaultTypeInternal _SimResponse_Frame_Mag_default_instance_;
+PROTOBUF_CONSTEXPR SimResponse_Frame::SimResponse_Frame(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.geo_)*/nullptr
+  , /*decltype(_impl_.mag_)*/nullptr
+  , /*decltype(_impl_.t_rel_s_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SimResponse_FrameDefaultTypeInternal {
-  constexpr SimResponse_FrameDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SimResponse_FrameDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~SimResponse_FrameDefaultTypeInternal() {}
   union {
     SimResponse_Frame _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SimResponse_FrameDefaultTypeInternal _SimResponse_Frame_default_instance_;
-constexpr SimResponse_Decay_TLEForward::SimResponse_Decay_TLEForward(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : time_utc_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , time_from_start_s_(0)
-  , uncertainty_s_(0)
-  , crossed_(false){}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SimResponse_FrameDefaultTypeInternal _SimResponse_Frame_default_instance_;
+PROTOBUF_CONSTEXPR SimResponse_Decay_TLEForward::SimResponse_Decay_TLEForward(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.time_utc_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.time_from_start_s_)*/0
+  , /*decltype(_impl_.uncertainty_s_)*/0
+  , /*decltype(_impl_.crossed_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SimResponse_Decay_TLEForwardDefaultTypeInternal {
-  constexpr SimResponse_Decay_TLEForwardDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SimResponse_Decay_TLEForwardDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~SimResponse_Decay_TLEForwardDefaultTypeInternal() {}
   union {
     SimResponse_Decay_TLEForward _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SimResponse_Decay_TLEForwardDefaultTypeInternal _SimResponse_Decay_TLEForward_default_instance_;
-constexpr SimResponse_Decay_PhysicsDrag::SimResponse_Decay_PhysicsDrag(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : time_utc_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , time_from_start_s_(0)
-  , uncertainty_s_(0)
-  , crossed_(false){}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SimResponse_Decay_TLEForwardDefaultTypeInternal _SimResponse_Decay_TLEForward_default_instance_;
+PROTOBUF_CONSTEXPR SimResponse_Decay_PhysicsDrag::SimResponse_Decay_PhysicsDrag(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.time_utc_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.time_from_start_s_)*/0
+  , /*decltype(_impl_.uncertainty_s_)*/0
+  , /*decltype(_impl_.crossed_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SimResponse_Decay_PhysicsDragDefaultTypeInternal {
-  constexpr SimResponse_Decay_PhysicsDragDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SimResponse_Decay_PhysicsDragDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~SimResponse_Decay_PhysicsDragDefaultTypeInternal() {}
   union {
     SimResponse_Decay_PhysicsDrag _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SimResponse_Decay_PhysicsDragDefaultTypeInternal _SimResponse_Decay_PhysicsDrag_default_instance_;
-constexpr SimResponse_Decay::SimResponse_Decay(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : tle_forward_(nullptr)
-  , physics_drag_(nullptr)
-  , threshold_km_(0){}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SimResponse_Decay_PhysicsDragDefaultTypeInternal _SimResponse_Decay_PhysicsDrag_default_instance_;
+PROTOBUF_CONSTEXPR SimResponse_Decay::SimResponse_Decay(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.tle_forward_)*/nullptr
+  , /*decltype(_impl_.physics_drag_)*/nullptr
+  , /*decltype(_impl_.threshold_km_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SimResponse_DecayDefaultTypeInternal {
-  constexpr SimResponse_DecayDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SimResponse_DecayDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~SimResponse_DecayDefaultTypeInternal() {}
   union {
     SimResponse_Decay _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SimResponse_DecayDefaultTypeInternal _SimResponse_Decay_default_instance_;
-constexpr SimResponse_Meta::SimResponse_Meta(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : tle_epoch_utc_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , points_returned_(0u)
-  , points_generated_(0u)
-  , skipped_frames_(0u)
-  , out_of_tle_epoch_window_(false){}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SimResponse_DecayDefaultTypeInternal _SimResponse_Decay_default_instance_;
+PROTOBUF_CONSTEXPR SimResponse_Meta::SimResponse_Meta(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.tle_epoch_utc_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.points_generated_)*/0u
+  , /*decltype(_impl_.out_of_tle_epoch_window_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SimResponse_MetaDefaultTypeInternal {
-  constexpr SimResponse_MetaDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SimResponse_MetaDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~SimResponse_MetaDefaultTypeInternal() {}
   union {
     SimResponse_Meta _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SimResponse_MetaDefaultTypeInternal _SimResponse_Meta_default_instance_;
-constexpr SimResponse::SimResponse(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : frames_()
-  , decay_(nullptr)
-  , meta_(nullptr){}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SimResponse_MetaDefaultTypeInternal _SimResponse_Meta_default_instance_;
+PROTOBUF_CONSTEXPR SimResponse::SimResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.frames_)*/{}
+  , /*decltype(_impl_.decay_)*/nullptr
+  , /*decltype(_impl_.meta_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SimResponseDefaultTypeInternal {
-  constexpr SimResponseDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SimResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~SimResponseDefaultTypeInternal() {}
   union {
     SimResponse _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SimResponseDefaultTypeInternal _SimResponse_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SimResponseDefaultTypeInternal _SimResponse_default_instance_;
 }  // namespace SatelliteEarthSimulation
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_satellite_5fEarth_5fsimulation_2eproto[10];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_satellite_5fEarth_5fsimulation_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_satellite_5fEarth_5fsimulation_2eproto = nullptr;
+static ::_pb::Metadata file_level_metadata_satellite_5fEarth_5fsimulation_2eproto[10];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_satellite_5fEarth_5fsimulation_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_satellite_5fEarth_5fsimulation_2eproto = nullptr;
 
 const uint32_t TableStruct_satellite_5fEarth_5fsimulation_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
@@ -176,99 +188,97 @@ const uint32_t TableStruct_satellite_5fEarth_5fsimulation_2eproto::offsets[] PRO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest_TLE, title_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest_TLE, line1_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest_TLE, line2_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest_TLE, _impl_.title_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest_TLE, _impl_.line1_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest_TLE, _impl_.line2_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest, tle_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest, start_epoch_ms_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest, duration_s_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest, step_s_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest, h_fail_km_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest, _impl_.tle_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest, _impl_.start_epoch_ms_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest, _impl_.duration_s_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest, _impl_.step_s_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimRequest, _impl_.h_fail_km_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Geo, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Geo, lat_deg_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Geo, lon_deg_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Geo, alt_km_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Geo, _impl_.lat_deg_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Geo, _impl_.lon_deg_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Geo, _impl_.alt_km_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Mag, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Mag, x_nt_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Mag, y_nt_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Mag, z_nt_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Mag, f_nt_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Mag, _impl_.x_nt_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Mag, _impl_.y_nt_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Mag, _impl_.z_nt_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame_Mag, _impl_.f_nt_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame, t_rel_s_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame, geo_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame, mag_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame, _impl_.t_rel_s_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame, _impl_.geo_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Frame, _impl_.mag_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_TLEForward, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_TLEForward, crossed_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_TLEForward, time_utc_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_TLEForward, time_from_start_s_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_TLEForward, uncertainty_s_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_TLEForward, _impl_.crossed_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_TLEForward, _impl_.time_utc_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_TLEForward, _impl_.time_from_start_s_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_TLEForward, _impl_.uncertainty_s_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag, crossed_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag, time_utc_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag, time_from_start_s_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag, uncertainty_s_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag, _impl_.crossed_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag, _impl_.time_utc_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag, _impl_.time_from_start_s_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag, _impl_.uncertainty_s_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay, threshold_km_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay, tle_forward_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay, physics_drag_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay, _impl_.threshold_km_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay, _impl_.tle_forward_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Decay, _impl_.physics_drag_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Meta, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Meta, points_returned_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Meta, points_generated_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Meta, skipped_frames_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Meta, tle_epoch_utc_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Meta, out_of_tle_epoch_window_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Meta, _impl_.points_generated_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Meta, _impl_.tle_epoch_utc_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse_Meta, _impl_.out_of_tle_epoch_window_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse, frames_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse, decay_),
-  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse, meta_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse, _impl_.frames_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse, _impl_.decay_),
+  PROTOBUF_FIELD_OFFSET(::SatelliteEarthSimulation::SimResponse, _impl_.meta_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::SatelliteEarthSimulation::SimRequest_TLE)},
   { 9, -1, -1, sizeof(::SatelliteEarthSimulation::SimRequest)},
   { 20, -1, -1, sizeof(::SatelliteEarthSimulation::SimResponse_Frame_Geo)},
@@ -278,20 +288,20 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 58, -1, -1, sizeof(::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag)},
   { 68, -1, -1, sizeof(::SatelliteEarthSimulation::SimResponse_Decay)},
   { 77, -1, -1, sizeof(::SatelliteEarthSimulation::SimResponse_Meta)},
-  { 88, -1, -1, sizeof(::SatelliteEarthSimulation::SimResponse)},
+  { 86, -1, -1, sizeof(::SatelliteEarthSimulation::SimResponse)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SatelliteEarthSimulation::_SimRequest_TLE_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SatelliteEarthSimulation::_SimRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SatelliteEarthSimulation::_SimResponse_Frame_Geo_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SatelliteEarthSimulation::_SimResponse_Frame_Mag_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SatelliteEarthSimulation::_SimResponse_Frame_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SatelliteEarthSimulation::_SimResponse_Decay_TLEForward_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SatelliteEarthSimulation::_SimResponse_Decay_PhysicsDrag_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SatelliteEarthSimulation::_SimResponse_Decay_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SatelliteEarthSimulation::_SimResponse_Meta_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SatelliteEarthSimulation::_SimResponse_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::SatelliteEarthSimulation::_SimRequest_TLE_default_instance_._instance,
+  &::SatelliteEarthSimulation::_SimRequest_default_instance_._instance,
+  &::SatelliteEarthSimulation::_SimResponse_Frame_Geo_default_instance_._instance,
+  &::SatelliteEarthSimulation::_SimResponse_Frame_Mag_default_instance_._instance,
+  &::SatelliteEarthSimulation::_SimResponse_Frame_default_instance_._instance,
+  &::SatelliteEarthSimulation::_SimResponse_Decay_TLEForward_default_instance_._instance,
+  &::SatelliteEarthSimulation::_SimResponse_Decay_PhysicsDrag_default_instance_._instance,
+  &::SatelliteEarthSimulation::_SimResponse_Decay_default_instance_._instance,
+  &::SatelliteEarthSimulation::_SimResponse_Meta_default_instance_._instance,
+  &::SatelliteEarthSimulation::_SimResponse_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_satellite_5fEarth_5fsimulation_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -301,7 +311,7 @@ const char descriptor_table_protodef_satellite_5fEarth_5fsimulation_2eproto[] PR
   "equest.TLE\022\026\n\016start_epoch_ms\030\002 \001(\004\022\022\n\ndu"
   "ration_s\030\003 \001(\001\022\016\n\006step_s\030\004 \001(\001\022\021\n\th_fail"
   "_km\030\005 \001(\001\0322\n\003TLE\022\r\n\005title\030\001 \001(\t\022\r\n\005line1"
-  "\030\002 \001(\t\022\r\n\005line2\030\003 \001(\t\"\336\007\n\013SimResponse\022;\n"
+  "\030\002 \001(\t\022\r\n\005line2\030\003 \001(\t\"\254\007\n\013SimResponse\022;\n"
   "\006frames\030\001 \003(\0132+.SatelliteEarthSimulation"
   ".SimResponse.Frame\022:\n\005decay\030\002 \001(\0132+.Sate"
   "lliteEarthSimulation.SimResponse.Decay\0228"
@@ -322,29 +332,30 @@ const char descriptor_table_protodef_satellite_5fEarth_5fsimulation_2eproto[] PR
   " \001(\t\022\031\n\021time_from_start_s\030\003 \001(\001\022\025\n\runcer"
   "tainty_s\030\004 \001(\001\032b\n\013PhysicsDrag\022\017\n\007crossed"
   "\030\001 \001(\010\022\020\n\010time_utc\030\002 \001(\t\022\031\n\021time_from_st"
-  "art_s\030\003 \001(\001\022\025\n\runcertainty_s\030\004 \001(\001\032\211\001\n\004M"
-  "eta\022\027\n\017points_returned\030\001 \001(\r\022\030\n\020points_g"
-  "enerated\030\002 \001(\r\022\026\n\016skipped_frames\030\003 \001(\r\022\025"
-  "\n\rtle_epoch_utc\030\004 \001(\t\022\037\n\027out_of_tle_epoc"
-  "h_window\030\005 \001(\0102\177\n\037SatelliteEarthSimulati"
-  "onService\022\\\n\rRunSimulation\022$.SatelliteEa"
-  "rthSimulation.SimRequest\032%.SatelliteEart"
-  "hSimulation.SimResponseB+Z)github.com/Th"
-  "eossr/Helikos_test/api/protob\006proto3"
+  "art_s\030\003 \001(\001\022\025\n\runcertainty_s\030\004 \001(\001\032X\n\004Me"
+  "ta\022\030\n\020points_generated\030\002 \001(\r\022\025\n\rtle_epoc"
+  "h_utc\030\004 \001(\t\022\037\n\027out_of_tle_epoch_window\030\005"
+  " \001(\0102\177\n\037SatelliteEarthSimulationService\022"
+  "\\\n\rRunSimulation\022$.SatelliteEarthSimulat"
+  "ion.SimRequest\032%.SatelliteEarthSimulatio"
+  "n.SimResponseB+Z)github.com/Theossr/Heli"
+  "kos_test/api/protob\006proto3"
   ;
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_satellite_5fEarth_5fsimulation_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_satellite_5fEarth_5fsimulation_2eproto = {
-  false, false, 1436, descriptor_table_protodef_satellite_5fEarth_5fsimulation_2eproto, "satellite_Earth_simulation.proto", 
-  &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_once, nullptr, 0, 10,
-  schemas, file_default_instances, TableStruct_satellite_5fEarth_5fsimulation_2eproto::offsets,
-  file_level_metadata_satellite_5fEarth_5fsimulation_2eproto, file_level_enum_descriptors_satellite_5fEarth_5fsimulation_2eproto, file_level_service_descriptors_satellite_5fEarth_5fsimulation_2eproto,
+static ::_pbi::once_flag descriptor_table_satellite_5fEarth_5fsimulation_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_satellite_5fEarth_5fsimulation_2eproto = {
+    false, false, 1386, descriptor_table_protodef_satellite_5fEarth_5fsimulation_2eproto,
+    "satellite_Earth_simulation.proto",
+    &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_once, nullptr, 0, 10,
+    schemas, file_default_instances, TableStruct_satellite_5fEarth_5fsimulation_2eproto::offsets,
+    file_level_metadata_satellite_5fEarth_5fsimulation_2eproto, file_level_enum_descriptors_satellite_5fEarth_5fsimulation_2eproto,
+    file_level_service_descriptors_satellite_5fEarth_5fsimulation_2eproto,
 };
-PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_satellite_5fEarth_5fsimulation_2eproto_getter() {
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_satellite_5fEarth_5fsimulation_2eproto_getter() {
   return &descriptor_table_satellite_5fEarth_5fsimulation_2eproto;
 }
 
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_satellite_5fEarth_5fsimulation_2eproto(&descriptor_table_satellite_5fEarth_5fsimulation_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_satellite_5fEarth_5fsimulation_2eproto(&descriptor_table_satellite_5fEarth_5fsimulation_2eproto);
 namespace SatelliteEarthSimulation {
 
 // ===================================================================
@@ -356,79 +367,88 @@ class SimRequest_TLE::_Internal {
 SimRequest_TLE::SimRequest_TLE(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:SatelliteEarthSimulation.SimRequest.TLE)
 }
 SimRequest_TLE::SimRequest_TLE(const SimRequest_TLE& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SimRequest_TLE* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.title_){}
+    , decltype(_impl_.line1_){}
+    , decltype(_impl_.line2_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  title_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.title_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    title_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+    _impl_.title_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_title().empty()) {
-    title_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_title(), 
-      GetArenaForAllocation());
+    _this->_impl_.title_.Set(from._internal_title(), 
+      _this->GetArenaForAllocation());
   }
-  line1_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.line1_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    line1_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+    _impl_.line1_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_line1().empty()) {
-    line1_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_line1(), 
-      GetArenaForAllocation());
+    _this->_impl_.line1_.Set(from._internal_line1(), 
+      _this->GetArenaForAllocation());
   }
-  line2_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.line2_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    line2_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+    _impl_.line2_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_line2().empty()) {
-    line2_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_line2(), 
-      GetArenaForAllocation());
+    _this->_impl_.line2_.Set(from._internal_line2(), 
+      _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:SatelliteEarthSimulation.SimRequest.TLE)
 }
 
-inline void SimRequest_TLE::SharedCtor() {
-title_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  title_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-line1_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  line1_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-line2_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  line2_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+inline void SimRequest_TLE::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.title_){}
+    , decltype(_impl_.line1_){}
+    , decltype(_impl_.line2_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.title_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.title_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.line1_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.line1_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.line2_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.line2_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SimRequest_TLE::~SimRequest_TLE() {
   // @@protoc_insertion_point(destructor:SatelliteEarthSimulation.SimRequest.TLE)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void SimRequest_TLE::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  title_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  line1_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  line2_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.title_.Destroy();
+  _impl_.line1_.Destroy();
+  _impl_.line2_.Destroy();
 }
 
-void SimRequest_TLE::ArenaDtor(void* object) {
-  SimRequest_TLE* _this = reinterpret_cast< SimRequest_TLE* >(object);
-  (void)_this;
-}
-void SimRequest_TLE::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SimRequest_TLE::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SimRequest_TLE::Clear() {
@@ -437,25 +457,25 @@ void SimRequest_TLE::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  title_.ClearToEmpty();
-  line1_.ClearToEmpty();
-  line2_.ClearToEmpty();
+  _impl_.title_.ClearToEmpty();
+  _impl_.line1_.ClearToEmpty();
+  _impl_.line2_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SimRequest_TLE::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SimRequest_TLE::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string title = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_title();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "SatelliteEarthSimulation.SimRequest.TLE.title"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "SatelliteEarthSimulation.SimRequest.TLE.title"));
         } else
           goto handle_unusual;
         continue;
@@ -463,9 +483,9 @@ const char* SimRequest_TLE::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_line1();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "SatelliteEarthSimulation.SimRequest.TLE.line1"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "SatelliteEarthSimulation.SimRequest.TLE.line1"));
         } else
           goto handle_unusual;
         continue;
@@ -473,9 +493,9 @@ const char* SimRequest_TLE::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_line2();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "SatelliteEarthSimulation.SimRequest.TLE.line2"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "SatelliteEarthSimulation.SimRequest.TLE.line2"));
         } else
           goto handle_unusual;
         continue;
@@ -539,7 +559,7 @@ uint8_t* SimRequest_TLE::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SatelliteEarthSimulation.SimRequest.TLE)
@@ -575,38 +595,34 @@ size_t SimRequest_TLE::ByteSizeLong() const {
         this->_internal_line2());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SimRequest_TLE::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     SimRequest_TLE::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SimRequest_TLE::GetClassData() const { return &_class_data_; }
 
-void SimRequest_TLE::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<SimRequest_TLE *>(to)->MergeFrom(
-      static_cast<const SimRequest_TLE &>(from));
-}
 
-
-void SimRequest_TLE::MergeFrom(const SimRequest_TLE& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimRequest.TLE)
-  GOOGLE_DCHECK_NE(&from, this);
+void SimRequest_TLE::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SimRequest_TLE*>(&to_msg);
+  auto& from = static_cast<const SimRequest_TLE&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimRequest.TLE)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (!from._internal_title().empty()) {
-    _internal_set_title(from._internal_title());
+    _this->_internal_set_title(from._internal_title());
   }
   if (!from._internal_line1().empty()) {
-    _internal_set_line1(from._internal_line1());
+    _this->_internal_set_line1(from._internal_line1());
   }
   if (!from._internal_line2().empty()) {
-    _internal_set_line2(from._internal_line2());
+    _this->_internal_set_line2(from._internal_line2());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SimRequest_TLE::CopyFrom(const SimRequest_TLE& from) {
@@ -626,24 +642,21 @@ void SimRequest_TLE::InternalSwap(SimRequest_TLE* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &title_, lhs_arena,
-      &other->title_, rhs_arena
+      &_impl_.title_, lhs_arena,
+      &other->_impl_.title_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &line1_, lhs_arena,
-      &other->line1_, rhs_arena
+      &_impl_.line1_, lhs_arena,
+      &other->_impl_.line1_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &line2_, lhs_arena,
-      &other->line2_, rhs_arena
+      &_impl_.line2_, lhs_arena,
+      &other->_impl_.line2_, rhs_arena
   );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SimRequest_TLE::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_getter, &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_once,
       file_level_metadata_satellite_5fEarth_5fsimulation_2eproto[0]);
 }
@@ -657,58 +670,65 @@ class SimRequest::_Internal {
 
 const ::SatelliteEarthSimulation::SimRequest_TLE&
 SimRequest::_Internal::tle(const SimRequest* msg) {
-  return *msg->tle_;
+  return *msg->_impl_.tle_;
 }
 SimRequest::SimRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:SatelliteEarthSimulation.SimRequest)
 }
 SimRequest::SimRequest(const SimRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SimRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.tle_){nullptr}
+    , decltype(_impl_.start_epoch_ms_){}
+    , decltype(_impl_.duration_s_){}
+    , decltype(_impl_.step_s_){}
+    , decltype(_impl_.h_fail_km_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_tle()) {
-    tle_ = new ::SatelliteEarthSimulation::SimRequest_TLE(*from.tle_);
-  } else {
-    tle_ = nullptr;
+    _this->_impl_.tle_ = new ::SatelliteEarthSimulation::SimRequest_TLE(*from._impl_.tle_);
   }
-  ::memcpy(&start_epoch_ms_, &from.start_epoch_ms_,
-    static_cast<size_t>(reinterpret_cast<char*>(&h_fail_km_) -
-    reinterpret_cast<char*>(&start_epoch_ms_)) + sizeof(h_fail_km_));
+  ::memcpy(&_impl_.start_epoch_ms_, &from._impl_.start_epoch_ms_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.h_fail_km_) -
+    reinterpret_cast<char*>(&_impl_.start_epoch_ms_)) + sizeof(_impl_.h_fail_km_));
   // @@protoc_insertion_point(copy_constructor:SatelliteEarthSimulation.SimRequest)
 }
 
-inline void SimRequest::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&tle_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&h_fail_km_) -
-    reinterpret_cast<char*>(&tle_)) + sizeof(h_fail_km_));
+inline void SimRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.tle_){nullptr}
+    , decltype(_impl_.start_epoch_ms_){uint64_t{0u}}
+    , decltype(_impl_.duration_s_){0}
+    , decltype(_impl_.step_s_){0}
+    , decltype(_impl_.h_fail_km_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SimRequest::~SimRequest() {
   // @@protoc_insertion_point(destructor:SatelliteEarthSimulation.SimRequest)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void SimRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete tle_;
+  if (this != internal_default_instance()) delete _impl_.tle_;
 }
 
-void SimRequest::ArenaDtor(void* object) {
-  SimRequest* _this = reinterpret_cast< SimRequest* >(object);
-  (void)_this;
-}
-void SimRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SimRequest::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SimRequest::Clear() {
@@ -717,21 +737,21 @@ void SimRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && tle_ != nullptr) {
-    delete tle_;
+  if (GetArenaForAllocation() == nullptr && _impl_.tle_ != nullptr) {
+    delete _impl_.tle_;
   }
-  tle_ = nullptr;
-  ::memset(&start_epoch_ms_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&h_fail_km_) -
-      reinterpret_cast<char*>(&start_epoch_ms_)) + sizeof(h_fail_km_));
+  _impl_.tle_ = nullptr;
+  ::memset(&_impl_.start_epoch_ms_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.h_fail_km_) -
+      reinterpret_cast<char*>(&_impl_.start_epoch_ms_)) + sizeof(_impl_.h_fail_km_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SimRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SimRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .SatelliteEarthSimulation.SimRequest.TLE tle = 1;
       case 1:
@@ -744,7 +764,7 @@ const char* SimRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
       // uint64 start_epoch_ms = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          start_epoch_ms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.start_epoch_ms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -752,7 +772,7 @@ const char* SimRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
       // double duration_s = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
-          duration_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.duration_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -760,7 +780,7 @@ const char* SimRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
       // double step_s = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
-          step_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.step_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -768,7 +788,7 @@ const char* SimRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
       // double h_fail_km = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 41)) {
-          h_fail_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.h_fail_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -804,16 +824,15 @@ uint8_t* SimRequest::_InternalSerialize(
 
   // .SatelliteEarthSimulation.SimRequest.TLE tle = 1;
   if (this->_internal_has_tle()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::tle(this), target, stream);
+      InternalWriteMessage(1, _Internal::tle(this),
+        _Internal::tle(this).GetCachedSize(), target, stream);
   }
 
   // uint64 start_epoch_ms = 2;
   if (this->_internal_start_epoch_ms() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(2, this->_internal_start_epoch_ms(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_start_epoch_ms(), target);
   }
 
   // double duration_s = 3;
@@ -823,7 +842,7 @@ uint8_t* SimRequest::_InternalSerialize(
   memcpy(&raw_duration_s, &tmp_duration_s, sizeof(tmp_duration_s));
   if (raw_duration_s != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_duration_s(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_duration_s(), target);
   }
 
   // double step_s = 4;
@@ -833,7 +852,7 @@ uint8_t* SimRequest::_InternalSerialize(
   memcpy(&raw_step_s, &tmp_step_s, sizeof(tmp_step_s));
   if (raw_step_s != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(4, this->_internal_step_s(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_step_s(), target);
   }
 
   // double h_fail_km = 5;
@@ -843,11 +862,11 @@ uint8_t* SimRequest::_InternalSerialize(
   memcpy(&raw_h_fail_km, &tmp_h_fail_km, sizeof(tmp_h_fail_km));
   if (raw_h_fail_km != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(5, this->_internal_h_fail_km(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(5, this->_internal_h_fail_km(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SatelliteEarthSimulation.SimRequest)
@@ -866,12 +885,12 @@ size_t SimRequest::ByteSizeLong() const {
   if (this->_internal_has_tle()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *tle_);
+        *_impl_.tle_);
   }
 
   // uint64 start_epoch_ms = 2;
   if (this->_internal_start_epoch_ms() != 0) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64SizePlusOne(this->_internal_start_epoch_ms());
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_start_epoch_ms());
   }
 
   // double duration_s = 3;
@@ -901,56 +920,53 @@ size_t SimRequest::ByteSizeLong() const {
     total_size += 1 + 8;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SimRequest::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     SimRequest::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SimRequest::GetClassData() const { return &_class_data_; }
 
-void SimRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<SimRequest *>(to)->MergeFrom(
-      static_cast<const SimRequest &>(from));
-}
 
-
-void SimRequest::MergeFrom(const SimRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimRequest)
-  GOOGLE_DCHECK_NE(&from, this);
+void SimRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SimRequest*>(&to_msg);
+  auto& from = static_cast<const SimRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_tle()) {
-    _internal_mutable_tle()->::SatelliteEarthSimulation::SimRequest_TLE::MergeFrom(from._internal_tle());
+    _this->_internal_mutable_tle()->::SatelliteEarthSimulation::SimRequest_TLE::MergeFrom(
+        from._internal_tle());
   }
   if (from._internal_start_epoch_ms() != 0) {
-    _internal_set_start_epoch_ms(from._internal_start_epoch_ms());
+    _this->_internal_set_start_epoch_ms(from._internal_start_epoch_ms());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_duration_s = from._internal_duration_s();
   uint64_t raw_duration_s;
   memcpy(&raw_duration_s, &tmp_duration_s, sizeof(tmp_duration_s));
   if (raw_duration_s != 0) {
-    _internal_set_duration_s(from._internal_duration_s());
+    _this->_internal_set_duration_s(from._internal_duration_s());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_step_s = from._internal_step_s();
   uint64_t raw_step_s;
   memcpy(&raw_step_s, &tmp_step_s, sizeof(tmp_step_s));
   if (raw_step_s != 0) {
-    _internal_set_step_s(from._internal_step_s());
+    _this->_internal_set_step_s(from._internal_step_s());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_h_fail_km = from._internal_h_fail_km();
   uint64_t raw_h_fail_km;
   memcpy(&raw_h_fail_km, &tmp_h_fail_km, sizeof(tmp_h_fail_km));
   if (raw_h_fail_km != 0) {
-    _internal_set_h_fail_km(from._internal_h_fail_km());
+    _this->_internal_set_h_fail_km(from._internal_h_fail_km());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SimRequest::CopyFrom(const SimRequest& from) {
@@ -968,15 +984,15 @@ void SimRequest::InternalSwap(SimRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SimRequest, h_fail_km_)
-      + sizeof(SimRequest::h_fail_km_)
-      - PROTOBUF_FIELD_OFFSET(SimRequest, tle_)>(
-          reinterpret_cast<char*>(&tle_),
-          reinterpret_cast<char*>(&other->tle_));
+      PROTOBUF_FIELD_OFFSET(SimRequest, _impl_.h_fail_km_)
+      + sizeof(SimRequest::_impl_.h_fail_km_)
+      - PROTOBUF_FIELD_OFFSET(SimRequest, _impl_.tle_)>(
+          reinterpret_cast<char*>(&_impl_.tle_),
+          reinterpret_cast<char*>(&other->_impl_.tle_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SimRequest::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_getter, &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_once,
       file_level_metadata_satellite_5fEarth_5fsimulation_2eproto[1]);
 }
@@ -990,47 +1006,52 @@ class SimResponse_Frame_Geo::_Internal {
 SimResponse_Frame_Geo::SimResponse_Frame_Geo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:SatelliteEarthSimulation.SimResponse.Frame.Geo)
 }
 SimResponse_Frame_Geo::SimResponse_Frame_Geo(const SimResponse_Frame_Geo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SimResponse_Frame_Geo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.lat_deg_){}
+    , decltype(_impl_.lon_deg_){}
+    , decltype(_impl_.alt_km_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&lat_deg_, &from.lat_deg_,
-    static_cast<size_t>(reinterpret_cast<char*>(&alt_km_) -
-    reinterpret_cast<char*>(&lat_deg_)) + sizeof(alt_km_));
+  ::memcpy(&_impl_.lat_deg_, &from._impl_.lat_deg_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.alt_km_) -
+    reinterpret_cast<char*>(&_impl_.lat_deg_)) + sizeof(_impl_.alt_km_));
   // @@protoc_insertion_point(copy_constructor:SatelliteEarthSimulation.SimResponse.Frame.Geo)
 }
 
-inline void SimResponse_Frame_Geo::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&lat_deg_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&alt_km_) -
-    reinterpret_cast<char*>(&lat_deg_)) + sizeof(alt_km_));
+inline void SimResponse_Frame_Geo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.lat_deg_){0}
+    , decltype(_impl_.lon_deg_){0}
+    , decltype(_impl_.alt_km_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SimResponse_Frame_Geo::~SimResponse_Frame_Geo() {
   // @@protoc_insertion_point(destructor:SatelliteEarthSimulation.SimResponse.Frame.Geo)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void SimResponse_Frame_Geo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void SimResponse_Frame_Geo::ArenaDtor(void* object) {
-  SimResponse_Frame_Geo* _this = reinterpret_cast< SimResponse_Frame_Geo* >(object);
-  (void)_this;
-}
-void SimResponse_Frame_Geo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SimResponse_Frame_Geo::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SimResponse_Frame_Geo::Clear() {
@@ -1039,22 +1060,22 @@ void SimResponse_Frame_Geo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&lat_deg_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&alt_km_) -
-      reinterpret_cast<char*>(&lat_deg_)) + sizeof(alt_km_));
+  ::memset(&_impl_.lat_deg_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.alt_km_) -
+      reinterpret_cast<char*>(&_impl_.lat_deg_)) + sizeof(_impl_.alt_km_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SimResponse_Frame_Geo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SimResponse_Frame_Geo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // double lat_deg = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
-          lat_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.lat_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1062,7 +1083,7 @@ const char* SimResponse_Frame_Geo::_InternalParse(const char* ptr, ::PROTOBUF_NA
       // double lon_deg = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
-          lon_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.lon_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1070,7 +1091,7 @@ const char* SimResponse_Frame_Geo::_InternalParse(const char* ptr, ::PROTOBUF_NA
       // double alt_km = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
-          alt_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.alt_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1111,7 +1132,7 @@ uint8_t* SimResponse_Frame_Geo::_InternalSerialize(
   memcpy(&raw_lat_deg, &tmp_lat_deg, sizeof(tmp_lat_deg));
   if (raw_lat_deg != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_lat_deg(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(1, this->_internal_lat_deg(), target);
   }
 
   // double lon_deg = 2;
@@ -1121,7 +1142,7 @@ uint8_t* SimResponse_Frame_Geo::_InternalSerialize(
   memcpy(&raw_lon_deg, &tmp_lon_deg, sizeof(tmp_lon_deg));
   if (raw_lon_deg != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_lon_deg(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_lon_deg(), target);
   }
 
   // double alt_km = 3;
@@ -1131,11 +1152,11 @@ uint8_t* SimResponse_Frame_Geo::_InternalSerialize(
   memcpy(&raw_alt_km, &tmp_alt_km, sizeof(tmp_alt_km));
   if (raw_alt_km != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_alt_km(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_alt_km(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SatelliteEarthSimulation.SimResponse.Frame.Geo)
@@ -1177,25 +1198,21 @@ size_t SimResponse_Frame_Geo::ByteSizeLong() const {
     total_size += 1 + 8;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SimResponse_Frame_Geo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     SimResponse_Frame_Geo::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SimResponse_Frame_Geo::GetClassData() const { return &_class_data_; }
 
-void SimResponse_Frame_Geo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<SimResponse_Frame_Geo *>(to)->MergeFrom(
-      static_cast<const SimResponse_Frame_Geo &>(from));
-}
 
-
-void SimResponse_Frame_Geo::MergeFrom(const SimResponse_Frame_Geo& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse.Frame.Geo)
-  GOOGLE_DCHECK_NE(&from, this);
+void SimResponse_Frame_Geo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SimResponse_Frame_Geo*>(&to_msg);
+  auto& from = static_cast<const SimResponse_Frame_Geo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse.Frame.Geo)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1204,23 +1221,23 @@ void SimResponse_Frame_Geo::MergeFrom(const SimResponse_Frame_Geo& from) {
   uint64_t raw_lat_deg;
   memcpy(&raw_lat_deg, &tmp_lat_deg, sizeof(tmp_lat_deg));
   if (raw_lat_deg != 0) {
-    _internal_set_lat_deg(from._internal_lat_deg());
+    _this->_internal_set_lat_deg(from._internal_lat_deg());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_lon_deg = from._internal_lon_deg();
   uint64_t raw_lon_deg;
   memcpy(&raw_lon_deg, &tmp_lon_deg, sizeof(tmp_lon_deg));
   if (raw_lon_deg != 0) {
-    _internal_set_lon_deg(from._internal_lon_deg());
+    _this->_internal_set_lon_deg(from._internal_lon_deg());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_alt_km = from._internal_alt_km();
   uint64_t raw_alt_km;
   memcpy(&raw_alt_km, &tmp_alt_km, sizeof(tmp_alt_km));
   if (raw_alt_km != 0) {
-    _internal_set_alt_km(from._internal_alt_km());
+    _this->_internal_set_alt_km(from._internal_alt_km());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SimResponse_Frame_Geo::CopyFrom(const SimResponse_Frame_Geo& from) {
@@ -1238,15 +1255,15 @@ void SimResponse_Frame_Geo::InternalSwap(SimResponse_Frame_Geo* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SimResponse_Frame_Geo, alt_km_)
-      + sizeof(SimResponse_Frame_Geo::alt_km_)
-      - PROTOBUF_FIELD_OFFSET(SimResponse_Frame_Geo, lat_deg_)>(
-          reinterpret_cast<char*>(&lat_deg_),
-          reinterpret_cast<char*>(&other->lat_deg_));
+      PROTOBUF_FIELD_OFFSET(SimResponse_Frame_Geo, _impl_.alt_km_)
+      + sizeof(SimResponse_Frame_Geo::_impl_.alt_km_)
+      - PROTOBUF_FIELD_OFFSET(SimResponse_Frame_Geo, _impl_.lat_deg_)>(
+          reinterpret_cast<char*>(&_impl_.lat_deg_),
+          reinterpret_cast<char*>(&other->_impl_.lat_deg_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SimResponse_Frame_Geo::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_getter, &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_once,
       file_level_metadata_satellite_5fEarth_5fsimulation_2eproto[2]);
 }
@@ -1260,47 +1277,54 @@ class SimResponse_Frame_Mag::_Internal {
 SimResponse_Frame_Mag::SimResponse_Frame_Mag(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:SatelliteEarthSimulation.SimResponse.Frame.Mag)
 }
 SimResponse_Frame_Mag::SimResponse_Frame_Mag(const SimResponse_Frame_Mag& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SimResponse_Frame_Mag* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.x_nt_){}
+    , decltype(_impl_.y_nt_){}
+    , decltype(_impl_.z_nt_){}
+    , decltype(_impl_.f_nt_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&x_nt_, &from.x_nt_,
-    static_cast<size_t>(reinterpret_cast<char*>(&f_nt_) -
-    reinterpret_cast<char*>(&x_nt_)) + sizeof(f_nt_));
+  ::memcpy(&_impl_.x_nt_, &from._impl_.x_nt_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.f_nt_) -
+    reinterpret_cast<char*>(&_impl_.x_nt_)) + sizeof(_impl_.f_nt_));
   // @@protoc_insertion_point(copy_constructor:SatelliteEarthSimulation.SimResponse.Frame.Mag)
 }
 
-inline void SimResponse_Frame_Mag::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&x_nt_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&f_nt_) -
-    reinterpret_cast<char*>(&x_nt_)) + sizeof(f_nt_));
+inline void SimResponse_Frame_Mag::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.x_nt_){0}
+    , decltype(_impl_.y_nt_){0}
+    , decltype(_impl_.z_nt_){0}
+    , decltype(_impl_.f_nt_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SimResponse_Frame_Mag::~SimResponse_Frame_Mag() {
   // @@protoc_insertion_point(destructor:SatelliteEarthSimulation.SimResponse.Frame.Mag)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void SimResponse_Frame_Mag::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void SimResponse_Frame_Mag::ArenaDtor(void* object) {
-  SimResponse_Frame_Mag* _this = reinterpret_cast< SimResponse_Frame_Mag* >(object);
-  (void)_this;
-}
-void SimResponse_Frame_Mag::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SimResponse_Frame_Mag::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SimResponse_Frame_Mag::Clear() {
@@ -1309,22 +1333,22 @@ void SimResponse_Frame_Mag::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&x_nt_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&f_nt_) -
-      reinterpret_cast<char*>(&x_nt_)) + sizeof(f_nt_));
+  ::memset(&_impl_.x_nt_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.f_nt_) -
+      reinterpret_cast<char*>(&_impl_.x_nt_)) + sizeof(_impl_.f_nt_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SimResponse_Frame_Mag::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SimResponse_Frame_Mag::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // double x_nT = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
-          x_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.x_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1332,7 +1356,7 @@ const char* SimResponse_Frame_Mag::_InternalParse(const char* ptr, ::PROTOBUF_NA
       // double y_nT = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
-          y_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.y_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1340,7 +1364,7 @@ const char* SimResponse_Frame_Mag::_InternalParse(const char* ptr, ::PROTOBUF_NA
       // double z_nT = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
-          z_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.z_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1348,7 +1372,7 @@ const char* SimResponse_Frame_Mag::_InternalParse(const char* ptr, ::PROTOBUF_NA
       // double f_nT = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
-          f_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.f_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1389,7 +1413,7 @@ uint8_t* SimResponse_Frame_Mag::_InternalSerialize(
   memcpy(&raw_x_nt, &tmp_x_nt, sizeof(tmp_x_nt));
   if (raw_x_nt != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_x_nt(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(1, this->_internal_x_nt(), target);
   }
 
   // double y_nT = 2;
@@ -1399,7 +1423,7 @@ uint8_t* SimResponse_Frame_Mag::_InternalSerialize(
   memcpy(&raw_y_nt, &tmp_y_nt, sizeof(tmp_y_nt));
   if (raw_y_nt != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_y_nt(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_y_nt(), target);
   }
 
   // double z_nT = 3;
@@ -1409,7 +1433,7 @@ uint8_t* SimResponse_Frame_Mag::_InternalSerialize(
   memcpy(&raw_z_nt, &tmp_z_nt, sizeof(tmp_z_nt));
   if (raw_z_nt != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_z_nt(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_z_nt(), target);
   }
 
   // double f_nT = 4;
@@ -1419,11 +1443,11 @@ uint8_t* SimResponse_Frame_Mag::_InternalSerialize(
   memcpy(&raw_f_nt, &tmp_f_nt, sizeof(tmp_f_nt));
   if (raw_f_nt != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(4, this->_internal_f_nt(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_f_nt(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SatelliteEarthSimulation.SimResponse.Frame.Mag)
@@ -1474,25 +1498,21 @@ size_t SimResponse_Frame_Mag::ByteSizeLong() const {
     total_size += 1 + 8;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SimResponse_Frame_Mag::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     SimResponse_Frame_Mag::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SimResponse_Frame_Mag::GetClassData() const { return &_class_data_; }
 
-void SimResponse_Frame_Mag::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<SimResponse_Frame_Mag *>(to)->MergeFrom(
-      static_cast<const SimResponse_Frame_Mag &>(from));
-}
 
-
-void SimResponse_Frame_Mag::MergeFrom(const SimResponse_Frame_Mag& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse.Frame.Mag)
-  GOOGLE_DCHECK_NE(&from, this);
+void SimResponse_Frame_Mag::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SimResponse_Frame_Mag*>(&to_msg);
+  auto& from = static_cast<const SimResponse_Frame_Mag&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse.Frame.Mag)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1501,30 +1521,30 @@ void SimResponse_Frame_Mag::MergeFrom(const SimResponse_Frame_Mag& from) {
   uint64_t raw_x_nt;
   memcpy(&raw_x_nt, &tmp_x_nt, sizeof(tmp_x_nt));
   if (raw_x_nt != 0) {
-    _internal_set_x_nt(from._internal_x_nt());
+    _this->_internal_set_x_nt(from._internal_x_nt());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_y_nt = from._internal_y_nt();
   uint64_t raw_y_nt;
   memcpy(&raw_y_nt, &tmp_y_nt, sizeof(tmp_y_nt));
   if (raw_y_nt != 0) {
-    _internal_set_y_nt(from._internal_y_nt());
+    _this->_internal_set_y_nt(from._internal_y_nt());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_z_nt = from._internal_z_nt();
   uint64_t raw_z_nt;
   memcpy(&raw_z_nt, &tmp_z_nt, sizeof(tmp_z_nt));
   if (raw_z_nt != 0) {
-    _internal_set_z_nt(from._internal_z_nt());
+    _this->_internal_set_z_nt(from._internal_z_nt());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_f_nt = from._internal_f_nt();
   uint64_t raw_f_nt;
   memcpy(&raw_f_nt, &tmp_f_nt, sizeof(tmp_f_nt));
   if (raw_f_nt != 0) {
-    _internal_set_f_nt(from._internal_f_nt());
+    _this->_internal_set_f_nt(from._internal_f_nt());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SimResponse_Frame_Mag::CopyFrom(const SimResponse_Frame_Mag& from) {
@@ -1542,15 +1562,15 @@ void SimResponse_Frame_Mag::InternalSwap(SimResponse_Frame_Mag* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SimResponse_Frame_Mag, f_nt_)
-      + sizeof(SimResponse_Frame_Mag::f_nt_)
-      - PROTOBUF_FIELD_OFFSET(SimResponse_Frame_Mag, x_nt_)>(
-          reinterpret_cast<char*>(&x_nt_),
-          reinterpret_cast<char*>(&other->x_nt_));
+      PROTOBUF_FIELD_OFFSET(SimResponse_Frame_Mag, _impl_.f_nt_)
+      + sizeof(SimResponse_Frame_Mag::_impl_.f_nt_)
+      - PROTOBUF_FIELD_OFFSET(SimResponse_Frame_Mag, _impl_.x_nt_)>(
+          reinterpret_cast<char*>(&_impl_.x_nt_),
+          reinterpret_cast<char*>(&other->_impl_.x_nt_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SimResponse_Frame_Mag::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_getter, &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_once,
       file_level_metadata_satellite_5fEarth_5fsimulation_2eproto[3]);
 }
@@ -1565,66 +1585,67 @@ class SimResponse_Frame::_Internal {
 
 const ::SatelliteEarthSimulation::SimResponse_Frame_Geo&
 SimResponse_Frame::_Internal::geo(const SimResponse_Frame* msg) {
-  return *msg->geo_;
+  return *msg->_impl_.geo_;
 }
 const ::SatelliteEarthSimulation::SimResponse_Frame_Mag&
 SimResponse_Frame::_Internal::mag(const SimResponse_Frame* msg) {
-  return *msg->mag_;
+  return *msg->_impl_.mag_;
 }
 SimResponse_Frame::SimResponse_Frame(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:SatelliteEarthSimulation.SimResponse.Frame)
 }
 SimResponse_Frame::SimResponse_Frame(const SimResponse_Frame& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SimResponse_Frame* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.geo_){nullptr}
+    , decltype(_impl_.mag_){nullptr}
+    , decltype(_impl_.t_rel_s_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_geo()) {
-    geo_ = new ::SatelliteEarthSimulation::SimResponse_Frame_Geo(*from.geo_);
-  } else {
-    geo_ = nullptr;
+    _this->_impl_.geo_ = new ::SatelliteEarthSimulation::SimResponse_Frame_Geo(*from._impl_.geo_);
   }
   if (from._internal_has_mag()) {
-    mag_ = new ::SatelliteEarthSimulation::SimResponse_Frame_Mag(*from.mag_);
-  } else {
-    mag_ = nullptr;
+    _this->_impl_.mag_ = new ::SatelliteEarthSimulation::SimResponse_Frame_Mag(*from._impl_.mag_);
   }
-  t_rel_s_ = from.t_rel_s_;
+  _this->_impl_.t_rel_s_ = from._impl_.t_rel_s_;
   // @@protoc_insertion_point(copy_constructor:SatelliteEarthSimulation.SimResponse.Frame)
 }
 
-inline void SimResponse_Frame::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&geo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&t_rel_s_) -
-    reinterpret_cast<char*>(&geo_)) + sizeof(t_rel_s_));
+inline void SimResponse_Frame::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.geo_){nullptr}
+    , decltype(_impl_.mag_){nullptr}
+    , decltype(_impl_.t_rel_s_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SimResponse_Frame::~SimResponse_Frame() {
   // @@protoc_insertion_point(destructor:SatelliteEarthSimulation.SimResponse.Frame)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void SimResponse_Frame::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete geo_;
-  if (this != internal_default_instance()) delete mag_;
+  if (this != internal_default_instance()) delete _impl_.geo_;
+  if (this != internal_default_instance()) delete _impl_.mag_;
 }
 
-void SimResponse_Frame::ArenaDtor(void* object) {
-  SimResponse_Frame* _this = reinterpret_cast< SimResponse_Frame* >(object);
-  (void)_this;
-}
-void SimResponse_Frame::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SimResponse_Frame::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SimResponse_Frame::Clear() {
@@ -1633,28 +1654,28 @@ void SimResponse_Frame::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && geo_ != nullptr) {
-    delete geo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.geo_ != nullptr) {
+    delete _impl_.geo_;
   }
-  geo_ = nullptr;
-  if (GetArenaForAllocation() == nullptr && mag_ != nullptr) {
-    delete mag_;
+  _impl_.geo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.mag_ != nullptr) {
+    delete _impl_.mag_;
   }
-  mag_ = nullptr;
-  t_rel_s_ = 0;
+  _impl_.mag_ = nullptr;
+  _impl_.t_rel_s_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SimResponse_Frame::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SimResponse_Frame::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // double t_rel_s = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
-          t_rel_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.t_rel_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1711,27 +1732,25 @@ uint8_t* SimResponse_Frame::_InternalSerialize(
   memcpy(&raw_t_rel_s, &tmp_t_rel_s, sizeof(tmp_t_rel_s));
   if (raw_t_rel_s != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_t_rel_s(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(1, this->_internal_t_rel_s(), target);
   }
 
   // .SatelliteEarthSimulation.SimResponse.Frame.Geo geo = 2;
   if (this->_internal_has_geo()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::geo(this), target, stream);
+      InternalWriteMessage(2, _Internal::geo(this),
+        _Internal::geo(this).GetCachedSize(), target, stream);
   }
 
   // .SatelliteEarthSimulation.SimResponse.Frame.Mag mag = 3;
   if (this->_internal_has_mag()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::mag(this), target, stream);
+      InternalWriteMessage(3, _Internal::mag(this),
+        _Internal::mag(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SatelliteEarthSimulation.SimResponse.Frame)
@@ -1750,14 +1769,14 @@ size_t SimResponse_Frame::ByteSizeLong() const {
   if (this->_internal_has_geo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *geo_);
+        *_impl_.geo_);
   }
 
   // .SatelliteEarthSimulation.SimResponse.Frame.Mag mag = 3;
   if (this->_internal_has_mag()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *mag_);
+        *_impl_.mag_);
   }
 
   // double t_rel_s = 1;
@@ -1769,42 +1788,40 @@ size_t SimResponse_Frame::ByteSizeLong() const {
     total_size += 1 + 8;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SimResponse_Frame::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     SimResponse_Frame::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SimResponse_Frame::GetClassData() const { return &_class_data_; }
 
-void SimResponse_Frame::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<SimResponse_Frame *>(to)->MergeFrom(
-      static_cast<const SimResponse_Frame &>(from));
-}
 
-
-void SimResponse_Frame::MergeFrom(const SimResponse_Frame& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse.Frame)
-  GOOGLE_DCHECK_NE(&from, this);
+void SimResponse_Frame::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SimResponse_Frame*>(&to_msg);
+  auto& from = static_cast<const SimResponse_Frame&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse.Frame)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_geo()) {
-    _internal_mutable_geo()->::SatelliteEarthSimulation::SimResponse_Frame_Geo::MergeFrom(from._internal_geo());
+    _this->_internal_mutable_geo()->::SatelliteEarthSimulation::SimResponse_Frame_Geo::MergeFrom(
+        from._internal_geo());
   }
   if (from._internal_has_mag()) {
-    _internal_mutable_mag()->::SatelliteEarthSimulation::SimResponse_Frame_Mag::MergeFrom(from._internal_mag());
+    _this->_internal_mutable_mag()->::SatelliteEarthSimulation::SimResponse_Frame_Mag::MergeFrom(
+        from._internal_mag());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_t_rel_s = from._internal_t_rel_s();
   uint64_t raw_t_rel_s;
   memcpy(&raw_t_rel_s, &tmp_t_rel_s, sizeof(tmp_t_rel_s));
   if (raw_t_rel_s != 0) {
-    _internal_set_t_rel_s(from._internal_t_rel_s());
+    _this->_internal_set_t_rel_s(from._internal_t_rel_s());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SimResponse_Frame::CopyFrom(const SimResponse_Frame& from) {
@@ -1822,15 +1839,15 @@ void SimResponse_Frame::InternalSwap(SimResponse_Frame* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SimResponse_Frame, t_rel_s_)
-      + sizeof(SimResponse_Frame::t_rel_s_)
-      - PROTOBUF_FIELD_OFFSET(SimResponse_Frame, geo_)>(
-          reinterpret_cast<char*>(&geo_),
-          reinterpret_cast<char*>(&other->geo_));
+      PROTOBUF_FIELD_OFFSET(SimResponse_Frame, _impl_.t_rel_s_)
+      + sizeof(SimResponse_Frame::_impl_.t_rel_s_)
+      - PROTOBUF_FIELD_OFFSET(SimResponse_Frame, _impl_.geo_)>(
+          reinterpret_cast<char*>(&_impl_.geo_),
+          reinterpret_cast<char*>(&other->_impl_.geo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SimResponse_Frame::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_getter, &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_once,
       file_level_metadata_satellite_5fEarth_5fsimulation_2eproto[4]);
 }
@@ -1844,60 +1861,67 @@ class SimResponse_Decay_TLEForward::_Internal {
 SimResponse_Decay_TLEForward::SimResponse_Decay_TLEForward(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:SatelliteEarthSimulation.SimResponse.Decay.TLEForward)
 }
 SimResponse_Decay_TLEForward::SimResponse_Decay_TLEForward(const SimResponse_Decay_TLEForward& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SimResponse_Decay_TLEForward* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.time_utc_){}
+    , decltype(_impl_.time_from_start_s_){}
+    , decltype(_impl_.uncertainty_s_){}
+    , decltype(_impl_.crossed_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  time_utc_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.time_utc_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    time_utc_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+    _impl_.time_utc_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_time_utc().empty()) {
-    time_utc_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_time_utc(), 
-      GetArenaForAllocation());
+    _this->_impl_.time_utc_.Set(from._internal_time_utc(), 
+      _this->GetArenaForAllocation());
   }
-  ::memcpy(&time_from_start_s_, &from.time_from_start_s_,
-    static_cast<size_t>(reinterpret_cast<char*>(&crossed_) -
-    reinterpret_cast<char*>(&time_from_start_s_)) + sizeof(crossed_));
+  ::memcpy(&_impl_.time_from_start_s_, &from._impl_.time_from_start_s_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.crossed_) -
+    reinterpret_cast<char*>(&_impl_.time_from_start_s_)) + sizeof(_impl_.crossed_));
   // @@protoc_insertion_point(copy_constructor:SatelliteEarthSimulation.SimResponse.Decay.TLEForward)
 }
 
-inline void SimResponse_Decay_TLEForward::SharedCtor() {
-time_utc_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  time_utc_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&time_from_start_s_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&crossed_) -
-    reinterpret_cast<char*>(&time_from_start_s_)) + sizeof(crossed_));
+inline void SimResponse_Decay_TLEForward::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.time_utc_){}
+    , decltype(_impl_.time_from_start_s_){0}
+    , decltype(_impl_.uncertainty_s_){0}
+    , decltype(_impl_.crossed_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.time_utc_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.time_utc_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SimResponse_Decay_TLEForward::~SimResponse_Decay_TLEForward() {
   // @@protoc_insertion_point(destructor:SatelliteEarthSimulation.SimResponse.Decay.TLEForward)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void SimResponse_Decay_TLEForward::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  time_utc_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.time_utc_.Destroy();
 }
 
-void SimResponse_Decay_TLEForward::ArenaDtor(void* object) {
-  SimResponse_Decay_TLEForward* _this = reinterpret_cast< SimResponse_Decay_TLEForward* >(object);
-  (void)_this;
-}
-void SimResponse_Decay_TLEForward::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SimResponse_Decay_TLEForward::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SimResponse_Decay_TLEForward::Clear() {
@@ -1906,23 +1930,23 @@ void SimResponse_Decay_TLEForward::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  time_utc_.ClearToEmpty();
-  ::memset(&time_from_start_s_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&crossed_) -
-      reinterpret_cast<char*>(&time_from_start_s_)) + sizeof(crossed_));
+  _impl_.time_utc_.ClearToEmpty();
+  ::memset(&_impl_.time_from_start_s_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.crossed_) -
+      reinterpret_cast<char*>(&_impl_.time_from_start_s_)) + sizeof(_impl_.crossed_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SimResponse_Decay_TLEForward::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SimResponse_Decay_TLEForward::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // bool crossed = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          crossed_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.crossed_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1931,16 +1955,16 @@ const char* SimResponse_Decay_TLEForward::_InternalParse(const char* ptr, ::PROT
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_time_utc();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "SatelliteEarthSimulation.SimResponse.Decay.TLEForward.time_utc"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "SatelliteEarthSimulation.SimResponse.Decay.TLEForward.time_utc"));
         } else
           goto handle_unusual;
         continue;
       // double time_from_start_s = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
-          time_from_start_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.time_from_start_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1948,7 +1972,7 @@ const char* SimResponse_Decay_TLEForward::_InternalParse(const char* ptr, ::PROT
       // double uncertainty_s = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
-          uncertainty_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.uncertainty_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1985,7 +2009,7 @@ uint8_t* SimResponse_Decay_TLEForward::_InternalSerialize(
   // bool crossed = 1;
   if (this->_internal_crossed() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_crossed(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_crossed(), target);
   }
 
   // string time_utc = 2;
@@ -2005,7 +2029,7 @@ uint8_t* SimResponse_Decay_TLEForward::_InternalSerialize(
   memcpy(&raw_time_from_start_s, &tmp_time_from_start_s, sizeof(tmp_time_from_start_s));
   if (raw_time_from_start_s != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_time_from_start_s(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_time_from_start_s(), target);
   }
 
   // double uncertainty_s = 4;
@@ -2015,11 +2039,11 @@ uint8_t* SimResponse_Decay_TLEForward::_InternalSerialize(
   memcpy(&raw_uncertainty_s, &tmp_uncertainty_s, sizeof(tmp_uncertainty_s));
   if (raw_uncertainty_s != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(4, this->_internal_uncertainty_s(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_uncertainty_s(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SatelliteEarthSimulation.SimResponse.Decay.TLEForward)
@@ -2064,49 +2088,45 @@ size_t SimResponse_Decay_TLEForward::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SimResponse_Decay_TLEForward::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     SimResponse_Decay_TLEForward::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SimResponse_Decay_TLEForward::GetClassData() const { return &_class_data_; }
 
-void SimResponse_Decay_TLEForward::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<SimResponse_Decay_TLEForward *>(to)->MergeFrom(
-      static_cast<const SimResponse_Decay_TLEForward &>(from));
-}
 
-
-void SimResponse_Decay_TLEForward::MergeFrom(const SimResponse_Decay_TLEForward& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse.Decay.TLEForward)
-  GOOGLE_DCHECK_NE(&from, this);
+void SimResponse_Decay_TLEForward::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SimResponse_Decay_TLEForward*>(&to_msg);
+  auto& from = static_cast<const SimResponse_Decay_TLEForward&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse.Decay.TLEForward)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (!from._internal_time_utc().empty()) {
-    _internal_set_time_utc(from._internal_time_utc());
+    _this->_internal_set_time_utc(from._internal_time_utc());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_time_from_start_s = from._internal_time_from_start_s();
   uint64_t raw_time_from_start_s;
   memcpy(&raw_time_from_start_s, &tmp_time_from_start_s, sizeof(tmp_time_from_start_s));
   if (raw_time_from_start_s != 0) {
-    _internal_set_time_from_start_s(from._internal_time_from_start_s());
+    _this->_internal_set_time_from_start_s(from._internal_time_from_start_s());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_uncertainty_s = from._internal_uncertainty_s();
   uint64_t raw_uncertainty_s;
   memcpy(&raw_uncertainty_s, &tmp_uncertainty_s, sizeof(tmp_uncertainty_s));
   if (raw_uncertainty_s != 0) {
-    _internal_set_uncertainty_s(from._internal_uncertainty_s());
+    _this->_internal_set_uncertainty_s(from._internal_uncertainty_s());
   }
   if (from._internal_crossed() != 0) {
-    _internal_set_crossed(from._internal_crossed());
+    _this->_internal_set_crossed(from._internal_crossed());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SimResponse_Decay_TLEForward::CopyFrom(const SimResponse_Decay_TLEForward& from) {
@@ -2126,20 +2146,19 @@ void SimResponse_Decay_TLEForward::InternalSwap(SimResponse_Decay_TLEForward* ot
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &time_utc_, lhs_arena,
-      &other->time_utc_, rhs_arena
+      &_impl_.time_utc_, lhs_arena,
+      &other->_impl_.time_utc_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SimResponse_Decay_TLEForward, crossed_)
-      + sizeof(SimResponse_Decay_TLEForward::crossed_)
-      - PROTOBUF_FIELD_OFFSET(SimResponse_Decay_TLEForward, time_from_start_s_)>(
-          reinterpret_cast<char*>(&time_from_start_s_),
-          reinterpret_cast<char*>(&other->time_from_start_s_));
+      PROTOBUF_FIELD_OFFSET(SimResponse_Decay_TLEForward, _impl_.crossed_)
+      + sizeof(SimResponse_Decay_TLEForward::_impl_.crossed_)
+      - PROTOBUF_FIELD_OFFSET(SimResponse_Decay_TLEForward, _impl_.time_from_start_s_)>(
+          reinterpret_cast<char*>(&_impl_.time_from_start_s_),
+          reinterpret_cast<char*>(&other->_impl_.time_from_start_s_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SimResponse_Decay_TLEForward::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_getter, &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_once,
       file_level_metadata_satellite_5fEarth_5fsimulation_2eproto[5]);
 }
@@ -2153,60 +2172,67 @@ class SimResponse_Decay_PhysicsDrag::_Internal {
 SimResponse_Decay_PhysicsDrag::SimResponse_Decay_PhysicsDrag(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:SatelliteEarthSimulation.SimResponse.Decay.PhysicsDrag)
 }
 SimResponse_Decay_PhysicsDrag::SimResponse_Decay_PhysicsDrag(const SimResponse_Decay_PhysicsDrag& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SimResponse_Decay_PhysicsDrag* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.time_utc_){}
+    , decltype(_impl_.time_from_start_s_){}
+    , decltype(_impl_.uncertainty_s_){}
+    , decltype(_impl_.crossed_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  time_utc_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.time_utc_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    time_utc_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+    _impl_.time_utc_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_time_utc().empty()) {
-    time_utc_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_time_utc(), 
-      GetArenaForAllocation());
+    _this->_impl_.time_utc_.Set(from._internal_time_utc(), 
+      _this->GetArenaForAllocation());
   }
-  ::memcpy(&time_from_start_s_, &from.time_from_start_s_,
-    static_cast<size_t>(reinterpret_cast<char*>(&crossed_) -
-    reinterpret_cast<char*>(&time_from_start_s_)) + sizeof(crossed_));
+  ::memcpy(&_impl_.time_from_start_s_, &from._impl_.time_from_start_s_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.crossed_) -
+    reinterpret_cast<char*>(&_impl_.time_from_start_s_)) + sizeof(_impl_.crossed_));
   // @@protoc_insertion_point(copy_constructor:SatelliteEarthSimulation.SimResponse.Decay.PhysicsDrag)
 }
 
-inline void SimResponse_Decay_PhysicsDrag::SharedCtor() {
-time_utc_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  time_utc_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&time_from_start_s_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&crossed_) -
-    reinterpret_cast<char*>(&time_from_start_s_)) + sizeof(crossed_));
+inline void SimResponse_Decay_PhysicsDrag::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.time_utc_){}
+    , decltype(_impl_.time_from_start_s_){0}
+    , decltype(_impl_.uncertainty_s_){0}
+    , decltype(_impl_.crossed_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.time_utc_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.time_utc_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SimResponse_Decay_PhysicsDrag::~SimResponse_Decay_PhysicsDrag() {
   // @@protoc_insertion_point(destructor:SatelliteEarthSimulation.SimResponse.Decay.PhysicsDrag)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void SimResponse_Decay_PhysicsDrag::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  time_utc_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.time_utc_.Destroy();
 }
 
-void SimResponse_Decay_PhysicsDrag::ArenaDtor(void* object) {
-  SimResponse_Decay_PhysicsDrag* _this = reinterpret_cast< SimResponse_Decay_PhysicsDrag* >(object);
-  (void)_this;
-}
-void SimResponse_Decay_PhysicsDrag::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SimResponse_Decay_PhysicsDrag::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SimResponse_Decay_PhysicsDrag::Clear() {
@@ -2215,23 +2241,23 @@ void SimResponse_Decay_PhysicsDrag::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  time_utc_.ClearToEmpty();
-  ::memset(&time_from_start_s_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&crossed_) -
-      reinterpret_cast<char*>(&time_from_start_s_)) + sizeof(crossed_));
+  _impl_.time_utc_.ClearToEmpty();
+  ::memset(&_impl_.time_from_start_s_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.crossed_) -
+      reinterpret_cast<char*>(&_impl_.time_from_start_s_)) + sizeof(_impl_.crossed_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SimResponse_Decay_PhysicsDrag::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SimResponse_Decay_PhysicsDrag::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // bool crossed = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          crossed_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.crossed_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2240,16 +2266,16 @@ const char* SimResponse_Decay_PhysicsDrag::_InternalParse(const char* ptr, ::PRO
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_time_utc();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "SatelliteEarthSimulation.SimResponse.Decay.PhysicsDrag.time_utc"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "SatelliteEarthSimulation.SimResponse.Decay.PhysicsDrag.time_utc"));
         } else
           goto handle_unusual;
         continue;
       // double time_from_start_s = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
-          time_from_start_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.time_from_start_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -2257,7 +2283,7 @@ const char* SimResponse_Decay_PhysicsDrag::_InternalParse(const char* ptr, ::PRO
       // double uncertainty_s = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
-          uncertainty_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.uncertainty_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -2294,7 +2320,7 @@ uint8_t* SimResponse_Decay_PhysicsDrag::_InternalSerialize(
   // bool crossed = 1;
   if (this->_internal_crossed() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_crossed(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_crossed(), target);
   }
 
   // string time_utc = 2;
@@ -2314,7 +2340,7 @@ uint8_t* SimResponse_Decay_PhysicsDrag::_InternalSerialize(
   memcpy(&raw_time_from_start_s, &tmp_time_from_start_s, sizeof(tmp_time_from_start_s));
   if (raw_time_from_start_s != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_time_from_start_s(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_time_from_start_s(), target);
   }
 
   // double uncertainty_s = 4;
@@ -2324,11 +2350,11 @@ uint8_t* SimResponse_Decay_PhysicsDrag::_InternalSerialize(
   memcpy(&raw_uncertainty_s, &tmp_uncertainty_s, sizeof(tmp_uncertainty_s));
   if (raw_uncertainty_s != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(4, this->_internal_uncertainty_s(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_uncertainty_s(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SatelliteEarthSimulation.SimResponse.Decay.PhysicsDrag)
@@ -2373,49 +2399,45 @@ size_t SimResponse_Decay_PhysicsDrag::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SimResponse_Decay_PhysicsDrag::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     SimResponse_Decay_PhysicsDrag::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SimResponse_Decay_PhysicsDrag::GetClassData() const { return &_class_data_; }
 
-void SimResponse_Decay_PhysicsDrag::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<SimResponse_Decay_PhysicsDrag *>(to)->MergeFrom(
-      static_cast<const SimResponse_Decay_PhysicsDrag &>(from));
-}
 
-
-void SimResponse_Decay_PhysicsDrag::MergeFrom(const SimResponse_Decay_PhysicsDrag& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse.Decay.PhysicsDrag)
-  GOOGLE_DCHECK_NE(&from, this);
+void SimResponse_Decay_PhysicsDrag::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SimResponse_Decay_PhysicsDrag*>(&to_msg);
+  auto& from = static_cast<const SimResponse_Decay_PhysicsDrag&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse.Decay.PhysicsDrag)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (!from._internal_time_utc().empty()) {
-    _internal_set_time_utc(from._internal_time_utc());
+    _this->_internal_set_time_utc(from._internal_time_utc());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_time_from_start_s = from._internal_time_from_start_s();
   uint64_t raw_time_from_start_s;
   memcpy(&raw_time_from_start_s, &tmp_time_from_start_s, sizeof(tmp_time_from_start_s));
   if (raw_time_from_start_s != 0) {
-    _internal_set_time_from_start_s(from._internal_time_from_start_s());
+    _this->_internal_set_time_from_start_s(from._internal_time_from_start_s());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_uncertainty_s = from._internal_uncertainty_s();
   uint64_t raw_uncertainty_s;
   memcpy(&raw_uncertainty_s, &tmp_uncertainty_s, sizeof(tmp_uncertainty_s));
   if (raw_uncertainty_s != 0) {
-    _internal_set_uncertainty_s(from._internal_uncertainty_s());
+    _this->_internal_set_uncertainty_s(from._internal_uncertainty_s());
   }
   if (from._internal_crossed() != 0) {
-    _internal_set_crossed(from._internal_crossed());
+    _this->_internal_set_crossed(from._internal_crossed());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SimResponse_Decay_PhysicsDrag::CopyFrom(const SimResponse_Decay_PhysicsDrag& from) {
@@ -2435,20 +2457,19 @@ void SimResponse_Decay_PhysicsDrag::InternalSwap(SimResponse_Decay_PhysicsDrag* 
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &time_utc_, lhs_arena,
-      &other->time_utc_, rhs_arena
+      &_impl_.time_utc_, lhs_arena,
+      &other->_impl_.time_utc_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SimResponse_Decay_PhysicsDrag, crossed_)
-      + sizeof(SimResponse_Decay_PhysicsDrag::crossed_)
-      - PROTOBUF_FIELD_OFFSET(SimResponse_Decay_PhysicsDrag, time_from_start_s_)>(
-          reinterpret_cast<char*>(&time_from_start_s_),
-          reinterpret_cast<char*>(&other->time_from_start_s_));
+      PROTOBUF_FIELD_OFFSET(SimResponse_Decay_PhysicsDrag, _impl_.crossed_)
+      + sizeof(SimResponse_Decay_PhysicsDrag::_impl_.crossed_)
+      - PROTOBUF_FIELD_OFFSET(SimResponse_Decay_PhysicsDrag, _impl_.time_from_start_s_)>(
+          reinterpret_cast<char*>(&_impl_.time_from_start_s_),
+          reinterpret_cast<char*>(&other->_impl_.time_from_start_s_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SimResponse_Decay_PhysicsDrag::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_getter, &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_once,
       file_level_metadata_satellite_5fEarth_5fsimulation_2eproto[6]);
 }
@@ -2463,66 +2484,67 @@ class SimResponse_Decay::_Internal {
 
 const ::SatelliteEarthSimulation::SimResponse_Decay_TLEForward&
 SimResponse_Decay::_Internal::tle_forward(const SimResponse_Decay* msg) {
-  return *msg->tle_forward_;
+  return *msg->_impl_.tle_forward_;
 }
 const ::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag&
 SimResponse_Decay::_Internal::physics_drag(const SimResponse_Decay* msg) {
-  return *msg->physics_drag_;
+  return *msg->_impl_.physics_drag_;
 }
 SimResponse_Decay::SimResponse_Decay(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:SatelliteEarthSimulation.SimResponse.Decay)
 }
 SimResponse_Decay::SimResponse_Decay(const SimResponse_Decay& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SimResponse_Decay* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.tle_forward_){nullptr}
+    , decltype(_impl_.physics_drag_){nullptr}
+    , decltype(_impl_.threshold_km_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_tle_forward()) {
-    tle_forward_ = new ::SatelliteEarthSimulation::SimResponse_Decay_TLEForward(*from.tle_forward_);
-  } else {
-    tle_forward_ = nullptr;
+    _this->_impl_.tle_forward_ = new ::SatelliteEarthSimulation::SimResponse_Decay_TLEForward(*from._impl_.tle_forward_);
   }
   if (from._internal_has_physics_drag()) {
-    physics_drag_ = new ::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag(*from.physics_drag_);
-  } else {
-    physics_drag_ = nullptr;
+    _this->_impl_.physics_drag_ = new ::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag(*from._impl_.physics_drag_);
   }
-  threshold_km_ = from.threshold_km_;
+  _this->_impl_.threshold_km_ = from._impl_.threshold_km_;
   // @@protoc_insertion_point(copy_constructor:SatelliteEarthSimulation.SimResponse.Decay)
 }
 
-inline void SimResponse_Decay::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&tle_forward_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&threshold_km_) -
-    reinterpret_cast<char*>(&tle_forward_)) + sizeof(threshold_km_));
+inline void SimResponse_Decay::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.tle_forward_){nullptr}
+    , decltype(_impl_.physics_drag_){nullptr}
+    , decltype(_impl_.threshold_km_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SimResponse_Decay::~SimResponse_Decay() {
   // @@protoc_insertion_point(destructor:SatelliteEarthSimulation.SimResponse.Decay)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void SimResponse_Decay::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete tle_forward_;
-  if (this != internal_default_instance()) delete physics_drag_;
+  if (this != internal_default_instance()) delete _impl_.tle_forward_;
+  if (this != internal_default_instance()) delete _impl_.physics_drag_;
 }
 
-void SimResponse_Decay::ArenaDtor(void* object) {
-  SimResponse_Decay* _this = reinterpret_cast< SimResponse_Decay* >(object);
-  (void)_this;
-}
-void SimResponse_Decay::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SimResponse_Decay::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SimResponse_Decay::Clear() {
@@ -2531,28 +2553,28 @@ void SimResponse_Decay::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && tle_forward_ != nullptr) {
-    delete tle_forward_;
+  if (GetArenaForAllocation() == nullptr && _impl_.tle_forward_ != nullptr) {
+    delete _impl_.tle_forward_;
   }
-  tle_forward_ = nullptr;
-  if (GetArenaForAllocation() == nullptr && physics_drag_ != nullptr) {
-    delete physics_drag_;
+  _impl_.tle_forward_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.physics_drag_ != nullptr) {
+    delete _impl_.physics_drag_;
   }
-  physics_drag_ = nullptr;
-  threshold_km_ = 0;
+  _impl_.physics_drag_ = nullptr;
+  _impl_.threshold_km_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SimResponse_Decay::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SimResponse_Decay::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // double threshold_km = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
-          threshold_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.threshold_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -2609,27 +2631,25 @@ uint8_t* SimResponse_Decay::_InternalSerialize(
   memcpy(&raw_threshold_km, &tmp_threshold_km, sizeof(tmp_threshold_km));
   if (raw_threshold_km != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_threshold_km(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(1, this->_internal_threshold_km(), target);
   }
 
   // .SatelliteEarthSimulation.SimResponse.Decay.TLEForward tle_forward = 2;
   if (this->_internal_has_tle_forward()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::tle_forward(this), target, stream);
+      InternalWriteMessage(2, _Internal::tle_forward(this),
+        _Internal::tle_forward(this).GetCachedSize(), target, stream);
   }
 
   // .SatelliteEarthSimulation.SimResponse.Decay.PhysicsDrag physics_drag = 3;
   if (this->_internal_has_physics_drag()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::physics_drag(this), target, stream);
+      InternalWriteMessage(3, _Internal::physics_drag(this),
+        _Internal::physics_drag(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SatelliteEarthSimulation.SimResponse.Decay)
@@ -2648,14 +2668,14 @@ size_t SimResponse_Decay::ByteSizeLong() const {
   if (this->_internal_has_tle_forward()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *tle_forward_);
+        *_impl_.tle_forward_);
   }
 
   // .SatelliteEarthSimulation.SimResponse.Decay.PhysicsDrag physics_drag = 3;
   if (this->_internal_has_physics_drag()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *physics_drag_);
+        *_impl_.physics_drag_);
   }
 
   // double threshold_km = 1;
@@ -2667,42 +2687,40 @@ size_t SimResponse_Decay::ByteSizeLong() const {
     total_size += 1 + 8;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SimResponse_Decay::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     SimResponse_Decay::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SimResponse_Decay::GetClassData() const { return &_class_data_; }
 
-void SimResponse_Decay::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<SimResponse_Decay *>(to)->MergeFrom(
-      static_cast<const SimResponse_Decay &>(from));
-}
 
-
-void SimResponse_Decay::MergeFrom(const SimResponse_Decay& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse.Decay)
-  GOOGLE_DCHECK_NE(&from, this);
+void SimResponse_Decay::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SimResponse_Decay*>(&to_msg);
+  auto& from = static_cast<const SimResponse_Decay&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse.Decay)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_tle_forward()) {
-    _internal_mutable_tle_forward()->::SatelliteEarthSimulation::SimResponse_Decay_TLEForward::MergeFrom(from._internal_tle_forward());
+    _this->_internal_mutable_tle_forward()->::SatelliteEarthSimulation::SimResponse_Decay_TLEForward::MergeFrom(
+        from._internal_tle_forward());
   }
   if (from._internal_has_physics_drag()) {
-    _internal_mutable_physics_drag()->::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag::MergeFrom(from._internal_physics_drag());
+    _this->_internal_mutable_physics_drag()->::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag::MergeFrom(
+        from._internal_physics_drag());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_threshold_km = from._internal_threshold_km();
   uint64_t raw_threshold_km;
   memcpy(&raw_threshold_km, &tmp_threshold_km, sizeof(tmp_threshold_km));
   if (raw_threshold_km != 0) {
-    _internal_set_threshold_km(from._internal_threshold_km());
+    _this->_internal_set_threshold_km(from._internal_threshold_km());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SimResponse_Decay::CopyFrom(const SimResponse_Decay& from) {
@@ -2720,15 +2738,15 @@ void SimResponse_Decay::InternalSwap(SimResponse_Decay* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SimResponse_Decay, threshold_km_)
-      + sizeof(SimResponse_Decay::threshold_km_)
-      - PROTOBUF_FIELD_OFFSET(SimResponse_Decay, tle_forward_)>(
-          reinterpret_cast<char*>(&tle_forward_),
-          reinterpret_cast<char*>(&other->tle_forward_));
+      PROTOBUF_FIELD_OFFSET(SimResponse_Decay, _impl_.threshold_km_)
+      + sizeof(SimResponse_Decay::_impl_.threshold_km_)
+      - PROTOBUF_FIELD_OFFSET(SimResponse_Decay, _impl_.tle_forward_)>(
+          reinterpret_cast<char*>(&_impl_.tle_forward_),
+          reinterpret_cast<char*>(&other->_impl_.tle_forward_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SimResponse_Decay::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_getter, &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_once,
       file_level_metadata_satellite_5fEarth_5fsimulation_2eproto[7]);
 }
@@ -2742,60 +2760,65 @@ class SimResponse_Meta::_Internal {
 SimResponse_Meta::SimResponse_Meta(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:SatelliteEarthSimulation.SimResponse.Meta)
 }
 SimResponse_Meta::SimResponse_Meta(const SimResponse_Meta& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SimResponse_Meta* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.tle_epoch_utc_){}
+    , decltype(_impl_.points_generated_){}
+    , decltype(_impl_.out_of_tle_epoch_window_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  tle_epoch_utc_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.tle_epoch_utc_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    tle_epoch_utc_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+    _impl_.tle_epoch_utc_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_tle_epoch_utc().empty()) {
-    tle_epoch_utc_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_tle_epoch_utc(), 
-      GetArenaForAllocation());
+    _this->_impl_.tle_epoch_utc_.Set(from._internal_tle_epoch_utc(), 
+      _this->GetArenaForAllocation());
   }
-  ::memcpy(&points_returned_, &from.points_returned_,
-    static_cast<size_t>(reinterpret_cast<char*>(&out_of_tle_epoch_window_) -
-    reinterpret_cast<char*>(&points_returned_)) + sizeof(out_of_tle_epoch_window_));
+  ::memcpy(&_impl_.points_generated_, &from._impl_.points_generated_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.out_of_tle_epoch_window_) -
+    reinterpret_cast<char*>(&_impl_.points_generated_)) + sizeof(_impl_.out_of_tle_epoch_window_));
   // @@protoc_insertion_point(copy_constructor:SatelliteEarthSimulation.SimResponse.Meta)
 }
 
-inline void SimResponse_Meta::SharedCtor() {
-tle_epoch_utc_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  tle_epoch_utc_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&points_returned_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&out_of_tle_epoch_window_) -
-    reinterpret_cast<char*>(&points_returned_)) + sizeof(out_of_tle_epoch_window_));
+inline void SimResponse_Meta::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.tle_epoch_utc_){}
+    , decltype(_impl_.points_generated_){0u}
+    , decltype(_impl_.out_of_tle_epoch_window_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.tle_epoch_utc_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.tle_epoch_utc_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SimResponse_Meta::~SimResponse_Meta() {
   // @@protoc_insertion_point(destructor:SatelliteEarthSimulation.SimResponse.Meta)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void SimResponse_Meta::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  tle_epoch_utc_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.tle_epoch_utc_.Destroy();
 }
 
-void SimResponse_Meta::ArenaDtor(void* object) {
-  SimResponse_Meta* _this = reinterpret_cast< SimResponse_Meta* >(object);
-  (void)_this;
-}
-void SimResponse_Meta::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SimResponse_Meta::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SimResponse_Meta::Clear() {
@@ -2804,39 +2827,23 @@ void SimResponse_Meta::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  tle_epoch_utc_.ClearToEmpty();
-  ::memset(&points_returned_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&out_of_tle_epoch_window_) -
-      reinterpret_cast<char*>(&points_returned_)) + sizeof(out_of_tle_epoch_window_));
+  _impl_.tle_epoch_utc_.ClearToEmpty();
+  ::memset(&_impl_.points_generated_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.out_of_tle_epoch_window_) -
+      reinterpret_cast<char*>(&_impl_.points_generated_)) + sizeof(_impl_.out_of_tle_epoch_window_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SimResponse_Meta::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SimResponse_Meta::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint32 points_returned = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          points_returned_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
       // uint32 points_generated = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          points_generated_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // uint32 skipped_frames = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          skipped_frames_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.points_generated_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2845,16 +2852,16 @@ const char* SimResponse_Meta::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_tle_epoch_utc();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "SatelliteEarthSimulation.SimResponse.Meta.tle_epoch_utc"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "SatelliteEarthSimulation.SimResponse.Meta.tle_epoch_utc"));
         } else
           goto handle_unusual;
         continue;
       // bool out_of_tle_epoch_window = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          out_of_tle_epoch_window_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.out_of_tle_epoch_window_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2888,22 +2895,10 @@ uint8_t* SimResponse_Meta::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 points_returned = 1;
-  if (this->_internal_points_returned() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_points_returned(), target);
-  }
-
   // uint32 points_generated = 2;
   if (this->_internal_points_generated() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_points_generated(), target);
-  }
-
-  // uint32 skipped_frames = 3;
-  if (this->_internal_skipped_frames() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->_internal_skipped_frames(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_points_generated(), target);
   }
 
   // string tle_epoch_utc = 4;
@@ -2919,11 +2914,11 @@ uint8_t* SimResponse_Meta::_InternalSerialize(
   // bool out_of_tle_epoch_window = 5;
   if (this->_internal_out_of_tle_epoch_window() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->_internal_out_of_tle_epoch_window(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_out_of_tle_epoch_window(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SatelliteEarthSimulation.SimResponse.Meta)
@@ -2945,19 +2940,9 @@ size_t SimResponse_Meta::ByteSizeLong() const {
         this->_internal_tle_epoch_utc());
   }
 
-  // uint32 points_returned = 1;
-  if (this->_internal_points_returned() != 0) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32SizePlusOne(this->_internal_points_returned());
-  }
-
   // uint32 points_generated = 2;
   if (this->_internal_points_generated() != 0) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32SizePlusOne(this->_internal_points_generated());
-  }
-
-  // uint32 skipped_frames = 3;
-  if (this->_internal_skipped_frames() != 0) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32SizePlusOne(this->_internal_skipped_frames());
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_points_generated());
   }
 
   // bool out_of_tle_epoch_window = 5;
@@ -2965,44 +2950,34 @@ size_t SimResponse_Meta::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SimResponse_Meta::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     SimResponse_Meta::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SimResponse_Meta::GetClassData() const { return &_class_data_; }
 
-void SimResponse_Meta::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<SimResponse_Meta *>(to)->MergeFrom(
-      static_cast<const SimResponse_Meta &>(from));
-}
 
-
-void SimResponse_Meta::MergeFrom(const SimResponse_Meta& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse.Meta)
-  GOOGLE_DCHECK_NE(&from, this);
+void SimResponse_Meta::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SimResponse_Meta*>(&to_msg);
+  auto& from = static_cast<const SimResponse_Meta&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse.Meta)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (!from._internal_tle_epoch_utc().empty()) {
-    _internal_set_tle_epoch_utc(from._internal_tle_epoch_utc());
-  }
-  if (from._internal_points_returned() != 0) {
-    _internal_set_points_returned(from._internal_points_returned());
+    _this->_internal_set_tle_epoch_utc(from._internal_tle_epoch_utc());
   }
   if (from._internal_points_generated() != 0) {
-    _internal_set_points_generated(from._internal_points_generated());
-  }
-  if (from._internal_skipped_frames() != 0) {
-    _internal_set_skipped_frames(from._internal_skipped_frames());
+    _this->_internal_set_points_generated(from._internal_points_generated());
   }
   if (from._internal_out_of_tle_epoch_window() != 0) {
-    _internal_set_out_of_tle_epoch_window(from._internal_out_of_tle_epoch_window());
+    _this->_internal_set_out_of_tle_epoch_window(from._internal_out_of_tle_epoch_window());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SimResponse_Meta::CopyFrom(const SimResponse_Meta& from) {
@@ -3022,20 +2997,19 @@ void SimResponse_Meta::InternalSwap(SimResponse_Meta* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &tle_epoch_utc_, lhs_arena,
-      &other->tle_epoch_utc_, rhs_arena
+      &_impl_.tle_epoch_utc_, lhs_arena,
+      &other->_impl_.tle_epoch_utc_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SimResponse_Meta, out_of_tle_epoch_window_)
-      + sizeof(SimResponse_Meta::out_of_tle_epoch_window_)
-      - PROTOBUF_FIELD_OFFSET(SimResponse_Meta, points_returned_)>(
-          reinterpret_cast<char*>(&points_returned_),
-          reinterpret_cast<char*>(&other->points_returned_));
+      PROTOBUF_FIELD_OFFSET(SimResponse_Meta, _impl_.out_of_tle_epoch_window_)
+      + sizeof(SimResponse_Meta::_impl_.out_of_tle_epoch_window_)
+      - PROTOBUF_FIELD_OFFSET(SimResponse_Meta, _impl_.points_generated_)>(
+          reinterpret_cast<char*>(&_impl_.points_generated_),
+          reinterpret_cast<char*>(&other->_impl_.points_generated_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SimResponse_Meta::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_getter, &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_once,
       file_level_metadata_satellite_5fEarth_5fsimulation_2eproto[8]);
 }
@@ -3050,67 +3024,67 @@ class SimResponse::_Internal {
 
 const ::SatelliteEarthSimulation::SimResponse_Decay&
 SimResponse::_Internal::decay(const SimResponse* msg) {
-  return *msg->decay_;
+  return *msg->_impl_.decay_;
 }
 const ::SatelliteEarthSimulation::SimResponse_Meta&
 SimResponse::_Internal::meta(const SimResponse* msg) {
-  return *msg->meta_;
+  return *msg->_impl_.meta_;
 }
 SimResponse::SimResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
-  frames_(arena) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:SatelliteEarthSimulation.SimResponse)
 }
 SimResponse::SimResponse(const SimResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      frames_(from.frames_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SimResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.frames_){from._impl_.frames_}
+    , decltype(_impl_.decay_){nullptr}
+    , decltype(_impl_.meta_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_decay()) {
-    decay_ = new ::SatelliteEarthSimulation::SimResponse_Decay(*from.decay_);
-  } else {
-    decay_ = nullptr;
+    _this->_impl_.decay_ = new ::SatelliteEarthSimulation::SimResponse_Decay(*from._impl_.decay_);
   }
   if (from._internal_has_meta()) {
-    meta_ = new ::SatelliteEarthSimulation::SimResponse_Meta(*from.meta_);
-  } else {
-    meta_ = nullptr;
+    _this->_impl_.meta_ = new ::SatelliteEarthSimulation::SimResponse_Meta(*from._impl_.meta_);
   }
   // @@protoc_insertion_point(copy_constructor:SatelliteEarthSimulation.SimResponse)
 }
 
-inline void SimResponse::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&decay_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&meta_) -
-    reinterpret_cast<char*>(&decay_)) + sizeof(meta_));
+inline void SimResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.frames_){arena}
+    , decltype(_impl_.decay_){nullptr}
+    , decltype(_impl_.meta_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SimResponse::~SimResponse() {
   // @@protoc_insertion_point(destructor:SatelliteEarthSimulation.SimResponse)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void SimResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete decay_;
-  if (this != internal_default_instance()) delete meta_;
+  _impl_.frames_.~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.decay_;
+  if (this != internal_default_instance()) delete _impl_.meta_;
 }
 
-void SimResponse::ArenaDtor(void* object) {
-  SimResponse* _this = reinterpret_cast< SimResponse* >(object);
-  (void)_this;
-}
-void SimResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SimResponse::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SimResponse::Clear() {
@@ -3119,23 +3093,23 @@ void SimResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  frames_.Clear();
-  if (GetArenaForAllocation() == nullptr && decay_ != nullptr) {
-    delete decay_;
+  _impl_.frames_.Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.decay_ != nullptr) {
+    delete _impl_.decay_;
   }
-  decay_ = nullptr;
-  if (GetArenaForAllocation() == nullptr && meta_ != nullptr) {
-    delete meta_;
+  _impl_.decay_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.meta_ != nullptr) {
+    delete _impl_.meta_;
   }
-  meta_ = nullptr;
+  _impl_.meta_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SimResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SimResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated .SatelliteEarthSimulation.SimResponse.Frame frames = 1;
       case 1:
@@ -3196,31 +3170,29 @@ uint8_t* SimResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated .SatelliteEarthSimulation.SimResponse.Frame frames = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_frames_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_frames_size()); i < n; i++) {
+    const auto& repfield = this->_internal_frames(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_frames(i), target, stream);
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // .SatelliteEarthSimulation.SimResponse.Decay decay = 2;
   if (this->_internal_has_decay()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::decay(this), target, stream);
+      InternalWriteMessage(2, _Internal::decay(this),
+        _Internal::decay(this).GetCachedSize(), target, stream);
   }
 
   // .SatelliteEarthSimulation.SimResponse.Meta meta = 3;
   if (this->_internal_has_meta()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::meta(this), target, stream);
+      InternalWriteMessage(3, _Internal::meta(this),
+        _Internal::meta(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SatelliteEarthSimulation.SimResponse)
@@ -3237,7 +3209,7 @@ size_t SimResponse::ByteSizeLong() const {
 
   // repeated .SatelliteEarthSimulation.SimResponse.Frame frames = 1;
   total_size += 1UL * this->_internal_frames_size();
-  for (const auto& msg : this->frames_) {
+  for (const auto& msg : this->_impl_.frames_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -3246,46 +3218,44 @@ size_t SimResponse::ByteSizeLong() const {
   if (this->_internal_has_decay()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *decay_);
+        *_impl_.decay_);
   }
 
   // .SatelliteEarthSimulation.SimResponse.Meta meta = 3;
   if (this->_internal_has_meta()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *meta_);
+        *_impl_.meta_);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SimResponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     SimResponse::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SimResponse::GetClassData() const { return &_class_data_; }
 
-void SimResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<SimResponse *>(to)->MergeFrom(
-      static_cast<const SimResponse &>(from));
-}
 
-
-void SimResponse::MergeFrom(const SimResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse)
-  GOOGLE_DCHECK_NE(&from, this);
+void SimResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SimResponse*>(&to_msg);
+  auto& from = static_cast<const SimResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:SatelliteEarthSimulation.SimResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  frames_.MergeFrom(from.frames_);
+  _this->_impl_.frames_.MergeFrom(from._impl_.frames_);
   if (from._internal_has_decay()) {
-    _internal_mutable_decay()->::SatelliteEarthSimulation::SimResponse_Decay::MergeFrom(from._internal_decay());
+    _this->_internal_mutable_decay()->::SatelliteEarthSimulation::SimResponse_Decay::MergeFrom(
+        from._internal_decay());
   }
   if (from._internal_has_meta()) {
-    _internal_mutable_meta()->::SatelliteEarthSimulation::SimResponse_Meta::MergeFrom(from._internal_meta());
+    _this->_internal_mutable_meta()->::SatelliteEarthSimulation::SimResponse_Meta::MergeFrom(
+        from._internal_meta());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SimResponse::CopyFrom(const SimResponse& from) {
@@ -3302,17 +3272,17 @@ bool SimResponse::IsInitialized() const {
 void SimResponse::InternalSwap(SimResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  frames_.InternalSwap(&other->frames_);
+  _impl_.frames_.InternalSwap(&other->_impl_.frames_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SimResponse, meta_)
-      + sizeof(SimResponse::meta_)
-      - PROTOBUF_FIELD_OFFSET(SimResponse, decay_)>(
-          reinterpret_cast<char*>(&decay_),
-          reinterpret_cast<char*>(&other->decay_));
+      PROTOBUF_FIELD_OFFSET(SimResponse, _impl_.meta_)
+      + sizeof(SimResponse::_impl_.meta_)
+      - PROTOBUF_FIELD_OFFSET(SimResponse, _impl_.decay_)>(
+          reinterpret_cast<char*>(&_impl_.decay_),
+          reinterpret_cast<char*>(&other->_impl_.decay_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SimResponse::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_getter, &descriptor_table_satellite_5fEarth_5fsimulation_2eproto_once,
       file_level_metadata_satellite_5fEarth_5fsimulation_2eproto[9]);
 }
@@ -3320,34 +3290,44 @@ void SimResponse::InternalSwap(SimResponse* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace SatelliteEarthSimulation
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimRequest_TLE* Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimRequest_TLE >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimRequest_TLE*
+Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimRequest_TLE >(Arena* arena) {
   return Arena::CreateMessageInternal< ::SatelliteEarthSimulation::SimRequest_TLE >(arena);
 }
-template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimRequest* Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimRequest >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimRequest*
+Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::SatelliteEarthSimulation::SimRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse_Frame_Geo* Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse_Frame_Geo >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse_Frame_Geo*
+Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse_Frame_Geo >(Arena* arena) {
   return Arena::CreateMessageInternal< ::SatelliteEarthSimulation::SimResponse_Frame_Geo >(arena);
 }
-template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse_Frame_Mag* Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse_Frame_Mag >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse_Frame_Mag*
+Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse_Frame_Mag >(Arena* arena) {
   return Arena::CreateMessageInternal< ::SatelliteEarthSimulation::SimResponse_Frame_Mag >(arena);
 }
-template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse_Frame* Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse_Frame >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse_Frame*
+Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse_Frame >(Arena* arena) {
   return Arena::CreateMessageInternal< ::SatelliteEarthSimulation::SimResponse_Frame >(arena);
 }
-template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse_Decay_TLEForward* Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse_Decay_TLEForward >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse_Decay_TLEForward*
+Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse_Decay_TLEForward >(Arena* arena) {
   return Arena::CreateMessageInternal< ::SatelliteEarthSimulation::SimResponse_Decay_TLEForward >(arena);
 }
-template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag* Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag*
+Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag >(Arena* arena) {
   return Arena::CreateMessageInternal< ::SatelliteEarthSimulation::SimResponse_Decay_PhysicsDrag >(arena);
 }
-template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse_Decay* Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse_Decay >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse_Decay*
+Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse_Decay >(Arena* arena) {
   return Arena::CreateMessageInternal< ::SatelliteEarthSimulation::SimResponse_Decay >(arena);
 }
-template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse_Meta* Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse_Meta >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse_Meta*
+Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse_Meta >(Arena* arena) {
   return Arena::CreateMessageInternal< ::SatelliteEarthSimulation::SimResponse_Meta >(arena);
 }
-template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse* Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::SatelliteEarthSimulation::SimResponse*
+Arena::CreateMaybeMessage< ::SatelliteEarthSimulation::SimResponse >(Arena* arena) {
   return Arena::CreateMessageInternal< ::SatelliteEarthSimulation::SimResponse >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

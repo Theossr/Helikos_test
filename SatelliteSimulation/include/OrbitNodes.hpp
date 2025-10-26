@@ -49,6 +49,7 @@ public:
 
     Decay();
     Decay(double threshold_km, DecayCounting tle_forward, DecayCounting physics_drag);
+    Decay& operator=(const Decay& other);
     double getThreshold() const;
     DecayCounting getTleForward() const;
     DecayCounting getPhysicsDrag() const;
@@ -66,9 +67,7 @@ public:
     OrbitNodes(std::string& line1, std::string& line2, uint64_t start_epoch_ms, double duration_s, double step_s, double h_fail_km);
 
     std::pair<double, Geo> formSatPair(libsgp4::SGP4& sgp4, const libsgp4::DateTime& time_date, const libsgp4::DateTime& epoch, 
-                                        double h_fail_km, double current, DecayCounting& tle_forward, DecayCounting& physics_drag);
-
-    libsgp4::DateTime fromUnixMs(uint64_t time_ms);
+                                        double h_fail_km, double current, DecayCounting& tle_forward);
 
     std::vector<std::pair<double, Geo>> getNodes() const;
 
@@ -83,6 +82,7 @@ private:
     Decay dc;
     std::string tle_epoch_utc;
     bool out_of_tle_epoch_window;
-
 };
+
+libsgp4::DateTime fromUnixMs(uint64_t time_ms);
 

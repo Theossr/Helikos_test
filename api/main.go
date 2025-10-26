@@ -91,6 +91,7 @@ func SimHandler(w http.ResponseWriter, r *http.Request) {
 
 		Indent:          "  ",
 		EmitUnpopulated: true,
+		UseProtoNames:   true,
 	}
 	jsonBytes, err := marshaler.Marshal(resp)
 	if err != nil {

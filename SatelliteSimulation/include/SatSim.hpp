@@ -1,13 +1,12 @@
 #pragma once
 
-#include <quicktle/dataset.h>
-#include <quicktle/func.h>
-#include <quicktle/node.h>
-#include <quicktle/stream.h>
+#include "OrbitNodes.hpp"
 
 #include <grpcpp/grpcpp.h>
 #include "satellite_Earth_simulation.grpc.pb.h"
+#include "satellite_Earth_simulation.pb.h"
 #include "Earth_simulation.grpc.pb.h"
+#include "Earth_simulation.pb.h"
 
 using grpc::Server;
 using grpc::ServerBuilder;

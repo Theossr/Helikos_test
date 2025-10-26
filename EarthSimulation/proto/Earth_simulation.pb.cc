@@ -16,105 +16,116 @@
 #include <google/protobuf/port_def.inc>
 
 PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace EarthSimulation {
-constexpr EarthRequest_Nodes_Geo::EarthRequest_Nodes_Geo(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : lat_deg_(0)
-  , lon_deg_(0)
-  , alt_km_(0){}
+PROTOBUF_CONSTEXPR EarthRequest_Nodes_Geo::EarthRequest_Nodes_Geo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.lat_deg_)*/0
+  , /*decltype(_impl_.lon_deg_)*/0
+  , /*decltype(_impl_.alt_km_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct EarthRequest_Nodes_GeoDefaultTypeInternal {
-  constexpr EarthRequest_Nodes_GeoDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR EarthRequest_Nodes_GeoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~EarthRequest_Nodes_GeoDefaultTypeInternal() {}
   union {
     EarthRequest_Nodes_Geo _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EarthRequest_Nodes_GeoDefaultTypeInternal _EarthRequest_Nodes_Geo_default_instance_;
-constexpr EarthRequest_Nodes::EarthRequest_Nodes(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : geo_(nullptr)
-  , t_rel_s_(0){}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EarthRequest_Nodes_GeoDefaultTypeInternal _EarthRequest_Nodes_Geo_default_instance_;
+PROTOBUF_CONSTEXPR EarthRequest_Nodes::EarthRequest_Nodes(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.geo_)*/nullptr
+  , /*decltype(_impl_.t_rel_s_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct EarthRequest_NodesDefaultTypeInternal {
-  constexpr EarthRequest_NodesDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR EarthRequest_NodesDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~EarthRequest_NodesDefaultTypeInternal() {}
   union {
     EarthRequest_Nodes _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EarthRequest_NodesDefaultTypeInternal _EarthRequest_Nodes_default_instance_;
-constexpr EarthRequest::EarthRequest(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : nodes_(){}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EarthRequest_NodesDefaultTypeInternal _EarthRequest_Nodes_default_instance_;
+PROTOBUF_CONSTEXPR EarthRequest::EarthRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.nodes_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct EarthRequestDefaultTypeInternal {
-  constexpr EarthRequestDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR EarthRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~EarthRequestDefaultTypeInternal() {}
   union {
     EarthRequest _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EarthRequestDefaultTypeInternal _EarthRequest_default_instance_;
-constexpr EarthResponse_Frame_Geo::EarthResponse_Frame_Geo(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : lat_deg_(0)
-  , lon_deg_(0)
-  , alt_km_(0){}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EarthRequestDefaultTypeInternal _EarthRequest_default_instance_;
+PROTOBUF_CONSTEXPR EarthResponse_Frame_Geo::EarthResponse_Frame_Geo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.lat_deg_)*/0
+  , /*decltype(_impl_.lon_deg_)*/0
+  , /*decltype(_impl_.alt_km_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct EarthResponse_Frame_GeoDefaultTypeInternal {
-  constexpr EarthResponse_Frame_GeoDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR EarthResponse_Frame_GeoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~EarthResponse_Frame_GeoDefaultTypeInternal() {}
   union {
     EarthResponse_Frame_Geo _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EarthResponse_Frame_GeoDefaultTypeInternal _EarthResponse_Frame_Geo_default_instance_;
-constexpr EarthResponse_Frame_Mag::EarthResponse_Frame_Mag(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : x_nt_(0)
-  , y_nt_(0)
-  , z_nt_(0)
-  , f_nt_(0){}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EarthResponse_Frame_GeoDefaultTypeInternal _EarthResponse_Frame_Geo_default_instance_;
+PROTOBUF_CONSTEXPR EarthResponse_Frame_Mag::EarthResponse_Frame_Mag(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.x_nt_)*/0
+  , /*decltype(_impl_.y_nt_)*/0
+  , /*decltype(_impl_.z_nt_)*/0
+  , /*decltype(_impl_.f_nt_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct EarthResponse_Frame_MagDefaultTypeInternal {
-  constexpr EarthResponse_Frame_MagDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR EarthResponse_Frame_MagDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~EarthResponse_Frame_MagDefaultTypeInternal() {}
   union {
     EarthResponse_Frame_Mag _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EarthResponse_Frame_MagDefaultTypeInternal _EarthResponse_Frame_Mag_default_instance_;
-constexpr EarthResponse_Frame::EarthResponse_Frame(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : geo_(nullptr)
-  , mag_(nullptr)
-  , t_rel_s_(0){}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EarthResponse_Frame_MagDefaultTypeInternal _EarthResponse_Frame_Mag_default_instance_;
+PROTOBUF_CONSTEXPR EarthResponse_Frame::EarthResponse_Frame(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.geo_)*/nullptr
+  , /*decltype(_impl_.mag_)*/nullptr
+  , /*decltype(_impl_.t_rel_s_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct EarthResponse_FrameDefaultTypeInternal {
-  constexpr EarthResponse_FrameDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR EarthResponse_FrameDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~EarthResponse_FrameDefaultTypeInternal() {}
   union {
     EarthResponse_Frame _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EarthResponse_FrameDefaultTypeInternal _EarthResponse_Frame_default_instance_;
-constexpr EarthResponse::EarthResponse(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : frames_(){}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EarthResponse_FrameDefaultTypeInternal _EarthResponse_Frame_default_instance_;
+PROTOBUF_CONSTEXPR EarthResponse::EarthResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.frames_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct EarthResponseDefaultTypeInternal {
-  constexpr EarthResponseDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR EarthResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~EarthResponseDefaultTypeInternal() {}
   union {
     EarthResponse _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EarthResponseDefaultTypeInternal _EarthResponse_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EarthResponseDefaultTypeInternal _EarthResponse_default_instance_;
 }  // namespace EarthSimulation
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Earth_5fsimulation_2eproto[7];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_Earth_5fsimulation_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Earth_5fsimulation_2eproto = nullptr;
+static ::_pb::Metadata file_level_metadata_Earth_5fsimulation_2eproto[7];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_Earth_5fsimulation_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_Earth_5fsimulation_2eproto = nullptr;
 
 const uint32_t TableStruct_Earth_5fsimulation_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
@@ -123,61 +134,61 @@ const uint32_t TableStruct_Earth_5fsimulation_2eproto::offsets[] PROTOBUF_SECTIO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthRequest_Nodes_Geo, lat_deg_),
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthRequest_Nodes_Geo, lon_deg_),
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthRequest_Nodes_Geo, alt_km_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthRequest_Nodes_Geo, _impl_.lat_deg_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthRequest_Nodes_Geo, _impl_.lon_deg_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthRequest_Nodes_Geo, _impl_.alt_km_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthRequest_Nodes, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthRequest_Nodes, t_rel_s_),
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthRequest_Nodes, geo_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthRequest_Nodes, _impl_.t_rel_s_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthRequest_Nodes, _impl_.geo_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthRequest, nodes_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthRequest, _impl_.nodes_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Geo, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Geo, lat_deg_),
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Geo, lon_deg_),
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Geo, alt_km_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Geo, _impl_.lat_deg_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Geo, _impl_.lon_deg_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Geo, _impl_.alt_km_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Mag, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Mag, x_nt_),
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Mag, y_nt_),
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Mag, z_nt_),
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Mag, f_nt_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Mag, _impl_.x_nt_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Mag, _impl_.y_nt_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Mag, _impl_.z_nt_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame_Mag, _impl_.f_nt_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame, t_rel_s_),
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame, geo_),
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame, mag_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame, _impl_.t_rel_s_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame, _impl_.geo_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse_Frame, _impl_.mag_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse, frames_),
+  PROTOBUF_FIELD_OFFSET(::EarthSimulation::EarthResponse, _impl_.frames_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::EarthSimulation::EarthRequest_Nodes_Geo)},
   { 9, -1, -1, sizeof(::EarthSimulation::EarthRequest_Nodes)},
   { 17, -1, -1, sizeof(::EarthSimulation::EarthRequest)},
@@ -187,14 +198,14 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 52, -1, -1, sizeof(::EarthSimulation::EarthResponse)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::EarthSimulation::_EarthRequest_Nodes_Geo_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::EarthSimulation::_EarthRequest_Nodes_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::EarthSimulation::_EarthRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::EarthSimulation::_EarthResponse_Frame_Geo_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::EarthSimulation::_EarthResponse_Frame_Mag_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::EarthSimulation::_EarthResponse_Frame_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::EarthSimulation::_EarthResponse_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::EarthSimulation::_EarthRequest_Nodes_Geo_default_instance_._instance,
+  &::EarthSimulation::_EarthRequest_Nodes_default_instance_._instance,
+  &::EarthSimulation::_EarthRequest_default_instance_._instance,
+  &::EarthSimulation::_EarthResponse_Frame_Geo_default_instance_._instance,
+  &::EarthSimulation::_EarthResponse_Frame_Mag_default_instance_._instance,
+  &::EarthSimulation::_EarthResponse_Frame_default_instance_._instance,
+  &::EarthSimulation::_EarthResponse_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_Earth_5fsimulation_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -218,19 +229,21 @@ const char descriptor_table_protodef_Earth_5fsimulation_2eproto[] PROTOBUF_SECTI
   "nseB+Z)github.com/Theossr/Helikos_test/a"
   "pi/protob\006proto3"
   ;
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Earth_5fsimulation_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Earth_5fsimulation_2eproto = {
-  false, false, 736, descriptor_table_protodef_Earth_5fsimulation_2eproto, "Earth_simulation.proto", 
-  &descriptor_table_Earth_5fsimulation_2eproto_once, nullptr, 0, 7,
-  schemas, file_default_instances, TableStruct_Earth_5fsimulation_2eproto::offsets,
-  file_level_metadata_Earth_5fsimulation_2eproto, file_level_enum_descriptors_Earth_5fsimulation_2eproto, file_level_service_descriptors_Earth_5fsimulation_2eproto,
+static ::_pbi::once_flag descriptor_table_Earth_5fsimulation_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_Earth_5fsimulation_2eproto = {
+    false, false, 736, descriptor_table_protodef_Earth_5fsimulation_2eproto,
+    "Earth_simulation.proto",
+    &descriptor_table_Earth_5fsimulation_2eproto_once, nullptr, 0, 7,
+    schemas, file_default_instances, TableStruct_Earth_5fsimulation_2eproto::offsets,
+    file_level_metadata_Earth_5fsimulation_2eproto, file_level_enum_descriptors_Earth_5fsimulation_2eproto,
+    file_level_service_descriptors_Earth_5fsimulation_2eproto,
 };
-PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_Earth_5fsimulation_2eproto_getter() {
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_Earth_5fsimulation_2eproto_getter() {
   return &descriptor_table_Earth_5fsimulation_2eproto;
 }
 
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_Earth_5fsimulation_2eproto(&descriptor_table_Earth_5fsimulation_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_Earth_5fsimulation_2eproto(&descriptor_table_Earth_5fsimulation_2eproto);
 namespace EarthSimulation {
 
 // ===================================================================
@@ -242,47 +255,52 @@ class EarthRequest_Nodes_Geo::_Internal {
 EarthRequest_Nodes_Geo::EarthRequest_Nodes_Geo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:EarthSimulation.EarthRequest.Nodes.Geo)
 }
 EarthRequest_Nodes_Geo::EarthRequest_Nodes_Geo(const EarthRequest_Nodes_Geo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  EarthRequest_Nodes_Geo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.lat_deg_){}
+    , decltype(_impl_.lon_deg_){}
+    , decltype(_impl_.alt_km_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&lat_deg_, &from.lat_deg_,
-    static_cast<size_t>(reinterpret_cast<char*>(&alt_km_) -
-    reinterpret_cast<char*>(&lat_deg_)) + sizeof(alt_km_));
+  ::memcpy(&_impl_.lat_deg_, &from._impl_.lat_deg_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.alt_km_) -
+    reinterpret_cast<char*>(&_impl_.lat_deg_)) + sizeof(_impl_.alt_km_));
   // @@protoc_insertion_point(copy_constructor:EarthSimulation.EarthRequest.Nodes.Geo)
 }
 
-inline void EarthRequest_Nodes_Geo::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&lat_deg_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&alt_km_) -
-    reinterpret_cast<char*>(&lat_deg_)) + sizeof(alt_km_));
+inline void EarthRequest_Nodes_Geo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.lat_deg_){0}
+    , decltype(_impl_.lon_deg_){0}
+    , decltype(_impl_.alt_km_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 EarthRequest_Nodes_Geo::~EarthRequest_Nodes_Geo() {
   // @@protoc_insertion_point(destructor:EarthSimulation.EarthRequest.Nodes.Geo)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void EarthRequest_Nodes_Geo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void EarthRequest_Nodes_Geo::ArenaDtor(void* object) {
-  EarthRequest_Nodes_Geo* _this = reinterpret_cast< EarthRequest_Nodes_Geo* >(object);
-  (void)_this;
-}
-void EarthRequest_Nodes_Geo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void EarthRequest_Nodes_Geo::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void EarthRequest_Nodes_Geo::Clear() {
@@ -291,22 +309,22 @@ void EarthRequest_Nodes_Geo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&lat_deg_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&alt_km_) -
-      reinterpret_cast<char*>(&lat_deg_)) + sizeof(alt_km_));
+  ::memset(&_impl_.lat_deg_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.alt_km_) -
+      reinterpret_cast<char*>(&_impl_.lat_deg_)) + sizeof(_impl_.alt_km_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* EarthRequest_Nodes_Geo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* EarthRequest_Nodes_Geo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // double lat_deg = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
-          lat_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.lat_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -314,7 +332,7 @@ const char* EarthRequest_Nodes_Geo::_InternalParse(const char* ptr, ::PROTOBUF_N
       // double lon_deg = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
-          lon_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.lon_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -322,7 +340,7 @@ const char* EarthRequest_Nodes_Geo::_InternalParse(const char* ptr, ::PROTOBUF_N
       // double alt_km = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
-          alt_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.alt_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -363,7 +381,7 @@ uint8_t* EarthRequest_Nodes_Geo::_InternalSerialize(
   memcpy(&raw_lat_deg, &tmp_lat_deg, sizeof(tmp_lat_deg));
   if (raw_lat_deg != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_lat_deg(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(1, this->_internal_lat_deg(), target);
   }
 
   // double lon_deg = 2;
@@ -373,7 +391,7 @@ uint8_t* EarthRequest_Nodes_Geo::_InternalSerialize(
   memcpy(&raw_lon_deg, &tmp_lon_deg, sizeof(tmp_lon_deg));
   if (raw_lon_deg != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_lon_deg(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_lon_deg(), target);
   }
 
   // double alt_km = 3;
@@ -383,11 +401,11 @@ uint8_t* EarthRequest_Nodes_Geo::_InternalSerialize(
   memcpy(&raw_alt_km, &tmp_alt_km, sizeof(tmp_alt_km));
   if (raw_alt_km != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_alt_km(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_alt_km(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:EarthSimulation.EarthRequest.Nodes.Geo)
@@ -429,25 +447,21 @@ size_t EarthRequest_Nodes_Geo::ByteSizeLong() const {
     total_size += 1 + 8;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EarthRequest_Nodes_Geo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     EarthRequest_Nodes_Geo::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EarthRequest_Nodes_Geo::GetClassData() const { return &_class_data_; }
 
-void EarthRequest_Nodes_Geo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<EarthRequest_Nodes_Geo *>(to)->MergeFrom(
-      static_cast<const EarthRequest_Nodes_Geo &>(from));
-}
 
-
-void EarthRequest_Nodes_Geo::MergeFrom(const EarthRequest_Nodes_Geo& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:EarthSimulation.EarthRequest.Nodes.Geo)
-  GOOGLE_DCHECK_NE(&from, this);
+void EarthRequest_Nodes_Geo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<EarthRequest_Nodes_Geo*>(&to_msg);
+  auto& from = static_cast<const EarthRequest_Nodes_Geo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:EarthSimulation.EarthRequest.Nodes.Geo)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -456,23 +470,23 @@ void EarthRequest_Nodes_Geo::MergeFrom(const EarthRequest_Nodes_Geo& from) {
   uint64_t raw_lat_deg;
   memcpy(&raw_lat_deg, &tmp_lat_deg, sizeof(tmp_lat_deg));
   if (raw_lat_deg != 0) {
-    _internal_set_lat_deg(from._internal_lat_deg());
+    _this->_internal_set_lat_deg(from._internal_lat_deg());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_lon_deg = from._internal_lon_deg();
   uint64_t raw_lon_deg;
   memcpy(&raw_lon_deg, &tmp_lon_deg, sizeof(tmp_lon_deg));
   if (raw_lon_deg != 0) {
-    _internal_set_lon_deg(from._internal_lon_deg());
+    _this->_internal_set_lon_deg(from._internal_lon_deg());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_alt_km = from._internal_alt_km();
   uint64_t raw_alt_km;
   memcpy(&raw_alt_km, &tmp_alt_km, sizeof(tmp_alt_km));
   if (raw_alt_km != 0) {
-    _internal_set_alt_km(from._internal_alt_km());
+    _this->_internal_set_alt_km(from._internal_alt_km());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void EarthRequest_Nodes_Geo::CopyFrom(const EarthRequest_Nodes_Geo& from) {
@@ -490,15 +504,15 @@ void EarthRequest_Nodes_Geo::InternalSwap(EarthRequest_Nodes_Geo* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(EarthRequest_Nodes_Geo, alt_km_)
-      + sizeof(EarthRequest_Nodes_Geo::alt_km_)
-      - PROTOBUF_FIELD_OFFSET(EarthRequest_Nodes_Geo, lat_deg_)>(
-          reinterpret_cast<char*>(&lat_deg_),
-          reinterpret_cast<char*>(&other->lat_deg_));
+      PROTOBUF_FIELD_OFFSET(EarthRequest_Nodes_Geo, _impl_.alt_km_)
+      + sizeof(EarthRequest_Nodes_Geo::_impl_.alt_km_)
+      - PROTOBUF_FIELD_OFFSET(EarthRequest_Nodes_Geo, _impl_.lat_deg_)>(
+          reinterpret_cast<char*>(&_impl_.lat_deg_),
+          reinterpret_cast<char*>(&other->_impl_.lat_deg_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata EarthRequest_Nodes_Geo::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_Earth_5fsimulation_2eproto_getter, &descriptor_table_Earth_5fsimulation_2eproto_once,
       file_level_metadata_Earth_5fsimulation_2eproto[0]);
 }
@@ -512,56 +526,57 @@ class EarthRequest_Nodes::_Internal {
 
 const ::EarthSimulation::EarthRequest_Nodes_Geo&
 EarthRequest_Nodes::_Internal::geo(const EarthRequest_Nodes* msg) {
-  return *msg->geo_;
+  return *msg->_impl_.geo_;
 }
 EarthRequest_Nodes::EarthRequest_Nodes(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:EarthSimulation.EarthRequest.Nodes)
 }
 EarthRequest_Nodes::EarthRequest_Nodes(const EarthRequest_Nodes& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  EarthRequest_Nodes* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.geo_){nullptr}
+    , decltype(_impl_.t_rel_s_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_geo()) {
-    geo_ = new ::EarthSimulation::EarthRequest_Nodes_Geo(*from.geo_);
-  } else {
-    geo_ = nullptr;
+    _this->_impl_.geo_ = new ::EarthSimulation::EarthRequest_Nodes_Geo(*from._impl_.geo_);
   }
-  t_rel_s_ = from.t_rel_s_;
+  _this->_impl_.t_rel_s_ = from._impl_.t_rel_s_;
   // @@protoc_insertion_point(copy_constructor:EarthSimulation.EarthRequest.Nodes)
 }
 
-inline void EarthRequest_Nodes::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&geo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&t_rel_s_) -
-    reinterpret_cast<char*>(&geo_)) + sizeof(t_rel_s_));
+inline void EarthRequest_Nodes::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.geo_){nullptr}
+    , decltype(_impl_.t_rel_s_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 EarthRequest_Nodes::~EarthRequest_Nodes() {
   // @@protoc_insertion_point(destructor:EarthSimulation.EarthRequest.Nodes)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void EarthRequest_Nodes::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete geo_;
+  if (this != internal_default_instance()) delete _impl_.geo_;
 }
 
-void EarthRequest_Nodes::ArenaDtor(void* object) {
-  EarthRequest_Nodes* _this = reinterpret_cast< EarthRequest_Nodes* >(object);
-  (void)_this;
-}
-void EarthRequest_Nodes::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void EarthRequest_Nodes::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void EarthRequest_Nodes::Clear() {
@@ -570,24 +585,24 @@ void EarthRequest_Nodes::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && geo_ != nullptr) {
-    delete geo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.geo_ != nullptr) {
+    delete _impl_.geo_;
   }
-  geo_ = nullptr;
-  t_rel_s_ = 0;
+  _impl_.geo_ = nullptr;
+  _impl_.t_rel_s_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* EarthRequest_Nodes::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* EarthRequest_Nodes::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // double t_rel_s = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
-          t_rel_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.t_rel_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -636,19 +651,18 @@ uint8_t* EarthRequest_Nodes::_InternalSerialize(
   memcpy(&raw_t_rel_s, &tmp_t_rel_s, sizeof(tmp_t_rel_s));
   if (raw_t_rel_s != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_t_rel_s(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(1, this->_internal_t_rel_s(), target);
   }
 
   // .EarthSimulation.EarthRequest.Nodes.Geo geo = 2;
   if (this->_internal_has_geo()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::geo(this), target, stream);
+      InternalWriteMessage(2, _Internal::geo(this),
+        _Internal::geo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:EarthSimulation.EarthRequest.Nodes)
@@ -667,7 +681,7 @@ size_t EarthRequest_Nodes::ByteSizeLong() const {
   if (this->_internal_has_geo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *geo_);
+        *_impl_.geo_);
   }
 
   // double t_rel_s = 1;
@@ -679,39 +693,36 @@ size_t EarthRequest_Nodes::ByteSizeLong() const {
     total_size += 1 + 8;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EarthRequest_Nodes::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     EarthRequest_Nodes::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EarthRequest_Nodes::GetClassData() const { return &_class_data_; }
 
-void EarthRequest_Nodes::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<EarthRequest_Nodes *>(to)->MergeFrom(
-      static_cast<const EarthRequest_Nodes &>(from));
-}
 
-
-void EarthRequest_Nodes::MergeFrom(const EarthRequest_Nodes& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:EarthSimulation.EarthRequest.Nodes)
-  GOOGLE_DCHECK_NE(&from, this);
+void EarthRequest_Nodes::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<EarthRequest_Nodes*>(&to_msg);
+  auto& from = static_cast<const EarthRequest_Nodes&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:EarthSimulation.EarthRequest.Nodes)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_geo()) {
-    _internal_mutable_geo()->::EarthSimulation::EarthRequest_Nodes_Geo::MergeFrom(from._internal_geo());
+    _this->_internal_mutable_geo()->::EarthSimulation::EarthRequest_Nodes_Geo::MergeFrom(
+        from._internal_geo());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_t_rel_s = from._internal_t_rel_s();
   uint64_t raw_t_rel_s;
   memcpy(&raw_t_rel_s, &tmp_t_rel_s, sizeof(tmp_t_rel_s));
   if (raw_t_rel_s != 0) {
-    _internal_set_t_rel_s(from._internal_t_rel_s());
+    _this->_internal_set_t_rel_s(from._internal_t_rel_s());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void EarthRequest_Nodes::CopyFrom(const EarthRequest_Nodes& from) {
@@ -729,15 +740,15 @@ void EarthRequest_Nodes::InternalSwap(EarthRequest_Nodes* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(EarthRequest_Nodes, t_rel_s_)
-      + sizeof(EarthRequest_Nodes::t_rel_s_)
-      - PROTOBUF_FIELD_OFFSET(EarthRequest_Nodes, geo_)>(
-          reinterpret_cast<char*>(&geo_),
-          reinterpret_cast<char*>(&other->geo_));
+      PROTOBUF_FIELD_OFFSET(EarthRequest_Nodes, _impl_.t_rel_s_)
+      + sizeof(EarthRequest_Nodes::_impl_.t_rel_s_)
+      - PROTOBUF_FIELD_OFFSET(EarthRequest_Nodes, _impl_.geo_)>(
+          reinterpret_cast<char*>(&_impl_.geo_),
+          reinterpret_cast<char*>(&other->_impl_.geo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata EarthRequest_Nodes::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_Earth_5fsimulation_2eproto_getter, &descriptor_table_Earth_5fsimulation_2eproto_once,
       file_level_metadata_Earth_5fsimulation_2eproto[1]);
 }
@@ -750,43 +761,47 @@ class EarthRequest::_Internal {
 
 EarthRequest::EarthRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
-  nodes_(arena) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:EarthSimulation.EarthRequest)
 }
 EarthRequest::EarthRequest(const EarthRequest& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      nodes_(from.nodes_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  EarthRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.nodes_){from._impl_.nodes_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:EarthSimulation.EarthRequest)
 }
 
-inline void EarthRequest::SharedCtor() {
+inline void EarthRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.nodes_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 EarthRequest::~EarthRequest() {
   // @@protoc_insertion_point(destructor:EarthSimulation.EarthRequest)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void EarthRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.nodes_.~RepeatedPtrField();
 }
 
-void EarthRequest::ArenaDtor(void* object) {
-  EarthRequest* _this = reinterpret_cast< EarthRequest* >(object);
-  (void)_this;
-}
-void EarthRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void EarthRequest::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void EarthRequest::Clear() {
@@ -795,15 +810,15 @@ void EarthRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  nodes_.Clear();
+  _impl_.nodes_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* EarthRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* EarthRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated .EarthSimulation.EarthRequest.Nodes nodes = 1;
       case 1:
@@ -848,15 +863,15 @@ uint8_t* EarthRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated .EarthSimulation.EarthRequest.Nodes nodes = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_nodes_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_nodes_size()); i < n; i++) {
+    const auto& repfield = this->_internal_nodes(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_nodes(i), target, stream);
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:EarthSimulation.EarthRequest)
@@ -873,35 +888,31 @@ size_t EarthRequest::ByteSizeLong() const {
 
   // repeated .EarthSimulation.EarthRequest.Nodes nodes = 1;
   total_size += 1UL * this->_internal_nodes_size();
-  for (const auto& msg : this->nodes_) {
+  for (const auto& msg : this->_impl_.nodes_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EarthRequest::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     EarthRequest::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EarthRequest::GetClassData() const { return &_class_data_; }
 
-void EarthRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<EarthRequest *>(to)->MergeFrom(
-      static_cast<const EarthRequest &>(from));
-}
 
-
-void EarthRequest::MergeFrom(const EarthRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:EarthSimulation.EarthRequest)
-  GOOGLE_DCHECK_NE(&from, this);
+void EarthRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<EarthRequest*>(&to_msg);
+  auto& from = static_cast<const EarthRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:EarthSimulation.EarthRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  nodes_.MergeFrom(from.nodes_);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.nodes_.MergeFrom(from._impl_.nodes_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void EarthRequest::CopyFrom(const EarthRequest& from) {
@@ -918,11 +929,11 @@ bool EarthRequest::IsInitialized() const {
 void EarthRequest::InternalSwap(EarthRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  nodes_.InternalSwap(&other->nodes_);
+  _impl_.nodes_.InternalSwap(&other->_impl_.nodes_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata EarthRequest::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_Earth_5fsimulation_2eproto_getter, &descriptor_table_Earth_5fsimulation_2eproto_once,
       file_level_metadata_Earth_5fsimulation_2eproto[2]);
 }
@@ -936,47 +947,52 @@ class EarthResponse_Frame_Geo::_Internal {
 EarthResponse_Frame_Geo::EarthResponse_Frame_Geo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:EarthSimulation.EarthResponse.Frame.Geo)
 }
 EarthResponse_Frame_Geo::EarthResponse_Frame_Geo(const EarthResponse_Frame_Geo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  EarthResponse_Frame_Geo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.lat_deg_){}
+    , decltype(_impl_.lon_deg_){}
+    , decltype(_impl_.alt_km_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&lat_deg_, &from.lat_deg_,
-    static_cast<size_t>(reinterpret_cast<char*>(&alt_km_) -
-    reinterpret_cast<char*>(&lat_deg_)) + sizeof(alt_km_));
+  ::memcpy(&_impl_.lat_deg_, &from._impl_.lat_deg_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.alt_km_) -
+    reinterpret_cast<char*>(&_impl_.lat_deg_)) + sizeof(_impl_.alt_km_));
   // @@protoc_insertion_point(copy_constructor:EarthSimulation.EarthResponse.Frame.Geo)
 }
 
-inline void EarthResponse_Frame_Geo::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&lat_deg_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&alt_km_) -
-    reinterpret_cast<char*>(&lat_deg_)) + sizeof(alt_km_));
+inline void EarthResponse_Frame_Geo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.lat_deg_){0}
+    , decltype(_impl_.lon_deg_){0}
+    , decltype(_impl_.alt_km_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 EarthResponse_Frame_Geo::~EarthResponse_Frame_Geo() {
   // @@protoc_insertion_point(destructor:EarthSimulation.EarthResponse.Frame.Geo)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void EarthResponse_Frame_Geo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void EarthResponse_Frame_Geo::ArenaDtor(void* object) {
-  EarthResponse_Frame_Geo* _this = reinterpret_cast< EarthResponse_Frame_Geo* >(object);
-  (void)_this;
-}
-void EarthResponse_Frame_Geo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void EarthResponse_Frame_Geo::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void EarthResponse_Frame_Geo::Clear() {
@@ -985,22 +1001,22 @@ void EarthResponse_Frame_Geo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&lat_deg_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&alt_km_) -
-      reinterpret_cast<char*>(&lat_deg_)) + sizeof(alt_km_));
+  ::memset(&_impl_.lat_deg_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.alt_km_) -
+      reinterpret_cast<char*>(&_impl_.lat_deg_)) + sizeof(_impl_.alt_km_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* EarthResponse_Frame_Geo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* EarthResponse_Frame_Geo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // double lat_deg = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
-          lat_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.lat_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1008,7 +1024,7 @@ const char* EarthResponse_Frame_Geo::_InternalParse(const char* ptr, ::PROTOBUF_
       // double lon_deg = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
-          lon_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.lon_deg_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1016,7 +1032,7 @@ const char* EarthResponse_Frame_Geo::_InternalParse(const char* ptr, ::PROTOBUF_
       // double alt_km = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
-          alt_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.alt_km_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1057,7 +1073,7 @@ uint8_t* EarthResponse_Frame_Geo::_InternalSerialize(
   memcpy(&raw_lat_deg, &tmp_lat_deg, sizeof(tmp_lat_deg));
   if (raw_lat_deg != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_lat_deg(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(1, this->_internal_lat_deg(), target);
   }
 
   // double lon_deg = 2;
@@ -1067,7 +1083,7 @@ uint8_t* EarthResponse_Frame_Geo::_InternalSerialize(
   memcpy(&raw_lon_deg, &tmp_lon_deg, sizeof(tmp_lon_deg));
   if (raw_lon_deg != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_lon_deg(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_lon_deg(), target);
   }
 
   // double alt_km = 3;
@@ -1077,11 +1093,11 @@ uint8_t* EarthResponse_Frame_Geo::_InternalSerialize(
   memcpy(&raw_alt_km, &tmp_alt_km, sizeof(tmp_alt_km));
   if (raw_alt_km != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_alt_km(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_alt_km(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:EarthSimulation.EarthResponse.Frame.Geo)
@@ -1123,25 +1139,21 @@ size_t EarthResponse_Frame_Geo::ByteSizeLong() const {
     total_size += 1 + 8;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EarthResponse_Frame_Geo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     EarthResponse_Frame_Geo::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EarthResponse_Frame_Geo::GetClassData() const { return &_class_data_; }
 
-void EarthResponse_Frame_Geo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<EarthResponse_Frame_Geo *>(to)->MergeFrom(
-      static_cast<const EarthResponse_Frame_Geo &>(from));
-}
 
-
-void EarthResponse_Frame_Geo::MergeFrom(const EarthResponse_Frame_Geo& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:EarthSimulation.EarthResponse.Frame.Geo)
-  GOOGLE_DCHECK_NE(&from, this);
+void EarthResponse_Frame_Geo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<EarthResponse_Frame_Geo*>(&to_msg);
+  auto& from = static_cast<const EarthResponse_Frame_Geo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:EarthSimulation.EarthResponse.Frame.Geo)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1150,23 +1162,23 @@ void EarthResponse_Frame_Geo::MergeFrom(const EarthResponse_Frame_Geo& from) {
   uint64_t raw_lat_deg;
   memcpy(&raw_lat_deg, &tmp_lat_deg, sizeof(tmp_lat_deg));
   if (raw_lat_deg != 0) {
-    _internal_set_lat_deg(from._internal_lat_deg());
+    _this->_internal_set_lat_deg(from._internal_lat_deg());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_lon_deg = from._internal_lon_deg();
   uint64_t raw_lon_deg;
   memcpy(&raw_lon_deg, &tmp_lon_deg, sizeof(tmp_lon_deg));
   if (raw_lon_deg != 0) {
-    _internal_set_lon_deg(from._internal_lon_deg());
+    _this->_internal_set_lon_deg(from._internal_lon_deg());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_alt_km = from._internal_alt_km();
   uint64_t raw_alt_km;
   memcpy(&raw_alt_km, &tmp_alt_km, sizeof(tmp_alt_km));
   if (raw_alt_km != 0) {
-    _internal_set_alt_km(from._internal_alt_km());
+    _this->_internal_set_alt_km(from._internal_alt_km());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void EarthResponse_Frame_Geo::CopyFrom(const EarthResponse_Frame_Geo& from) {
@@ -1184,15 +1196,15 @@ void EarthResponse_Frame_Geo::InternalSwap(EarthResponse_Frame_Geo* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(EarthResponse_Frame_Geo, alt_km_)
-      + sizeof(EarthResponse_Frame_Geo::alt_km_)
-      - PROTOBUF_FIELD_OFFSET(EarthResponse_Frame_Geo, lat_deg_)>(
-          reinterpret_cast<char*>(&lat_deg_),
-          reinterpret_cast<char*>(&other->lat_deg_));
+      PROTOBUF_FIELD_OFFSET(EarthResponse_Frame_Geo, _impl_.alt_km_)
+      + sizeof(EarthResponse_Frame_Geo::_impl_.alt_km_)
+      - PROTOBUF_FIELD_OFFSET(EarthResponse_Frame_Geo, _impl_.lat_deg_)>(
+          reinterpret_cast<char*>(&_impl_.lat_deg_),
+          reinterpret_cast<char*>(&other->_impl_.lat_deg_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata EarthResponse_Frame_Geo::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_Earth_5fsimulation_2eproto_getter, &descriptor_table_Earth_5fsimulation_2eproto_once,
       file_level_metadata_Earth_5fsimulation_2eproto[3]);
 }
@@ -1206,47 +1218,54 @@ class EarthResponse_Frame_Mag::_Internal {
 EarthResponse_Frame_Mag::EarthResponse_Frame_Mag(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:EarthSimulation.EarthResponse.Frame.Mag)
 }
 EarthResponse_Frame_Mag::EarthResponse_Frame_Mag(const EarthResponse_Frame_Mag& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  EarthResponse_Frame_Mag* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.x_nt_){}
+    , decltype(_impl_.y_nt_){}
+    , decltype(_impl_.z_nt_){}
+    , decltype(_impl_.f_nt_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&x_nt_, &from.x_nt_,
-    static_cast<size_t>(reinterpret_cast<char*>(&f_nt_) -
-    reinterpret_cast<char*>(&x_nt_)) + sizeof(f_nt_));
+  ::memcpy(&_impl_.x_nt_, &from._impl_.x_nt_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.f_nt_) -
+    reinterpret_cast<char*>(&_impl_.x_nt_)) + sizeof(_impl_.f_nt_));
   // @@protoc_insertion_point(copy_constructor:EarthSimulation.EarthResponse.Frame.Mag)
 }
 
-inline void EarthResponse_Frame_Mag::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&x_nt_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&f_nt_) -
-    reinterpret_cast<char*>(&x_nt_)) + sizeof(f_nt_));
+inline void EarthResponse_Frame_Mag::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.x_nt_){0}
+    , decltype(_impl_.y_nt_){0}
+    , decltype(_impl_.z_nt_){0}
+    , decltype(_impl_.f_nt_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 EarthResponse_Frame_Mag::~EarthResponse_Frame_Mag() {
   // @@protoc_insertion_point(destructor:EarthSimulation.EarthResponse.Frame.Mag)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void EarthResponse_Frame_Mag::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void EarthResponse_Frame_Mag::ArenaDtor(void* object) {
-  EarthResponse_Frame_Mag* _this = reinterpret_cast< EarthResponse_Frame_Mag* >(object);
-  (void)_this;
-}
-void EarthResponse_Frame_Mag::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void EarthResponse_Frame_Mag::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void EarthResponse_Frame_Mag::Clear() {
@@ -1255,22 +1274,22 @@ void EarthResponse_Frame_Mag::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&x_nt_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&f_nt_) -
-      reinterpret_cast<char*>(&x_nt_)) + sizeof(f_nt_));
+  ::memset(&_impl_.x_nt_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.f_nt_) -
+      reinterpret_cast<char*>(&_impl_.x_nt_)) + sizeof(_impl_.f_nt_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* EarthResponse_Frame_Mag::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* EarthResponse_Frame_Mag::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // double x_nT = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
-          x_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.x_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1278,7 +1297,7 @@ const char* EarthResponse_Frame_Mag::_InternalParse(const char* ptr, ::PROTOBUF_
       // double y_nT = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
-          y_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.y_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1286,7 +1305,7 @@ const char* EarthResponse_Frame_Mag::_InternalParse(const char* ptr, ::PROTOBUF_
       // double z_nT = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
-          z_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.z_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1294,7 +1313,7 @@ const char* EarthResponse_Frame_Mag::_InternalParse(const char* ptr, ::PROTOBUF_
       // double f_nT = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
-          f_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.f_nt_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1335,7 +1354,7 @@ uint8_t* EarthResponse_Frame_Mag::_InternalSerialize(
   memcpy(&raw_x_nt, &tmp_x_nt, sizeof(tmp_x_nt));
   if (raw_x_nt != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_x_nt(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(1, this->_internal_x_nt(), target);
   }
 
   // double y_nT = 2;
@@ -1345,7 +1364,7 @@ uint8_t* EarthResponse_Frame_Mag::_InternalSerialize(
   memcpy(&raw_y_nt, &tmp_y_nt, sizeof(tmp_y_nt));
   if (raw_y_nt != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_y_nt(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_y_nt(), target);
   }
 
   // double z_nT = 3;
@@ -1355,7 +1374,7 @@ uint8_t* EarthResponse_Frame_Mag::_InternalSerialize(
   memcpy(&raw_z_nt, &tmp_z_nt, sizeof(tmp_z_nt));
   if (raw_z_nt != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_z_nt(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_z_nt(), target);
   }
 
   // double f_nT = 4;
@@ -1365,11 +1384,11 @@ uint8_t* EarthResponse_Frame_Mag::_InternalSerialize(
   memcpy(&raw_f_nt, &tmp_f_nt, sizeof(tmp_f_nt));
   if (raw_f_nt != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(4, this->_internal_f_nt(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_f_nt(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:EarthSimulation.EarthResponse.Frame.Mag)
@@ -1420,25 +1439,21 @@ size_t EarthResponse_Frame_Mag::ByteSizeLong() const {
     total_size += 1 + 8;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EarthResponse_Frame_Mag::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     EarthResponse_Frame_Mag::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EarthResponse_Frame_Mag::GetClassData() const { return &_class_data_; }
 
-void EarthResponse_Frame_Mag::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<EarthResponse_Frame_Mag *>(to)->MergeFrom(
-      static_cast<const EarthResponse_Frame_Mag &>(from));
-}
 
-
-void EarthResponse_Frame_Mag::MergeFrom(const EarthResponse_Frame_Mag& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:EarthSimulation.EarthResponse.Frame.Mag)
-  GOOGLE_DCHECK_NE(&from, this);
+void EarthResponse_Frame_Mag::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<EarthResponse_Frame_Mag*>(&to_msg);
+  auto& from = static_cast<const EarthResponse_Frame_Mag&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:EarthSimulation.EarthResponse.Frame.Mag)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1447,30 +1462,30 @@ void EarthResponse_Frame_Mag::MergeFrom(const EarthResponse_Frame_Mag& from) {
   uint64_t raw_x_nt;
   memcpy(&raw_x_nt, &tmp_x_nt, sizeof(tmp_x_nt));
   if (raw_x_nt != 0) {
-    _internal_set_x_nt(from._internal_x_nt());
+    _this->_internal_set_x_nt(from._internal_x_nt());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_y_nt = from._internal_y_nt();
   uint64_t raw_y_nt;
   memcpy(&raw_y_nt, &tmp_y_nt, sizeof(tmp_y_nt));
   if (raw_y_nt != 0) {
-    _internal_set_y_nt(from._internal_y_nt());
+    _this->_internal_set_y_nt(from._internal_y_nt());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_z_nt = from._internal_z_nt();
   uint64_t raw_z_nt;
   memcpy(&raw_z_nt, &tmp_z_nt, sizeof(tmp_z_nt));
   if (raw_z_nt != 0) {
-    _internal_set_z_nt(from._internal_z_nt());
+    _this->_internal_set_z_nt(from._internal_z_nt());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_f_nt = from._internal_f_nt();
   uint64_t raw_f_nt;
   memcpy(&raw_f_nt, &tmp_f_nt, sizeof(tmp_f_nt));
   if (raw_f_nt != 0) {
-    _internal_set_f_nt(from._internal_f_nt());
+    _this->_internal_set_f_nt(from._internal_f_nt());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void EarthResponse_Frame_Mag::CopyFrom(const EarthResponse_Frame_Mag& from) {
@@ -1488,15 +1503,15 @@ void EarthResponse_Frame_Mag::InternalSwap(EarthResponse_Frame_Mag* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(EarthResponse_Frame_Mag, f_nt_)
-      + sizeof(EarthResponse_Frame_Mag::f_nt_)
-      - PROTOBUF_FIELD_OFFSET(EarthResponse_Frame_Mag, x_nt_)>(
-          reinterpret_cast<char*>(&x_nt_),
-          reinterpret_cast<char*>(&other->x_nt_));
+      PROTOBUF_FIELD_OFFSET(EarthResponse_Frame_Mag, _impl_.f_nt_)
+      + sizeof(EarthResponse_Frame_Mag::_impl_.f_nt_)
+      - PROTOBUF_FIELD_OFFSET(EarthResponse_Frame_Mag, _impl_.x_nt_)>(
+          reinterpret_cast<char*>(&_impl_.x_nt_),
+          reinterpret_cast<char*>(&other->_impl_.x_nt_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata EarthResponse_Frame_Mag::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_Earth_5fsimulation_2eproto_getter, &descriptor_table_Earth_5fsimulation_2eproto_once,
       file_level_metadata_Earth_5fsimulation_2eproto[4]);
 }
@@ -1511,66 +1526,67 @@ class EarthResponse_Frame::_Internal {
 
 const ::EarthSimulation::EarthResponse_Frame_Geo&
 EarthResponse_Frame::_Internal::geo(const EarthResponse_Frame* msg) {
-  return *msg->geo_;
+  return *msg->_impl_.geo_;
 }
 const ::EarthSimulation::EarthResponse_Frame_Mag&
 EarthResponse_Frame::_Internal::mag(const EarthResponse_Frame* msg) {
-  return *msg->mag_;
+  return *msg->_impl_.mag_;
 }
 EarthResponse_Frame::EarthResponse_Frame(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:EarthSimulation.EarthResponse.Frame)
 }
 EarthResponse_Frame::EarthResponse_Frame(const EarthResponse_Frame& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  EarthResponse_Frame* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.geo_){nullptr}
+    , decltype(_impl_.mag_){nullptr}
+    , decltype(_impl_.t_rel_s_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_geo()) {
-    geo_ = new ::EarthSimulation::EarthResponse_Frame_Geo(*from.geo_);
-  } else {
-    geo_ = nullptr;
+    _this->_impl_.geo_ = new ::EarthSimulation::EarthResponse_Frame_Geo(*from._impl_.geo_);
   }
   if (from._internal_has_mag()) {
-    mag_ = new ::EarthSimulation::EarthResponse_Frame_Mag(*from.mag_);
-  } else {
-    mag_ = nullptr;
+    _this->_impl_.mag_ = new ::EarthSimulation::EarthResponse_Frame_Mag(*from._impl_.mag_);
   }
-  t_rel_s_ = from.t_rel_s_;
+  _this->_impl_.t_rel_s_ = from._impl_.t_rel_s_;
   // @@protoc_insertion_point(copy_constructor:EarthSimulation.EarthResponse.Frame)
 }
 
-inline void EarthResponse_Frame::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&geo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&t_rel_s_) -
-    reinterpret_cast<char*>(&geo_)) + sizeof(t_rel_s_));
+inline void EarthResponse_Frame::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.geo_){nullptr}
+    , decltype(_impl_.mag_){nullptr}
+    , decltype(_impl_.t_rel_s_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 EarthResponse_Frame::~EarthResponse_Frame() {
   // @@protoc_insertion_point(destructor:EarthSimulation.EarthResponse.Frame)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void EarthResponse_Frame::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete geo_;
-  if (this != internal_default_instance()) delete mag_;
+  if (this != internal_default_instance()) delete _impl_.geo_;
+  if (this != internal_default_instance()) delete _impl_.mag_;
 }
 
-void EarthResponse_Frame::ArenaDtor(void* object) {
-  EarthResponse_Frame* _this = reinterpret_cast< EarthResponse_Frame* >(object);
-  (void)_this;
-}
-void EarthResponse_Frame::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void EarthResponse_Frame::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void EarthResponse_Frame::Clear() {
@@ -1579,28 +1595,28 @@ void EarthResponse_Frame::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && geo_ != nullptr) {
-    delete geo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.geo_ != nullptr) {
+    delete _impl_.geo_;
   }
-  geo_ = nullptr;
-  if (GetArenaForAllocation() == nullptr && mag_ != nullptr) {
-    delete mag_;
+  _impl_.geo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.mag_ != nullptr) {
+    delete _impl_.mag_;
   }
-  mag_ = nullptr;
-  t_rel_s_ = 0;
+  _impl_.mag_ = nullptr;
+  _impl_.t_rel_s_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* EarthResponse_Frame::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* EarthResponse_Frame::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // double t_rel_s = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
-          t_rel_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _impl_.t_rel_s_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -1657,27 +1673,25 @@ uint8_t* EarthResponse_Frame::_InternalSerialize(
   memcpy(&raw_t_rel_s, &tmp_t_rel_s, sizeof(tmp_t_rel_s));
   if (raw_t_rel_s != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_t_rel_s(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(1, this->_internal_t_rel_s(), target);
   }
 
   // .EarthSimulation.EarthResponse.Frame.Geo geo = 2;
   if (this->_internal_has_geo()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::geo(this), target, stream);
+      InternalWriteMessage(2, _Internal::geo(this),
+        _Internal::geo(this).GetCachedSize(), target, stream);
   }
 
   // .EarthSimulation.EarthResponse.Frame.Mag mag = 3;
   if (this->_internal_has_mag()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::mag(this), target, stream);
+      InternalWriteMessage(3, _Internal::mag(this),
+        _Internal::mag(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:EarthSimulation.EarthResponse.Frame)
@@ -1696,14 +1710,14 @@ size_t EarthResponse_Frame::ByteSizeLong() const {
   if (this->_internal_has_geo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *geo_);
+        *_impl_.geo_);
   }
 
   // .EarthSimulation.EarthResponse.Frame.Mag mag = 3;
   if (this->_internal_has_mag()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *mag_);
+        *_impl_.mag_);
   }
 
   // double t_rel_s = 1;
@@ -1715,42 +1729,40 @@ size_t EarthResponse_Frame::ByteSizeLong() const {
     total_size += 1 + 8;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EarthResponse_Frame::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     EarthResponse_Frame::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EarthResponse_Frame::GetClassData() const { return &_class_data_; }
 
-void EarthResponse_Frame::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<EarthResponse_Frame *>(to)->MergeFrom(
-      static_cast<const EarthResponse_Frame &>(from));
-}
 
-
-void EarthResponse_Frame::MergeFrom(const EarthResponse_Frame& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:EarthSimulation.EarthResponse.Frame)
-  GOOGLE_DCHECK_NE(&from, this);
+void EarthResponse_Frame::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<EarthResponse_Frame*>(&to_msg);
+  auto& from = static_cast<const EarthResponse_Frame&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:EarthSimulation.EarthResponse.Frame)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_geo()) {
-    _internal_mutable_geo()->::EarthSimulation::EarthResponse_Frame_Geo::MergeFrom(from._internal_geo());
+    _this->_internal_mutable_geo()->::EarthSimulation::EarthResponse_Frame_Geo::MergeFrom(
+        from._internal_geo());
   }
   if (from._internal_has_mag()) {
-    _internal_mutable_mag()->::EarthSimulation::EarthResponse_Frame_Mag::MergeFrom(from._internal_mag());
+    _this->_internal_mutable_mag()->::EarthSimulation::EarthResponse_Frame_Mag::MergeFrom(
+        from._internal_mag());
   }
   static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
   double tmp_t_rel_s = from._internal_t_rel_s();
   uint64_t raw_t_rel_s;
   memcpy(&raw_t_rel_s, &tmp_t_rel_s, sizeof(tmp_t_rel_s));
   if (raw_t_rel_s != 0) {
-    _internal_set_t_rel_s(from._internal_t_rel_s());
+    _this->_internal_set_t_rel_s(from._internal_t_rel_s());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void EarthResponse_Frame::CopyFrom(const EarthResponse_Frame& from) {
@@ -1768,15 +1780,15 @@ void EarthResponse_Frame::InternalSwap(EarthResponse_Frame* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(EarthResponse_Frame, t_rel_s_)
-      + sizeof(EarthResponse_Frame::t_rel_s_)
-      - PROTOBUF_FIELD_OFFSET(EarthResponse_Frame, geo_)>(
-          reinterpret_cast<char*>(&geo_),
-          reinterpret_cast<char*>(&other->geo_));
+      PROTOBUF_FIELD_OFFSET(EarthResponse_Frame, _impl_.t_rel_s_)
+      + sizeof(EarthResponse_Frame::_impl_.t_rel_s_)
+      - PROTOBUF_FIELD_OFFSET(EarthResponse_Frame, _impl_.geo_)>(
+          reinterpret_cast<char*>(&_impl_.geo_),
+          reinterpret_cast<char*>(&other->_impl_.geo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata EarthResponse_Frame::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_Earth_5fsimulation_2eproto_getter, &descriptor_table_Earth_5fsimulation_2eproto_once,
       file_level_metadata_Earth_5fsimulation_2eproto[5]);
 }
@@ -1789,43 +1801,47 @@ class EarthResponse::_Internal {
 
 EarthResponse::EarthResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
-  frames_(arena) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:EarthSimulation.EarthResponse)
 }
 EarthResponse::EarthResponse(const EarthResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      frames_(from.frames_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  EarthResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.frames_){from._impl_.frames_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:EarthSimulation.EarthResponse)
 }
 
-inline void EarthResponse::SharedCtor() {
+inline void EarthResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.frames_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 EarthResponse::~EarthResponse() {
   // @@protoc_insertion_point(destructor:EarthSimulation.EarthResponse)
-  if (GetArenaForAllocation() != nullptr) return;
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 inline void EarthResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.frames_.~RepeatedPtrField();
 }
 
-void EarthResponse::ArenaDtor(void* object) {
-  EarthResponse* _this = reinterpret_cast< EarthResponse* >(object);
-  (void)_this;
-}
-void EarthResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void EarthResponse::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void EarthResponse::Clear() {
@@ -1834,15 +1850,15 @@ void EarthResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  frames_.Clear();
+  _impl_.frames_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* EarthResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* EarthResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated .EarthSimulation.EarthResponse.Frame frames = 1;
       case 1:
@@ -1887,15 +1903,15 @@ uint8_t* EarthResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated .EarthSimulation.EarthResponse.Frame frames = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_frames_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_frames_size()); i < n; i++) {
+    const auto& repfield = this->_internal_frames(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_frames(i), target, stream);
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:EarthSimulation.EarthResponse)
@@ -1912,35 +1928,31 @@ size_t EarthResponse::ByteSizeLong() const {
 
   // repeated .EarthSimulation.EarthResponse.Frame frames = 1;
   total_size += 1UL * this->_internal_frames_size();
-  for (const auto& msg : this->frames_) {
+  for (const auto& msg : this->_impl_.frames_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EarthResponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     EarthResponse::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EarthResponse::GetClassData() const { return &_class_data_; }
 
-void EarthResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<EarthResponse *>(to)->MergeFrom(
-      static_cast<const EarthResponse &>(from));
-}
 
-
-void EarthResponse::MergeFrom(const EarthResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:EarthSimulation.EarthResponse)
-  GOOGLE_DCHECK_NE(&from, this);
+void EarthResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<EarthResponse*>(&to_msg);
+  auto& from = static_cast<const EarthResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:EarthSimulation.EarthResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  frames_.MergeFrom(from.frames_);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.frames_.MergeFrom(from._impl_.frames_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void EarthResponse::CopyFrom(const EarthResponse& from) {
@@ -1957,11 +1969,11 @@ bool EarthResponse::IsInitialized() const {
 void EarthResponse::InternalSwap(EarthResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  frames_.InternalSwap(&other->frames_);
+  _impl_.frames_.InternalSwap(&other->_impl_.frames_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata EarthResponse::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+  return ::_pbi::AssignDescriptors(
       &descriptor_table_Earth_5fsimulation_2eproto_getter, &descriptor_table_Earth_5fsimulation_2eproto_once,
       file_level_metadata_Earth_5fsimulation_2eproto[6]);
 }
@@ -1969,25 +1981,32 @@ void EarthResponse::InternalSwap(EarthResponse* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace EarthSimulation
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::EarthSimulation::EarthRequest_Nodes_Geo* Arena::CreateMaybeMessage< ::EarthSimulation::EarthRequest_Nodes_Geo >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::EarthSimulation::EarthRequest_Nodes_Geo*
+Arena::CreateMaybeMessage< ::EarthSimulation::EarthRequest_Nodes_Geo >(Arena* arena) {
   return Arena::CreateMessageInternal< ::EarthSimulation::EarthRequest_Nodes_Geo >(arena);
 }
-template<> PROTOBUF_NOINLINE ::EarthSimulation::EarthRequest_Nodes* Arena::CreateMaybeMessage< ::EarthSimulation::EarthRequest_Nodes >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::EarthSimulation::EarthRequest_Nodes*
+Arena::CreateMaybeMessage< ::EarthSimulation::EarthRequest_Nodes >(Arena* arena) {
   return Arena::CreateMessageInternal< ::EarthSimulation::EarthRequest_Nodes >(arena);
 }
-template<> PROTOBUF_NOINLINE ::EarthSimulation::EarthRequest* Arena::CreateMaybeMessage< ::EarthSimulation::EarthRequest >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::EarthSimulation::EarthRequest*
+Arena::CreateMaybeMessage< ::EarthSimulation::EarthRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::EarthSimulation::EarthRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::EarthSimulation::EarthResponse_Frame_Geo* Arena::CreateMaybeMessage< ::EarthSimulation::EarthResponse_Frame_Geo >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::EarthSimulation::EarthResponse_Frame_Geo*
+Arena::CreateMaybeMessage< ::EarthSimulation::EarthResponse_Frame_Geo >(Arena* arena) {
   return Arena::CreateMessageInternal< ::EarthSimulation::EarthResponse_Frame_Geo >(arena);
 }
-template<> PROTOBUF_NOINLINE ::EarthSimulation::EarthResponse_Frame_Mag* Arena::CreateMaybeMessage< ::EarthSimulation::EarthResponse_Frame_Mag >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::EarthSimulation::EarthResponse_Frame_Mag*
+Arena::CreateMaybeMessage< ::EarthSimulation::EarthResponse_Frame_Mag >(Arena* arena) {
   return Arena::CreateMessageInternal< ::EarthSimulation::EarthResponse_Frame_Mag >(arena);
 }
-template<> PROTOBUF_NOINLINE ::EarthSimulation::EarthResponse_Frame* Arena::CreateMaybeMessage< ::EarthSimulation::EarthResponse_Frame >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::EarthSimulation::EarthResponse_Frame*
+Arena::CreateMaybeMessage< ::EarthSimulation::EarthResponse_Frame >(Arena* arena) {
   return Arena::CreateMessageInternal< ::EarthSimulation::EarthResponse_Frame >(arena);
 }
-template<> PROTOBUF_NOINLINE ::EarthSimulation::EarthResponse* Arena::CreateMaybeMessage< ::EarthSimulation::EarthResponse >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::EarthSimulation::EarthResponse*
+Arena::CreateMaybeMessage< ::EarthSimulation::EarthResponse >(Arena* arena) {
   return Arena::CreateMessageInternal< ::EarthSimulation::EarthResponse >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

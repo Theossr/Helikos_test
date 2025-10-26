@@ -55,10 +55,10 @@ Status SatelliteServiceImpl::RunSimulation(ServerContext* context, const SimRequ
 
     auto* meta = response->mutable_meta();
     meta->set_points_generated(nodes.size());
-    meta->set_points_returned(earthResp.frames_size());
-    meta->set_skipped_frames(0);
     meta->set_tle_epoch_utc(currentTleNodes.getTleEpoch());
     meta->set_out_of_tle_epoch_window(currentTleNodes.getOutOfEpoch());
+
+    std::cout << "Computed " << response->frames_size() << " points" << std::endl;
 
     return Status::OK;   
 }

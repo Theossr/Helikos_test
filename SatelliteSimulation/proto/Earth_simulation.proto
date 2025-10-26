@@ -1,0 +1,46 @@
+syntax = "proto3";
+package EarthSimulation;
+
+option go_package = "github.com/Theossr/Helikos_test/api/proto";
+
+message EarthRequest {
+
+  message Nodes {
+    double t_rel_s = 1;
+
+    message Geo {
+      double lat_deg = 1;
+      double lon_deg = 2;
+      double alt_km = 3;
+    }
+    Geo geo = 2;
+  }
+  repeated Nodes nodes = 1;
+}
+
+message EarthResponse {
+    
+  message Frame {
+    double t_rel_s = 1;
+
+    message Geo {
+      double lat_deg = 1;
+      double lon_deg = 2;
+      double alt_km = 3;
+    }
+    Geo geo = 2;
+
+    message Mag {
+      double x_nT = 1;
+      double y_nT = 2;
+      double z_nT = 3;
+      double f_nT = 4;
+    }
+    Mag mag = 3;
+  }
+  repeated Frame frames = 1;
+}
+
+service EarthSimulationService {
+  rpc SendEarthData(EarthRequest) returns (EarthResponse);
+}

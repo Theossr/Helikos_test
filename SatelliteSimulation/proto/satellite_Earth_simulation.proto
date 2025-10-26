@@ -65,9 +65,7 @@ message SimResponse {
 
   // Meta
   message Meta {
-    uint32 points_returned = 1;
     uint32 points_generated = 2;
-    uint32 skipped_frames = 3;
     string tle_epoch_utc = 4;
     bool out_of_tle_epoch_window = 5;
   }
