@@ -1,0 +1,20 @@
+build/
+CMakeCache.txt
+CMakeFiles/
+*.o
+*.a
+*.so
+*.out
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git
+.gitignore
+
+# Прочее
+__pycache__/
+*.pyc

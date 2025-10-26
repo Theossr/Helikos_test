@@ -17,7 +17,7 @@ Status SatelliteServiceImpl::RunSimulation(ServerContext* context, const SimRequ
 
     const auto& nodes = currentTleNodes.getNodes();
     
-    EarthSimulationClient earthClient(grpc::CreateChannel("0.0.0.0:50052", grpc::InsecureChannelCredentials()));
+    EarthSimulationClient earthClient(grpc::CreateChannel("earth_sim:50052", grpc::InsecureChannelCredentials()));
 
     EarthResponse earthResp =  earthClient.SendSimulationData(nodes);
 

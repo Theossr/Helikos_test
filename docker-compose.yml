@@ -1,0 +1,48 @@
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: helikos_api
+    ports:
+      - "8080:8080"
+    environment:
+      SAT_SIM_HOST: sat_sim:50051
+    depends_on:
+      - sat_sim
+    networks:
+      - helikos_net
+    restart: unless-stopped
+
+  sat_sim:
+    build:
+      context: ./SatelliteSimulation
+      dockerfile: Dockerfile
+    container_name: sat_sim
+    environment:
+      EARTH_SIM_HOST: earth_sim:50052
+      LISTEN_PORT: 50051
+    ports:
+      - "50051:50051"
+    depends_on:
+      - earth_sim
+    networks:
+      - helikos_net
+    restart: unless-stopped
+
+  earth_sim:
+    build:
+      context: ./EarthSimulation
+      dockerfile: Dockerfile
+    container_name: earth_sim
+    environment:
+      LISTEN_PORT: 50052
+    ports:
+      - "50052:50052"
+    networks:
+      - helikos_net
+    restart: unless-stopped
+
+networks:
+  helikos_net:
+    driver: bridge

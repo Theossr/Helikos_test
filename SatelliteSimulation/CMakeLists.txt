@@ -9,7 +9,12 @@ find_package(gRPC REQUIRED)
 find_package(GTest REQUIRED)
 
 set(PROTO_DIR ${CMAKE_CURRENT_SOURCE_DIR}/proto)
-include_directories(${PROTO_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/include)
+include_directories(
+    ${PROTO_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/external/sgp4
+    ${CMAKE_CURRENT_SOURCE_DIR}/external/sgp4/libsgp4
+)
 
 if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/external/sgp4/CMakeLists.txt)
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/sgp4 ${CMAKE_CURRENT_BINARY_DIR}/sgp4_build)
@@ -63,5 +68,7 @@ target_link_libraries(OrbitNodesTests
     gRPC::grpc++
     ${SGP4_LIB}
 )
+
+
 
 gtest_discover_tests(OrbitNodesTests)

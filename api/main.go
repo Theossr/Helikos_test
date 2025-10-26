@@ -51,7 +51,7 @@ func SimHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	conn, err := grpc.NewClient("0.0.0.0:50051", grpc.WithTransportCredentials(insecure.NewCredentials()))
+	conn, err := grpc.NewClient("sat_sim:50051", grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		http.Error(w, "500/Internal server error", http.StatusInternalServerError)
 		log.Printf("Connection error: %v", err)
@@ -110,5 +110,5 @@ func main() {
 	http.HandleFunc("/health", HealthHandler)
 	http.HandleFunc("/simulate", SimHandler)
 
-	http.ListenAndServe("localhost:8080", nil)
+	http.ListenAndServe("0.0.0.0:8080", nil)
 }
